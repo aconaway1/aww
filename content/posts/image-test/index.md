@@ -7,7 +7,7 @@ draft: false
 This post demonstrates adding an image as a page bundle resource.
 You can use the `figure` shortcode to embed responsive images with captions and WebP support.
 
-{{< figure src="image.svg" alt="Image Test" caption="Figure: Image Test example" >}}{{< /figure >}}
+{{< figure src="image.svg" alt="Image Test" caption="Figure: Image Test example" >}}
 
 You can also access the image in templates using Page Resources:
 

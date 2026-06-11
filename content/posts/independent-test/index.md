@@ -11,7 +11,7 @@ Here's another.
 
 This one has an image in it.
 
-{{< figure src="IMG_3865.png" alt="Some alt text" caption="Figure: A sample image" >}}{{< /figure >}}
+{{< figure src="IMG_3865.png" alt="Some alt text" caption="Figure: A sample image" >}}
 
 As you can see by the image, blah, blah, blah.
 
