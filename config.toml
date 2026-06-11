@@ -1,9 +1,8 @@
 baseURL = "https://example.pages.dev/"
 languageCode = "en-us"
 title = "aww"
-theme = "ananke"
 enableRobotsTXT = true
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]
 
 [pagination]
   pagerSize = 10

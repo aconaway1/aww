@@ -1,4 +1,4 @@
-{{ $src := .Get 0 }}
+{{ $src := .Get "src" | default (.Get 0) }}
 {{ $alt := .Get "alt" | default "" }}
 {{ $caption := .Get "caption" | default (or (.Inner | plainify) "") }}
 {{ $class := .Get "class" | default "" }}
