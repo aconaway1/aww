@@ -1,5 +1,6 @@
 ---
-title: "Welcome to Ron Con Rails!"
+title: "Welcome to AWW"
+description: "A clean Hugo test site using the Shibiu theme."
 ---
 
-This is the extra content for ron_con's YouTube channel.
+This is a fresh start for the site, rebuilt from scratch with only the Shibiu theme installed.

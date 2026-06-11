@@ -1,6 +1,9 @@
-public/
-resources/
-hugo_stats.json
+# Hugo build output
+/public/
+/resources/
+
+# Hugo cache and lock files
+.hugo_build.lock
+
+# System files
 .DS_Store
-node_modules/
-.env
