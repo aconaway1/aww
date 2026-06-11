@@ -18,6 +18,7 @@ A minimal Hugo site configured for deployment on Cloudflare Pages.
 - Set `HUGO_VERSION` in the Pages project settings if you need a specific Hugo release.
 - Use `hugo --baseURL="$CF_PAGES_URL"` in Pages settings so the generated URLs match the deployment URL.
 - When validating locally or in GitHub Actions, set `CF_PAGES_URL` manually or use a fixed URL like `https://example.pages.dev`.
+- If Cloudflare attempts automatic framework detection and reports multiple frameworks, force the project to Hugo in the Pages build configuration and do not rely on Wrangler auto-setup.
 
 ## Custom domain
 
