@@ -1,5 +1,5 @@
 ---
-title: "Welcome to aww"
+title: "Welcome to Ron Con Rails!"
 ---
 
-This is a starter Hugo site built for Cloudflare Pages. Browse the blog post below to verify the site is rendering correctly.
+This is the extra content for ron_con's YouTube channel.
