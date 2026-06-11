@@ -1,6 +1,6 @@
 baseURL = "https://example.pages.dev/"
 languageCode = "en-us"
-theme = "PaperMod"
+theme = "hugo-coder"
 title = "Some new title"
 enableRobotsTXT = true
 disableKinds = ["taxonomy"]
