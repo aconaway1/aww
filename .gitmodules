@@ -4,6 +4,3 @@
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
-[submodule "themes/shibui"]
-	path = themes/shibui
-	url = https://github.com/ntk148v/shibui.git
