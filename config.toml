@@ -9,4 +9,8 @@ disableKinds = ["taxonomy"]
   pagerSize = 10
 
 [params]
+  author = "Aaron Conaway"
+  info = ["Hugo learning site", "Testing themes and posts"]
   description = "A minimal Hugo site for Cloudflare Pages."
+  keywords = "Hugo, Cloudflare Pages, blog"
+  colorScheme = "auto"
