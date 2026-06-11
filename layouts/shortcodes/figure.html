@@ -9,16 +9,14 @@
 {{ else if eq $img.MediaType.SubType "svg" }}
   <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
 {{ else }}
-  {{ $s := $img.Fit "400x" }}
-  {{ $m := $img.Fit "800x" }}
-  {{ $l := $img.Fit "1200x" }}
-  {{ $webpSmall := $s.Convert "webp" }}
-  {{ $webpMedium := $m.Convert "webp" }}
-  {{ $webpLarge := $l.Convert "webp" }}
-  <picture>
-    <source type="image/webp" srcset="{{ $webpSmall.RelPermalink }} 400w, {{ $webpMedium.RelPermalink }} 800w, {{ $webpLarge.RelPermalink }} 1200w" sizes="(max-width:800px) 100vw, 800px">
+  {{ if gt $img.Width 0 }}
+    {{ $s := $img.Resize "400x" }}
+    {{ $m := $img.Resize "800x" }}
+    {{ $l := $img.Resize "1200x" }}
     <img src="{{ $m.RelPermalink }}" srcset="{{ $s.RelPermalink }} 400w, {{ $m.RelPermalink }} 800w, {{ $l.RelPermalink }} 1200w" sizes="(max-width:800px) 100vw, 800px" alt="{{ $alt }}" loading="lazy">
-  </picture>
+  {{ else }}
+    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+  {{ end }}
 {{ end }}
 {{ if $caption }}
   <figcaption class="figcaption">{{ $caption | safeHTML }}</figcaption>
