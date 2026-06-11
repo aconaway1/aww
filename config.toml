@@ -2,7 +2,10 @@ baseURL = "https://example.pages.dev/"
 languageCode = "en-us"
 title = "aww"
 enableRobotsTXT = true
-paginate = 10
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[pagination]
+  pagerSize = 10
 
 [params]
   description = "A minimal Hugo site for Cloudflare Pages."

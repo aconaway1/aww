@@ -8,7 +8,7 @@ A minimal Hugo site configured for deployment on Cloudflare Pages.
 2. Create a new Cloudflare Pages project and connect it to this GitHub repository.
 3. Configure the Pages build settings:
    - Production branch: `main`
-   - Build command: `hugo -b $CF_PAGES_URL`
+   - Build command: `hugo --baseURL="$CF_PAGES_URL"`
    - Build directory: `public`
 4. Save and deploy.
 
@@ -16,7 +16,8 @@ A minimal Hugo site configured for deployment on Cloudflare Pages.
 
 - `CF_PAGES_URL` is provided by Cloudflare Pages during preview and production builds.
 - Set `HUGO_VERSION` in the Pages project settings if you need a specific Hugo release.
-- The build command should include `-b $CF_PAGES_URL` so the generated URLs match the Pages deployment URL.
+- Use `hugo --baseURL="$CF_PAGES_URL"` in Pages settings so the generated URLs match the deployment URL.
+- When validating locally or in GitHub Actions, set `CF_PAGES_URL` manually or use a fixed URL like `https://example.pages.dev`.
 
 ## Custom domain
 
