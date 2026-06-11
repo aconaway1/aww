@@ -5,13 +5,14 @@ draft: false
 ---
 
 This post demonstrates adding an image as a page bundle resource.
+You can use the `responsive` shortcode to generate responsive images with WebP support.
 
-![Image Test](image.svg)
+{{< responsive "image.svg" alt="Image Test" >}}
 
-You can also reference this image in templates via Page Resources:
+You can also access the image in templates using Page Resources:
 
-{{< highlight >}}
+```gotemplate
 {{ $img := .Resources.GetMatch "image.svg" }}
 {{ $res := $img.Fit "800x" }}
 <img src="{{ $res.RelPermalink }}" alt="Image Test">
-{{< /highlight >}}
+```
