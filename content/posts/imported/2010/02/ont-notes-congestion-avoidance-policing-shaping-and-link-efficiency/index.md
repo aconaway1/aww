@@ -1,0 +1,86 @@
+---
+title: "ONT Notes - Congestion Avoidance, Policing, Shaping, and Link Efficiency"
+date: 2010-02-03
+categories: 
+  - "ccnp"
+  - "ont"
+tags: 
+  - "642-845"
+  - "bucket"
+  - "cbwfq"
+  - "cbwred"
+  - "ccnp"
+  - "certification"
+  - "cisco"
+  - "class"
+  - "compression"
+  - "fifo"
+  - "fragmentation"
+  - "interleaving"
+  - "ont"
+  - "policing"
+  - "policy"
+  - "qos"
+  - "queueing"
+  - "queuing"
+  - "red"
+  - "shaping"
+  - "tail-drop"
+  - "test"
+  - "token"
+  - "voice"
+  - "voip"
+  - "wfq"
+  - "wred"
+---
+
+- Tail drop drawbacks
+    - TCP synchronization - Dropping TCP packets from different flows can cause them all to window down and back up again at the same time in cycles.
+    - TCP starvation - Non-TCP or aggressive flows can starve everyone else out when TCP throttles back.
+    - No differentiated drop - Tail drop doesn't care who you are, so you get dropped if the queue is full.
+- RED - Random Early Detection
+    - Avoids tail drop by randomly dropping packets from the queue before it gets full
+    - Only dropped TCP flows slow down instead of everyone who has sent a packet since the queue filled
+    - Queues are smaller.
+    - Link utilization is more efficient
+    - Configured with
+        - Minimum threshold - start dropping when the queue is this size
+        - Maximum threshold - if the queue is this big, start tail dropping
+        - Mark probability denominator (MPD) - 1/MPD is the ratio of packets to drop when between the thresholds
+- WRED - Weighted RED
+    - Based on IP precedence or DSCP values
+    - Less-important packets are dropped more aggressively than important packets
+    - Applied to an interface, VC or a class within a policy map
+- CBWRED - Class based WRED
+    - Configured with CBWFQ
+- Policing
+    - Limits subrate bandwidth (give you 100kbps on a T1)
+    - Limits traffic of certain applications
+    - Any traffic that exceeds police is dropped or re-classified; it's a hard limit
+    - Inbound or outbound
+- Shaping
+    - Sets a limit but buffers any in excess
+    - Requires memory to store the buffer
+    - Buffers = delay and/or jitter
+    - Outbound only
+    - Can respond to network signals like BECNs and FECNs
+- Token and bucket
+    - The queue is a bucket; if a byte of data needs to be sent, it needs a token.
+    - If there are enough tokens, the traffic is considered conforming.
+    - If there aren't enough tokens, the traffic is considered exceeding, which triggers the drop (policing), re-classify (policing), or buffer (shaping).
+- Frame relay traffic shaping (FRTS)
+    - Only controls frame relay traffic
+    - Applied on subif or DLCI
+    - Support fragmentation and interleaving
+    - Reacts to FECNs and BECNs
+- Compression
+    - Removed redundancy and patterns in data
+    - Less data = less latency
+    - Hardware compression or hardware-assisted compression does not involve the main CPU
+    - Software compression does
+    - Payload compression
+    - Header compression
+- Link fragmentation and interleaving
+    - Small data might be waiting for larger data pieces to finish sending
+    - Chunks data into smaller fragments so they don't have to wait
+    - Interleaving shuffles flows in the Tx queue

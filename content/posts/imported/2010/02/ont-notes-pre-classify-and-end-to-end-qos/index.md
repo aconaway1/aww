@@ -1,0 +1,95 @@
+---
+title: "ONT Notes - Pre-classify and End-to-end QoS"
+date: 2010-02-04
+categories: 
+  - "ccnp"
+  - "ont"
+tags: 
+  - "642-845"
+  - "campus"
+  - "ccnp"
+  - "certification"
+  - "cisco"
+  - "class"
+  - "control-plane"
+  - "copp"
+  - "documentation"
+  - "headers"
+  - "interface"
+  - "ont"
+  - "physical"
+  - "policing"
+  - "policy"
+  - "pre-classify"
+  - "qos"
+  - "shaping"
+  - "test"
+  - "tunnel"
+  - "voice"
+  - "voip"
+  - "vpn"
+---
+
+- VPNs (Didn't ISCW cover this?)
+    - Provide
+        - Confidentiality
+        - Integrity
+        - Authentication
+    - Types
+        - Remote-access
+            - Client-initiated
+            - NAS-initiated
+        - Site-to-site
+            - LAN-to-LAN
+            - Extranet
+- L3 Tunneling protocols
+    - GRE
+    - IPSec
+- Pre-classify allows traffic to be classified before being sent across a tunnel or crypto-ed.
+    - _qos pre-classify_
+    - Provides a view into the original IP headers
+    - To classify on pre-tunnel header, apply the policy to the tunnel interface WITHOUT pre-classify.
+    - To classify on post-tunnel header, apply the policy to the physical interface WITHOUT pre-classify.
+    - To classify on pre-tunnel header, apply the policy to the physical interface WITH pre-classify.
+- SLA - agreement with provider to guarantee QoS mechanisms across their network based on your markings.
+    - Assures availability, loss, throughput, delay, and jitter.
+- End-to-end QoS
+    - To be effective, each hop in the path must have QoS configured similarly.
+    - Necessary in three locations
+        - Campus - within the customer network
+        - The edges - customer facing the provider, provider facing customer
+        - On the provider network
+- QoS tasks
+    - Campus access switches
+        - Speed/duplex settings
+        - Classification
+        - Trust
+        - Phone/access switch configs
+        - Multiple queues on switch ports, including priority for VOIP
+    - Campus distribution
+        - L3 policing and marking
+        - Multiple queues on switch ports, including priority for VOIP
+        - WRED
+    - WAN edge
+        - SLA definitions
+        - LLQ
+        - LFI
+        - WRED
+        - Shaping
+    - Provider cloud
+        - Capacity planning
+        - PHB
+        - LLQ
+        - WRED
+- Enterprise campus QoS implementation
+    - Implement multiple queues to avoid congestion
+    - Assign VOIP and video to highest priority queue
+    - Esablish trust boundaries
+    - Use policing to rate-limit excess traffic
+    - Use hardware QoS when possible
+- Control Plane Policing (CoPP)
+    - Applies QoS policy to traffic destined for the router
+        - Routing protocols
+        - Management protocols
+    - Can be used to avoid DOS attacks
+    - Applied to _control-plane_ in global config

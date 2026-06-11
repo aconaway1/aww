@@ -1,0 +1,10 @@
+---
+title: "Pakistan and YouTube -- What Happened?"
+date: 2008-02-25
+---
+
+BGP has issues; the main one being transitive \[tag\]trust\[/tag\]. \[tag\]BGP\[/tag\] works by having networks (companies, providers, etc.) advertise \[tag\]routes\[/tag\] that it owns to its peers. These peers pass those routes on to their peers, ad nauseum, until everyone knows what networks everyone has. The big assumption here is that you are advertising only networks for which you are responsible. The word "assumption" should be emphasized.
+
+The Pakistani government decided that a video on \[tag\]YouTube\[/tag\] was bashing Islam, so they [ordered the Pakistani Internet services to block it](http://www.efluxmedia.com/news_Pakistani_ISPs_Block_YouTube_Access_Over_Anti_Islamic_Videos_14434.html "eFluxMedia -- Youtube Outage"). Instead of filtering from their network out, they decided to advertise via BGP that _they_ were YouTube. To make things worse, they used a more-specific, 24-bit route; since YouTube advertises a 22-bit route, the new Pakistani route is preferred since its more specific. The transitive trust of the BGP cloud allowed them to tell the world that YouTube was on their network, effectively taking YouTube completely off the Internet for few hours. YouTube finally changed their advertising to a bunch of 25-bit networks, which restored connectivity, and, eventually, the Pakistani ASN withdrew the route. [Here](http://www.renesys.com/blog/2008/02/pakistan_hijacks_youtube.shtml "Timetable -- Renesys")'s a timetable from Martin Brown of \[tag\]Renesys\[/tag\].
+
+Obviously something needs to be done about this. This is not the first time time that someone has (un)intentionally advertised someone else's routes and took stuff down ([The Yahoo! outage from July 2007](http://isc.sans.org/diary.html?storyid=3112 "SANS -- Yahoo! Writeup") comes to mind). I have no solution, but TPTB might want to prioritize finding a more-secure method for controlling an IP space advertisements. Certificate-based peering? More filtering on the transit networks? There's no good solution, really.

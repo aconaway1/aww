@@ -1,0 +1,104 @@
+---
+title: "ONT Notes – Classification, Marking, and NBAR"
+date: 2010-01-22
+tags: 
+  - "642-845"
+  - "autoqos"
+  - "ccnp"
+  - "certification"
+  - "cisco"
+  - "classification"
+  - "diffserv"
+  - "dscp"
+  - "marking"
+  - "ont"
+  - "policing"
+  - "qos"
+  - "test"
+  - "voice"
+  - "voip"
+---
+
+Here's another set of notes from my ONT studies.  I'm sure someone will find it useful.  Please help to correct dumbass mistakes.
+
+- Classification is done with traffic desriptors
+    - Ingress interface
+    - CoS value on ISL or 802.1P frames
+    - Source/destination IP address
+    - IP Precedence or DSCP value
+    - MPLS EXP
+    - Application type
+- Layer 3 QoS
+    - Type of Service (ToS) is 8-bit field.
+    - First 3 bits of ToS are the IP precedence.
+    - First 6 bits of ToS are the DSCP value.
+    - Last 2 bits of ToS are explicit congestion notification (ECN).
+- Layer 2 QoS
+    - Ethernet
+        - Class of Service (CoS)
+        - On 802.1P frame
+        - 3-bit priority (PRI) field
+            - 000 - Routine - Best-effort
+            - 001 - Priority - Medium priority
+            - 010 - Immediate - High priority
+            - 011 - Flash - Call signaling
+            - 100 - Flash-Override - Video conferencing
+            - 101 - Critical - Voice bearer
+            - 110 - Internet - Reserved
+            - 111 - Network - Reserved
+    - Frame Relay
+        - 1-bit discard eligible (DE) field
+    - ATM
+        - 1-bit cell loss priority (CLP) field
+    - MPLS (layer 2 1/2)
+        - 3-bit experimental (EXP) field
+        - By default, the 3 most significant ToS bits (IP Precedence bits) are copied to EXP
+- Per-hop Behavior (PHB)
+    - "an externally observable fowarding behavior of a network node toward a group of IP packets that have the same DSCP value"
+    - In other words, treat packets with the same DSCP value in the same manner - scheduling, queuing, policing, etc.
+    - Behavior aggregate (BA) is a group of packets with the same DSCP value
+- DSCP
+    
+    - DSCP is chopped up into 4 PHBs
+        - Class selector PHB - (000) old IP precedence compatibility
+        - Default PHB - (000) best effort
+        - Assured forwarding (AF) PHB - (001, 010, 011, 100) guarantee bandwidth
+            - Provides 4 queues for 4 classes of traffic (AF1-4)
+            - Also specifies drop preference (ex., AF41, A13) where second number is preference (higher is more probable to be dropped)
+            - Each queue must have (W)RED to avoid drops
+            - No queue is any better than the other
+            - Backward compatible with IP precedence
+    
+    - - Expedited forwarding (EF) PHB - (101) low delay
+            - Minimum delay
+            - Bandwidth guarantee
+            - Policing
+- Trust boundaries
+    - Establish DSCP values as close to the source as possible
+        - On the device (IP phone), access switch, or distribution switch
+        - The core should never assign DSCP values
+    - Only trust DSCP values from devices you trust
+    - Examine and rewrite values from untrust sources
+- Network-based Application Recognition (NBAR)
+    - Protocol discovery - discovers what protocols you're running on your network
+    - Traffic statistics collection - keeps tracks of stats on each protocol
+    - Traffic classification - NBAR protocols can be used in _class-maps_ to define traffic to be services
+    - Packet description language models (PDLMs) - table of what protocols NBAR recognizes
+    - Limitations
+        - Doesn't work on EtherChannel interfaces
+        - Only handles 24 URLs, hosts, or MIME types
+        - Only analyzes first 400 bytes of the packets
+        - Requires CEF
+        - Doesn't work on HTTPS, multicasts, or fragments
+        - Ignored traffic destined for the router itself
+    - NBAR commands
+        - Router(config)# **ip nbar pdlm** _pdlm-name_ : Update the PDLM table
+        - Router(config)# **ip nbar port-map** _protocol-name_ **\[tcp|udp\]** _port-number_ : Adds an entry to the PDLM table
+        - Router# **show ip nbar port-map** _protocol-name_ : Shows what's in the PDLM table
+        - Router# **show ip nbar protocol-discovery** : Shows what's been discovered
+        - Router(config-cmap)# **match protocol** _name_ : a class-map match for an NBAR-discovered protocol
+    - Special protocol matching
+        - Can match beyond the port number with deep packet inspection
+        - Matches HTTP hostname, URL, or MIME type
+        - Matches fast-track P2P
+        - Matches RTP content

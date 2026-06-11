@@ -1,0 +1,74 @@
+---
+title: "ONT Notes - QoS On Wireless Networks"
+date: 2010-02-11
+tags: 
+  - "642-845"
+  - "802-1p"
+  - "campus"
+  - "ccnp"
+  - "certification"
+  - "cisco"
+  - "dscp"
+  - "headers"
+  - "lwap"
+  - "lwapp"
+  - "ont"
+  - "precedence"
+  - "qos"
+  - "test"
+  - "wifi"
+  - "wireless"
+---
+
+- Wireless LANs (WLANs)
+    - Extensions to wired LANs
+    - Carrier sense multiple access collision avoidance (CSMA/CA) as media access method
+    - Uses distributed coordinated function (DCF) for collision avoidance
+    - DCF is based on RF carrier sense, inter-frame spacing (IFS), and random wait timers
+- Wifi QoS standards
+    - 802.11e
+        - IEEE standard
+        - 0-7 priority levels
+    - Wifi Multimedia (WMM)
+        - Four access categories
+            - Platinum (voice) - 6 or 7 802.11e
+            - Gold (video) - 4 or 5 802.11e
+            - Silver (BE) - 0 or 3 802.11e
+            - Bronze (Background) - 1 or 2 802.11e
+    - WMM and 802.11e replace DCF with EDCF
+- Cisco Split-MAC
+    - Splits functions between Lightweight access points (LWAPs) and WLAN controllers (WLCs)
+    - LWAPs handle real-time functions
+        - Beacon generation
+        - Probe transmission and response
+        - Power management
+        - 802.11e/WMM scheduling and queuing
+        - Packet buffering
+        - Encryption/decryption
+        - Control frame/message processing
+    - WLCs handle non-real-time functions
+        - Association/disassociation/reassociation
+        - 802.11e/WMM resource reservation
+        - 802.1x EAP
+        - Key management
+        - Authentication
+        - Fragmentation
+        - Ethernet-WLAN bridging
+- End-to-end QoS
+    - Step 1:  WLC copies DSCP from switch to outer DSCP and outer 802.1p and sends to LWAP over LWAPP tunnel
+    - Step 2:  LWAP copies outer DSCP from WLC to 802.11e/WMM field and sent to client
+    - Step 3:  LWAP copies 802.11e/WMM value from the client to outer DSCP and sends it to WLC
+    - Step 4:  WLC copies outer DSCP from WLAP to 802.1p (CoS) fields and sends it to the switch
+- Web interface (do you even need to know this?)
+    - Controller>QoS Profiles
+        - Per-User Bandwidth Contracts - set avg data rate, burst data rate, avg real-time rate, and burst real-time rate
+        - Over the Air QoS
+            - Maximum RF usage per AP (%)
+            - Queue Depth - queue size before dropping packets
+            - Wired QoS Protocol - 802.1p or None
+    - Controller>WLANs>Edit
+        - For each WLAN ID, set the QoS value:  plat, gold, silver, bronze
+        - WMM Policy
+            - Disabled - 802.11e/WMM QoS requests are ignored
+            - Allowed - 802.11e/WMM QoS requests are sent
+            - Required - 802.11e/WMM QoS requests are required

@@ -1,0 +1,90 @@
+---
+title: "ONT Notes - AutoQoS"
+date: 2010-02-10
+categories: 
+  - "ccnp"
+  - "ont"
+tags: 
+  - "642-845"
+  - "auto"
+  - "autoqos"
+  - "campus"
+  - "ccnp"
+  - "certification"
+  - "cisco"
+  - "class"
+  - "headers"
+  - "interface"
+  - "ont"
+  - "policing"
+  - "policy"
+  - "qos"
+  - "shaping"
+  - "test"
+  - "voice"
+  - "voip"
+---
+
+- AutoQoS benefits
+    - Automates QoS for most deployments
+    - Protects business-critical apps to maximize availability
+    - Simplifies QoS deployments
+    - Reduces configuration errors
+    - Cheaper, faster, and simpler deployments
+    - Follows DiffServ
+    - Allows complete control over QoS configs
+    - Allows modification of auto-generated configs
+- AutoQoS phases of evolution
+    - AutoQoS VOIP - Early version that configures the basics without discovery
+    - AutoQoS for Enterprise - Second version that only runs on routers and uses two-step process
+        - Autodiscovery using NBAR
+        - Generation of class maps
+- AutoQoS key elements
+    - Application classification
+    - Policy generation
+    - Configuration
+    - Monitoring and reporting
+    - Consistency
+- Interfaces that you can configure AutoQoS on
+    - Serial ifs with PPP and HDLC
+    - FR point-to-point subifs (NOT multipoint)
+    - ATM point-to-point subifs
+    - FR-to-ATM links
+- Prerequsites
+    - No Qos policy already configured on if
+    - CEF enabled on if
+    - Correct bandwidth configured on if
+    - IP address on low-speed if
+- Configuring AutoQoS Enterprise on a router (NOT a switch)
+    - **auto qos discovery** - begins discovery process
+    - **auto qos** - generates and applies MQC-based policies
+- Configuring AutoQoS VOIP
+    - **auto qos voip \[ trust | cisco-phone \]**
+- Verifying AutoQoS on router
+    - **show auto discovery qos** - get autodiscovery results
+    - **show auto qos** - examine configuration generated
+        - Number of classes
+        - Classification options
+        - Marking options
+        - Queuing mechanisms
+        - Other QoS mechanisms
+        - If, subif, PVC where policy is applied
+    - **show policy-map interface** - look at if stats
+- Verify AutoQoS VOIP
+    - **show auto qos**
+    - **show policy-map interface**
+    - **show mls qos maps** - shows CoS to DSCP mappings
+- Possible issues with AutoQoS
+    - Too many traffic classes - manually consolidate some
+    - Configuration doesn't change - rerun AutoQoS
+    - Configuration may not fit your situation - fine-tune it by hand
+- Fine-tuning AutoQoS
+    - Use QPM
+    - CLI
+    - copy policy into editor, change, reapply
+- AutoQoS can match on characteristics besides ACLs and NBAR
+    - **match input interface**
+    - **match cos**
+    - **match ip precedence**
+    - **match ip dscp**
+    - **match ip rtp**
