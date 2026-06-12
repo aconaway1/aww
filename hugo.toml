@@ -1,4 +1,14 @@
-baseURL = 'https://example.pages.dev/'
+baseURL = 'https://aww-3cz.pages.dev/'
 locale = 'en-us'
-title = 'AWW Test Site'
-theme = 'shibui'
+title = 'AWW'
+theme = "shibui"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[params]
+  sidebar = true
+  defaultTheme = "auto"
+
+[module]
+  [[module.imports]]
+    path = "go.ngs.io/hugo-primer-blog"
