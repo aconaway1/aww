@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{ .Content }}
+  
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    <table class="time-list">
+        <tbody>
+            {{ range first 10 (sort (where site.RegularPages "Type" "posts") "Date" "desc") }}
+            <tr>
+                <td class="time-list__date">{{- partial "date" .Date -}}</td>
+                <td class="time-list__title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+  </section>
+
+  <div class="terminal-nav">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+{{ end }}
