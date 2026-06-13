@@ -17,7 +17,7 @@ As a warning to everyone, I am not a developer. I am a network engineer who is t
 
 I use too many print statements to figure out what's going on. Get an object and print it to screen to make sure it's right. Do a calculation and print the result. There are so many print statements in my code that I had to start using a debug variable to tell it when to print stuff. I even use that technique in my functions.
 
-```
+```python {linenos=true}
 # Don't do stuff like this
 def myFunc(string_to_return, debug=False):
     if debug:
@@ -41,7 +41,7 @@ How about a simple example? Let's write some code that goes through the sites\_t
 
 I'm running [Python 3.9.10](https://www.python.org/downloads/release/python-3910/) for today. All my code is in [my GitHub repo](https://github.com/aconaway1/blog-pynetbox).
 
-```python
+```python {linenos=true}
 # logging_check_sites_1.py
 import yaml
 import logging
@@ -58,13 +58,13 @@ for site in sites_to_load:
         logging.error(f"The site {site['name']} does not have a time zone configured.")
 ```
 
-Line 6 sets the level we want to see. Note that `logging.DEBUG` is an integer definition included with the module. Obviously, you have `logging.INFO`, `logging.WARNING`, `logging.ERROR`, and `logging.CRITICAL` as well.
+Line 7 sets the level we want to see. Note that `logging.DEBUG` is an integer definition included with the module. Obviously, you have `logging.INFO`, `logging.WARNING`, `logging.ERROR`, and `logging.CRITICAL` as well.
 
-Line 13 sends an error message to the logging module. Since we said we wanted to see debug messages, we'll see this message printed. If we had set the level to critical, nothing would be printed at all.
+Line 14 sends an error message to the logging module. Since we said we wanted to see debug messages, we'll see this message printed. If we had set the level to critical, nothing would be printed at all.
 
 Let's do something more advanced. How about check physical address and time zone, but this time we have debug messages that help us track what we're doing. We also want to add a timestamp to the messages so we know when things happen. And, just to finish it off, let's log everything to a file called check\_sites.log.
 
-```python
+```python {linenos=true}
 # logging_check_sites_2.py
 import yaml
 import logging
@@ -95,15 +95,15 @@ for site in sites_to_load:
         logging.debug(f"Site {site['name']} has a time zone configured.")
 ```
 
-Line 5 defines the log file we're going to use. We'll see that in a bit.
+Line 6 defines the log file we're going to use. We'll see that in a bit.
 
-Line 6 defines a string that we'll pass as the format we want to use. In this case, we want to see the time (asctime), the logging level, and the message. There are lots of other attributes you can use, so check out [this list](https://docs.python.org/3/library/logging.html#logrecord-attributes) to see what you want to use and how to use them properly.
+Line 7 defines a string that we'll pass as the format we want to use. In this case, we want to see the time (asctime), the logging level, and the message. There are lots of other attributes you can use, so check out [this list](https://docs.python.org/3/library/logging.html#logrecord-attributes) to see what you want to use and how to use them properly.
 
-Lines 8 - 10 configure the logging module. I think you can figure out what each argument is. :
+Lines 9 - 11 configure the logging module. I think you can figure out what each argument is. :
 
 _Note that files are opened in append mode like this. There is a way to change that, but that's beyond the scope of what we're doing today._
 
-We've actually got three different levels of logging message in this one. Lines 19, 23, and 27 are our debug messages that fire off so we can follow along at home. Lines 21 & 25 are our error messages that we record when things are missing. Line 17 gives us a critical message when the name is missing from the record.
+We've actually got three different levels of logging message in this one. Lines 20, 24, and 28 are our debug messages that fire off so we can follow along at home. Lines 22 & 26 are our error messages that we record when things are missing. Line 18 gives us a critical message when the name is missing from the record.
 
 Here's the `check_sites.log` file after we run this terrible code.
 

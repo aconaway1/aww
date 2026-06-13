@@ -22,7 +22,7 @@ We've added stuff and updated stuff, so let's delete some stuff. "Hey, man...you
 
 When using pynetbox, we mostly deal with object. When updating, we get the object, make changes, then save it back to [Netbox](https://docs.netbox.dev/en/stable/). We don't say "update object 38718 with a new widget"; you actually manipulate an object. When we delete something, we do the same thing...get the object and delete it. Here's a snippet of the token cleanup script to show that.
 
-```python
+```python {linenos=true}
 <SNIP>
 all_tokens = nb_conn.users.tokens.all()
 
@@ -39,7 +39,7 @@ We get all the tokens, which come to us as a RecordSet. We then go through each 
 
 Let's say that our Denver switches have been upgraded. We have the older devices in Netbox with a status of `decommissioning`, but we don't want to remove them just yet since we have to make sure they're written off the books and recycled properly. We put some text in the `description` field that says "delete after <DATE>" so that everyone knows to keep this device in Netbox until then. Here are our devices.
 
-```
+```text
 Name:   DEN-OLDFRWL01 Status: Decommissioning Desc: delete after 12 Jan 2022
 Name: DEN-OLDSWITCH01 Status: Decommissioning Desc: delete after 16 Feb 2023
 Name: DEN-OLDSWITCH02 Status: Decommissioning Desc: delete after 16 Feb 2023
@@ -58,13 +58,13 @@ Things that we'll need to do:
 
 We're running [Python](https://www.python.org/) with pynetbox and querying our local Netbox server. Here's what we're running. As always, the code is in [my Github repo](https://github.com/aconaway1/blog-pynetbox).
 
-```
+```text
 Python         :  3.9.10
 Pynetbox       :  7.0.0
 Netbox version :  3.4.3 (Docker)
 ```
 
-```python
+```python {linenos=true}
 # pynetbox_decom_devices.py
 """
 Deletes devices from Netbox after an indicated date in the description field
@@ -115,21 +115,21 @@ I've got some nice comments in the code this time, so you should be able to foll
 
 Here are the highlights.
 
-Line 20 gets the date and time for right now. This is a [datetime](https://docs.python.org/3/library/datetime.html) object that we can do math on later.
+Line 21 gets the date and time for right now. This is a [datetime](https://docs.python.org/3/library/datetime.html) object that we can do math on later.
 
-Line 24 is a [regex](https://docs.python.org/3/library/re.html) search for the string in the description. Regex is its own beast, and everyone is intimidated by it at first. This just says to look at the description (decommed\_device.description) and save anything that comes after "delete after " to use later.
+Line 25 is a [regex](https://docs.python.org/3/library/re.html) search for the string in the description. Regex is its own beast, and everyone is intimidated by it at first. This just says to look at the description (decommed\_device.description) and save anything that comes after "delete after " to use later.
 
-Line 26 checks if you found a match to the regex on line 24.
+Line 27 checks if you found a match to the regex on line 25.
 
-Line 28 takes the date from the device description and converts it to a datetime object so we can do some date math. Check out [strptime](https://www.geeksforgeeks.org/python-datetime-strptime-function/) for details on the formatting. The time is included in this object at midnight of that day.
+Line 29 takes the date from the device description and converts it to a datetime object so we can do some date math. Check out [strptime](https://www.geeksforgeeks.org/python-datetime-strptime-function/) for details on the formatting. The time is included in this object at midnight of that day.
 
-Line 30 is the comparison of today's date and time with date in the description of the device. If the decom date is in the past, we'll delete it.
+Line 31 is the comparison of today's date and time with date in the description of the device. If the decom date is in the past, we'll delete it.
 
-Line 34 deletes the device.
+Line 35 deletes the device.
 
 Here's the output.
 
-```
+```text
 Deleting the device DEN-OLDFRWL01......deleted.
 Deleting the device DEN-OLDSWITCH02......deleted.
 Deleting the device DEV-OLDSWITCH01......deleted.

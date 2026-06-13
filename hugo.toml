@@ -15,7 +15,7 @@ enableRobotsTXT = true
   recentPostsCount = 5
   showAuthor = true
   showReadingTime = true
-  showShareButtons = true
+  showShareButtons = false
   sidebar = true
 
 [[params.sidebarModules]]
@@ -49,7 +49,7 @@ enableRobotsTXT = true
   [markup.highlight]
     codeFences = true
     guessSyntax = true
-    lineNumbersInTable = true
+    lineNumbersInTable = false
     noClasses = false
     style = "github"
     tabWidth = 4

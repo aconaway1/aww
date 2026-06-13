@@ -22,7 +22,7 @@ As a warning to everyone, I am not a developer. I am a network engineer who is t
 
 We're going to again use [Python](https://www.python.org/) and [pynetbox](https://pynetbox.readthedocs.io/en/latest/) for this (as the title says). Here's the environment I'm working in.
 
-```
+```text
 Python         :  3.9.10 
 Pynetbox       :  7.0.0  
 Netbox version :  3.4.3 (Docker)
@@ -30,7 +30,7 @@ Netbox version :  3.4.3 (Docker)
 
 Remember when [we loaded the data from the _sites.yml_ file last time](https://aconaway.com/2023/01/17/adding-stuff-to-netbox-with-pynetbox/)? We're going to use that same file to run another script that will update existing information. This time, the script will check Netbox for some site values and updated it if it doesn't match the [YAML](https://yaml.org/) file. Here we go. As always, these scripts and YAML files are available in [my Github repository](https://github.com/aconaway1/blog-pynetbox).
 
-```python
+```python {linenos=true}
 ### pynetbox_update_sites.py
 import pynetbox
 import yaml
@@ -68,21 +68,21 @@ for site in sites_to_load:
 token.delete()
 ```
 
-All the way down to line 15 should be pretty familiar already. Check out [the last few posts](https://aconaway.com/tag/pynetbox/) to get caught up.
+All the way down to line 16 should be pretty familiar already. Check out [the last few posts](https://aconaway.com/tag/pynetbox/) to get caught up.
 
-Line 17 goes through all the sites in the YAML so we can do stuff.
+Line 18 goes through all the sites in the YAML so we can do stuff.
 
-Line 18 sets a boolean variable called _are\_they\_different_ to track if we need to do the update or not. We could just blindly update the object, but it seems a bit inefficient if the data is the same.
+Line 19 sets a boolean variable called _are\_they\_different_ to track if we need to do the update or not. We could just blindly update the object, but it seems a bit inefficient if the data is the same.
 
-Lines 20 - 23 check to make sure the site actually exists. If it doesn't, print a message and skip it. We'll use that queried site object here in a bit to compare against the YAML.
+Lines 21 - 24 check to make sure the site actually exists. If it doesn't, print a message and skip it. We'll use that queried site object here in a bit to compare against the YAML.
 
-I'm having trouble wording an explanation for lines 24 - 27. We first take the keys for the dictionary that we imported from YAML and go through each of them. If the value for that key in the Netbox object is different than the value for the same key in the YAML file, then we'll set that boolean variable to _True_. If they're the same, nothing will happen.
+I'm having trouble wording an explanation for lines 25 - 28. We first take the keys for the dictionary that we imported from YAML and go through each of them. If the value for that key in the Netbox object is different than the value for the same key in the YAML file, then we'll set that boolean variable to _True_. If they're the same, nothing will happen.
 
-Lines 28 - 29 check to see if we need to do an update and then do it if needed. We're done .all(), .get(), .filter(), and .create() (and even .delete() if you count [the token thing](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/)), but this is the first time we're doing an .update(). In this case, we're taking the _queried\_site_ object and updating it with the data that came from the YAML. Any values that are different get updated.
+Lines 29 - 30 check to see if we need to do an update and then do it if needed. We're done .all(), .get(), .filter(), and .create() (and even .delete() if you count [the token thing](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/)), but this is the first time we're doing an .update(). In this case, we're taking the _queried\_site_ object and updating it with the data that came from the YAML. Any values that are different get updated.
 
-Lines 30 - 32 tell the user nothing is happening since the values match.
+Lines 31 - 33 tell the user nothing is happening since the values match.
 
-Line 34 nukes the token we created in line 15.
+Line 35 nukes the token we created in line 16.
 
 Is this horrible code or what? We could probably take the YAML, do some value validation, then just update the object without all this frilly stuff. I mean, this isn't our production database that's taking 65k connection per second, so we're probably not bogging down the Netbox server with additional updates. Also, the [populate](https://github.com/aconaway1/blog-pynetbox/blob/master/pynetbox_populate_sites.py) script and this update script should be one and the same. We would just load everything up from file, add things that needed to be added, and update things that needed to be updated. See again the note about me not knowing what I'm talking about. LOL
 
@@ -96,7 +96,7 @@ We have yet another YAML file with the IP information for the devices...and anot
 
 The device YAML files contains a list of devices to check with _name_ and _mgmt\_ip_.
 
-```
+```yaml
 ### devices_to_update.yml
 - name: PHX-RTR01
   mgmt_ip: 172.22.0.1
@@ -106,7 +106,7 @@ The credentials YAML file is just _username_ and _password_. I'm not going to pu
 
 Alright. Code.
 
-```python
+```python {linenos=true}
 ### pynetbox_update_device_serial.py
 import pynetbox
 import yaml
@@ -173,21 +173,21 @@ token.delete()
 
 The code is getting a bit out of hand without some comments. I'll have to start including those from now on.
 
-Lines 22 - 24 are calling local functions to load up the data from the YAML files. These are here just to show that I do indeed know how to use functions. :)
+Lines 23 - 25 are calling local functions to load up the data from the YAML files. These are here just to show that I do indeed know how to use functions. :)
 
-Line 29 goes through all the devices in our file. We only have one, so it shouldn't take too long.
+Line 30 goes through all the devices in our file. We only have one, so it shouldn't take too long.
 
-Lines 32 - 40 are the Netmiko stuff. First, we build up a dictionary that contains the connection information - host, username, password, and device type. This is the Netmiko device type and is used to figure out what prompts and login process to expect. Line 39 gets the output of the command _/system/routerboard/print_ (a [RouterOS](https://mikrotik.com/software) command) and stores it in _output_. We'll look at that again in a second.
+Lines 33 - 41 are the Netmiko stuff. First, we build up a dictionary that contains the connection information - host, username, password, and device type. This is the Netmiko device type and is used to figure out what prompts and login process to expect. Line 40 gets the output of the command _/system/routerboard/print_ (a [RouterOS](https://mikrotik.com/software) command) and stores it in _output_. We'll look at that again in a second.
 
-Line 42 defines the dictionary we'll send to Netbox if an update is needed.
+Line 43 defines the dictionary we'll send to Netbox if an update is needed.
 
-Line 44 turns the value of output, which is a long string from the device, into a list of lines that are more usable. We'll use those lines to do a [regex](https://www.w3schools.com/python/python_regex.asp) match to find the serial number. Regex is its own beast, so do some reading & testing on your own.
+Line 45 turns the value of output, which is a long string from the device, into a list of lines that are more usable. We'll use those lines to do a [regex](https://www.w3schools.com/python/python_regex.asp) match to find the serial number. Regex is its own beast, so do some reading & testing on your own.
 
-Lines 46 - 49 are where the regex magic happens. Line 48 does the heavy lifting here; it finds a line that contains "serial-number: " (yes, there's a space in there at the end) and saves the characters after it. We use that value in line 49 (the _m.group(1)_ thing) to set the serial number in the _scraped\_info_ dictionary.
+Lines 47 - 50 are where the regex magic happens. Line 48 does the heavy lifting here; it finds a line that contains "serial-number: " (yes, there's a space in there at the end) and saves the characters after it. We use that value in line 50 (the _m.group(1)_ thing) to set the serial number in the _scraped\_info_ dictionary.
 
-Line 51 queries Netbox for the object we might need to update. The next few lines make sure it really exists before moving forward. We should probably do this before the SSH stuff so we don't waste our time if the device isn't already in Netbox.
+Line 52 queries Netbox for the object we might need to update. The next few lines make sure it really exists before moving forward. We should probably do this before the SSH stuff so we don't waste our time if the device isn't already in Netbox.
 
-Line 55 does the comparison of the scraped serial number versus the serial number in Netbox. If they don't match, then we update like we did for the sites.
+Line 56 does the comparison of the scraped serial number versus the serial number in Netbox. If they don't match, then we update like we did for the sites.
 
 Updating serial numbers is nice, but that's in the bottom 1% of the data you care about. You really care about subnets and addresses and interfaces and circuits and rack locations and more. Some things can be derived from the gear and others can't. There's always going to be some stuff you have to keep updated manually, but that data that can be updated automatically should be taken out of the hands of people. People make mistakes, get lazy, don't read directions...that leads to something worse than no documentation -- bad documentation.
 

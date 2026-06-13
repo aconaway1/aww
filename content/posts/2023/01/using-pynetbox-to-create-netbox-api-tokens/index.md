@@ -22,7 +22,7 @@ It seems to me -- the person who is not the authority on such things -- that a b
 
 How about some code to see through the mud here? This code is all in [my Github repo](https://github.com/aconaway1/blog-pynetbox) for you to look at and share. Here's the environment I'm running.
 
-```
+```text
 Python version: 3.9.10
 Pynetbox version: 7.0.0
 Netbox version: 3.4.2 (running in Docker)
@@ -30,7 +30,7 @@ Netbox version: 3.4.2 (running in Docker)
 
 Let's start with a YAML file called _env.yml_ that contains all the environment information like URL and user/pass info.
 
-```
+```yaml
 username: admin
 password: admin
 netbox_url: "http://*.*.*.*"
@@ -40,7 +40,7 @@ netbox_url: "http://*.*.*.*"
 
 Now for the Python. This is the file _pynetbox\_create\_token.py_.
 
-```
+```python {linenos=true}
 import pynetbox
 import pprint
 import yaml
@@ -75,7 +75,7 @@ Line 16 deletes that token. We're using the token object itself to delete it. If
 
 Here's what the output looks like when we run it.
 
-```
+```text
 {'allowed_ips': None,
  'created': '2023-01-12T18:08:07.816089Z',
  'description': '',
@@ -98,7 +98,7 @@ As for those orphaned tokens, they can be a problem. I did some troubleshooting 
 
 This is _pynetbox\_clear\_all\_tokens.py_ in the repo. It get a list of all the tokens then nukes them all except the one that we created when running this script; that token gets deleted at the end. This could be very destructive if run in production since it will delete all your production tokens as well.
 
-```
+```python {linenos=true}
 import pynetbox
 import yaml
 

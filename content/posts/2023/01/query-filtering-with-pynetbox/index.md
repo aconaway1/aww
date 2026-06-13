@@ -24,13 +24,13 @@ We want to print a report of all devices with hostname and role. The devices sho
 
 Here's the environment I'm running. All this code is in [my Github repo](https://github.com/aconaway1/blog-pynetbox).
 
-```
+```text
 Python         :  3.9.10 
 Pynetbox       :  7.0.0  
 Netbox version :  3.4.2  (Docker)
 ```
 
-```python
+```python {linenos=true}
 ### pynetbox_query_filter_1.py
 import pynetbox
 import yaml
@@ -59,25 +59,25 @@ for site in sites:
 token.delete()
 ```
 
-Lines 1 & 2 are our imports. Basic Python stuff there.
+Lines 2 & 3 are our imports. Basic Python stuff there.
 
-Lines 4 - 10 and 25 are from [a previous post about generating keys in pynetbox](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/).
+Lines 5 - 11 and 26 are from [a previous post about generating keys in pynetbox](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/).
 
-Line 12 gets all the sites.
+Line 13 gets all the sites.
 
-Line 14 goes through each site to do the magic.
+Line 15 goes through each site to do the magic.
 
-Lines 15 - 17 just print some header info. Line 17 is pretty cool trick for having the right number of underscores.
+Lines 16 - 18 just print some header info. Line 18 is a pretty cool trick for having the right number of underscores.
 
-Line 18 is the one we care about right now. This asks Netbox to provide all the devices that have a site ID equal to the site we're looking at. We're using "site\_id" as the argument here, but you can use any field you want to filter on. Status, rack ID, manufacturer, tags, create time..the list goes on. You can have more than one argument, too, which is pretty great.
+Line 19 is the one we care about right now. This asks Netbox to provide all the devices that have a site ID equal to the site we're looking at. We're using "site\_id" as the argument here, but you can use any field you want to filter on. Status, rack ID, manufacturer, tags, create time..the list goes on. You can have more than one argument, too, which is pretty great.
 
-Lines 19 - 21 check if we actually got devices for a site. If not, we just say "No devices." and move on to the next site using _continue_.
+Lines 20 - 22 check if we actually got devices for a site. If not, we just say "No devices." and move on to the next site using _continue_.
 
-Lines 22 & 23 go through the devices for this site and print the name and role. They use some fancy formatting to make it look nice.
+Lines 23 & 24 go through the devices for this site and print the name and role. They use some fancy formatting to make it look nice.
 
 Here's the output from running this.
 
-```
+```text
 Devices at site CHI (Chicago)
 ------------------------------
      CHI-CSW01           CORE_SWITCH     
@@ -117,7 +117,7 @@ When you use .filter(), pynetbox returns a _RecordSet_ (or None if there's nothi
 
 .get() takes the same arguments as .filter(), but the arguments must be specific enough for Netbox to return a single result. That is, the total sum of all the arguments must be unique across Netbox. If your arguments match more than one result, you get an error like this one.
 
-```
+```text
 ValueError: get() returned more than one result. Check that the kwarg(s) passed are valid for this endpoint or use filter() or all() instead.
 ```
 
@@ -125,7 +125,7 @@ You can keep stacking arguments until it's unique ("_device\_role="firewall", si
 
 .get() has its limitations but it's still very useful, though. If a Netbox object has a reference to another Netbox object, the result will include some information about that referenced object. That's a terrible sentence. Things might be clearer if we look at the result from a query.
 
-```
+```text
 {'airflow': None,
  'asset_tag': None,
  'cluster': None,
@@ -145,7 +145,7 @@ This is a snip of a device record. You can see _device\_role_ isn't just a strin
 
 Here's some code to get shipping information for the devices with a "planned" status. The real-world scenario is that you have configured these devices and need to ship them out to the right site for install.
 
-```python
+```python {linenos=true}
 ### pynetbox_query_filter_3.py
 import pynetbox
 import yaml
@@ -167,13 +167,13 @@ for device in devices:
 token.delete()
 ```
 
-Line 12 is a .filter() that retrieves only devices in a "planned" state. This is a _RecordSet_, so you have to iterate through to get anything useful.
+Line 13 is a .filter() that retrieves only devices in a "planned" state. This is a _RecordSet_, so you have to iterate through to get anything useful.
 
-Line 15 is the .get(). We get the site ID returned with the device (device.site.id), so we can use that in a .get() argument to get a single result. This is a _Record_, so you can use it directly.
+Line 16 is the .get(). We get the site ID returned with the device (device.site.id), so we can use that in a .get() argument to get a single result. This is a _Record_, so you can use it directly.
 
 The rest of the lines are pretty much the same as above, so I'll skip the explanation. Here's the output.
 
-```
+```text
 Ship LAX-RTR01 to:
 123 Main Street
 Los Angeles, CA 90001

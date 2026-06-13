@@ -47,7 +47,7 @@ Take a snapshot. Name it something like `Updated OS` so you know what it is.
 
 On your production server, export your data. You can use [the Replicating Netbox page](https://docs.netbox.dev/en/stable/administration/replicating-netbox/) on the official docs to see the details. I had to do all the exporting as the `postgres` user to get access to the data.
 
-```
+```bash
 sudo su - postgres
 pg_dump netbox > nb.oldversion.sql
 ```
@@ -58,20 +58,20 @@ Copy this file off to your machines somewhere. I usually SCP it over.
 
 On your VM, install Netbox v2.11.12 using Netbox Build-o-matic.
 
-```
+```bash
 git clone https://github.com/jordanrvillarreal/netbox-build-o-matic.git
 ```
 
 This will create a directory called "netbox-build-o-matic". Go in there and edit the file `step2.sh`. There's a line near the top where it does a curl to get the latest version number, but you can just change that to whatever you want. I usually comment out that line and add a new one like this. The "v" is very important!
 
-```
+```bash
 #netboxVERSION=`curl -s https://api.github.com/repos/netbox-community/netbox/releases/latest | grep "tag_name" | cut -d : -f 2,3 | tr -d \" | tr -d \,`
 netboxVERSION="v2.11.12"
 ```
 
 The instructions for Netbox Build-o-matic tell us to chmod the `install.sh` file and run it as root.
 
-```
+```bash
 sudo su -
 chmod u+x install.sh
 ./install.sh
@@ -87,7 +87,7 @@ Copy your export up to your VM. Put it in `/tmp` to make sure you have access to
 
 Next, we'll drop the netbox database, recreate it, then import in the old data. You probably need to do this as the `postgres` user like we did before.
 
-```
+```bash
 sudo su - postgres
 psql -c 'drop database netbox'
 psql -c 'create database netbox'
@@ -96,7 +96,7 @@ psql netbox < /tmp/nb.oldversion.sql
 
 Now we run the Netbox upgrade scripts to get the new data set up properly.
 
-```
+```bash
 sudo /opt/netbox/upgrade.sh
 ```
 
@@ -110,7 +110,7 @@ Take a snapshot! Call is something like `v2.11.12`.
 
 Use the same method as above to export the data. Make sure to call the file something like `nb.v2.11.12.sql` so you know which one is which. Copy that over to your machine.
 
-```
+```bash
 sudo su - postgres
 pg_dump netbox > nb.v2.11.2.sql
 ```
@@ -125,7 +125,7 @@ Use Netbox Build-o-matic again to install v3.4.8. This time, though, we're not g
 
 So, clone the repo, become root, chmod the installer, run the installer.
 
-```
+```bash
 git clone https://github.com/jordanrvillarreal/netbox-build-o-matic.git
 cd netbox-build-o-matic
 sudo su -
@@ -141,7 +141,7 @@ SNAPSHOT!
 
 Copy your v2.11.12 data up to the VM. Put it in `/tmp` like before and import it in.
 
-```
+```bash
 sudo su - postgres
 psql -c 'drop database netbox'
 psql -c 'create database netbox'
@@ -152,7 +152,7 @@ Before we run the upgrade, we need to deal with the way Netbox changed contacts 
 
 The ASN data looks to be in the same boat here (Thanks, Justin!). If you do the upgrade this way, you'll have to recreate that as well.
 
-```
+```bash
 sudo su -
 export NETBOX_DELETE_LEGACY_DATA=1
 /opt/netbox/upgrade.sh
@@ -166,7 +166,7 @@ SNAPSHOT!
 
 Yep. Export the data again. This time, call it `nb.v3.4.8.sql`. Copy it off.
 
-```
+```bash
 sudo su - postgres
 pg_dump netbox > nb.v3.4.8.sql
 ```
@@ -175,7 +175,7 @@ pg_dump netbox > nb.v3.4.8.sql
 
 Now that we have our data on the right version, we can import it into our new production server. Same method here. Copy it up to `/tmp`. You've done it 3 times now, so update your LinkedIn profile to make sure everyone knows you are a Postgres admin now.
 
-```
+```bash
 sudo su - postgres
 psql -c 'drop database netbox'
 psql -c 'create database netbox'
@@ -184,7 +184,7 @@ psql netbox < /tmp/nb.v3.4.8.sql
 
 Run the upgrade script to make sure things are kosher.
 
-```
+```bash
 sudo /opt/netbox/upgrade.sh
 ```
 

@@ -19,7 +19,7 @@ With just this information, we can turn up a BGP neighbor that does absolutely n
 
 Now we have something of value (though choosing BGP over OSPF or RIP for this little scenario is pretty horrible). We can advertise a couple networks back and forth, and everything should work. Let's advertise all subnets in both directions, shall we? We're looking at a config for FortiOS 6.4.
 
-```
+```text
 config router bgp
   set as 65001
   set router-id 172.16.0.1
@@ -53,7 +53,7 @@ Let's set up the scenario here. We only want to accept the route for the 192.168
 
 First are our prefix lists for inbound and outbound.
 
-```
+```text
 config router prefix-list
   edit "PREFIX-INBOUND-FG2"
     config rule
@@ -78,7 +78,7 @@ end
 
 Next is the route map using these new prefix lists.
 
-```
+```text
 config router route-map
   edit "RM-BGP-INBOUND-FG2"
     config rule
@@ -100,7 +100,7 @@ If you remember your Cisco route map config, you have to give an action (e.g., r
 
 One last thing to do: add the route map to the neighbor.
 
-```
+```text
 config router bgp
   config neighbor
     edit "172.16.0.2"
@@ -115,7 +115,7 @@ I think you can figure out what each of these lines does.
 
 Time to verify that everything is working. The standard BGP commands are in order here but they all have the FortiOS spin to them.
 
-```
+```text
 get router info bgp summary
 
 get router info bgp neighbor 172.16.0.2 advertised-routes

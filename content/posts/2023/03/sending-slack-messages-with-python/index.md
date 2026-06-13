@@ -43,7 +43,7 @@ To some code, I guess. Let's refactor an easy one we've already done. How about 
 
 I'm running Python `3.9.10` today. All this code is available on [my Github repo](https://github.com/aconaway1/blog-pynetbox) for you to freely steal. I reiterate that I am not a developer and make no guarantees with this code. You should ask someone who knows what they're doing to review any of this before you put it into production. I am also learning as I go, so I've noticed my own code is changing as times moves along. Don't freak out if there's some different structure or actual comments compared to the last time we looked at this code.
 
-```python
+```python {linenos=true}
 # pynetbox_clear_all_tokens_slack.py
 """
 Deletes all API tokens from Netbox
@@ -113,11 +113,11 @@ if __name__ == "__main__":
 
 ```
 
-Like I said, the basic function of the script is the same. We've only added some Slack functionality to replace the print statements, which are done through the `send_to_slack` function defined in line 8. There we set up the JSON body, send the post to the given URL, and return a boolean based on the status code we get back. Not too difficult here.
+Like I said, the basic function of the script is the same. We've only added some Slack functionality to replace the print statements, which are done through the `send_to_slack` function defined in line 9. There we set up the JSON body, send the post to the given URL, and return a boolean based on the status code we get back. Not too difficult here.
 
-Some of the minor changes include importing in the creds from YAML on line 35. The `slack_url` value from that dictionary will be sent to the function for posting. We've also added a tracking variable called `found_old_token`s to see if we found something to delete. If we didn't, we'll published a Slack message that says we didn't find any...just so we know the process finished and didn't crash. I like closure.
+Some of the minor changes include importing in the creds from YAML on line 36. The `slack_url` value from that dictionary will be sent to the function for posting. We've also added a tracking variable called `found_old_token`s to see if we found something to delete. If we didn't, we'll published a Slack message that says we didn't find any...just so we know the process finished and didn't crash. I like closure.
 
-I do need to mention that we did some restructuring of the script to make it more [Pythonic](https://docs.python-guide.org/writing/style/). See line 64 where we did the whole `__name__` thing, which makes us look fancy. This just says to run the function `main()` if this script is called from the command line. It's not really important for functionality here, but it's good practice for the future. Things like this will help us when we start taking all this code and putting into a custom module later.
+I do need to mention that we did some restructuring of the script to make it more [Pythonic](https://docs.python-guide.org/writing/style/). See line 65 where we did the whole `__name__` thing, which makes us look fancy. This just says to run the function `main()` if this script is called from the command line. It's not really important for functionality here, but it's good practice for the future. Things like this will help us when we start taking all this code and putting into a custom module later.
 
 We also included some [type hints](https://realpython.com/lessons/type-hinting/) in the `send_to_slack` function. What are these? I mean, they tell you what type of variable to use, but I'm not sure what they really do for us here. Maybe when we've got a fully-developed system for automatically maintaining our Netbox data we can see a benefit. I think I just watch too many YouTube videos on Python at this point.
 

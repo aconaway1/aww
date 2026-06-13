@@ -11,7 +11,7 @@ _To use pynetbox (or anything that uses API calls to Netbox), you'll need to set
 
 We're going to write a short script to get all the devices from the Netbox instance...and here it is!\[efn\_note\]This is just something I wrote really quickly. Use more [Pythonic techniques](https://docs.python-guide.org/writing/style/) on your finished product\[/efn\_note\]
 
-```
+```python {linenos=true}
 import pynetbox
 import urllib3
 
@@ -46,7 +46,7 @@ In line 13, we go through that **RecordSet** and address each device as the vari
 
 Here's the output from the code above.
 
-```
+```text
 DEVICE NAME:  ROUTER A  DEVICE IP: 10.0.0.1/24
 DEVICE NAME:  ROUTER B  DEVICE IP: 172.16.2.2/24
 DEVICE NAME:  ROUTER C  DEVICE IP: None
@@ -58,26 +58,26 @@ DEVICE NAME:  ROUTER E  DEVICE IP: None
 
 What other information can we get in the **Devices** data type? If you were to do a **dir()** on one of the devices (i.e., **print(dir(device))**), you can see all the variables that you can pull out of the object. These are the ones that don't start with the underscores (which is another topic all together). You can see name in there somewhere. You can also see primary\_ip4. Here's the output of the **dir()** so you can see what I'm talking about.
 
-```
+```text
 ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattr__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__key__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_add_cache', '_diff', '_endpoint_from_url', '_full_cache', '_init_cache', '_parse_values', 'airflow', 'api', 'asset_tag', 'cluster', 'comments', 'config_context', 'created', 'custom_fields', 'default_ret', 'delete', 'device_role', 'device_type', 'display', 'endpoint', 'face', 'full_details', 'has_details', 'id', 'last_updated', 'local_context_data', 'location', 'name', 'napalm', 'parent_device', 'platform', 'position', 'primary_ip', 'primary_ip4', 'primary_ip6', 'rack', 'save', 'serial', 'serialize', 'site', 'status', 'tags', 'tenant', 'update', 'updates', 'url', 'vc_position', 'vc_priority', 'virtual_chassis']
 ```
 
 Be very careful, as I've misled you a little bit here. Data points like name come back as strings. ID comes back as an integer. **Device\_role**, **device\_type**, and **primary\_ip4** (even **primary\_ip** and **primary\_ip6**) come back as nested objects, though. The script output shows a nice IP address in the last column, but it's a trick. The **primary\_ip4** object just happens to be named with the IP and mask so that it looks like a string. The object returned, though, is of type **IPAddresses**. Here's a dir() on one of those for you to see.
 
-```
+```text
 ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattr__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__key__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__setstate__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_add_cache', '_diff', '_endpoint_from_url', '_full_cache', '_init_cache', '_parse_values', 'address', 'api', 'default_ret', 'delete', 'display', 'endpoint', 'family', 'full_details', 'has_details', 'id', 'save', 'serialize', 'update', 'updates', 'url']
 ```
 
 As before, the non-underscored items are things you can call. If you wanted to get a string of the IP address, you could call **device.primary\_ip4.address**. This returns a real string that includes the mask in CIDR notation. It would be something like "10.0.0.1/24". You can just split it at the "/" to get the address and mask. Or, if you just want the address, you can do something like.
 
-```
+```python {linenos=true}
 for device in devices:
     print(f"DEVICE NAME: {device.name:^10} DEVICE IP: {device.primary_ip4.address.split("/")[0]}")
 ```
 
 Notice that a couple of the lines in our output above have an address of "None". This is another trick, really. It's not a string of value "None", but, rather, it's an object of [NoneType](https://realpython.com/null-in-python/). In Python, if something doesn't exist, a NoneType object is returned. If a device in Netbox doesn't have a primary IP address assigned, this code will return a value of "None", which is a NoneType object. If we printed the **type()** of each device's **primary\_ip4**, we could verify that.
 
-```
+```text
 <class 'pynetbox.models.ipam.IpAddresses'>
 <class 'pynetbox.models.ipam.IpAddresses'>
 <class 'NoneType'>

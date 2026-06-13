@@ -18,7 +18,7 @@ I think there's a theme in the last few posts. I can't quite put my finger on it
 
 Here’s the environment I’m running. All this code is in [my Github repo](https://github.com/aconaway1/blog-pynetbox).
 
-```
+```text
 Python         :  3.9.10 
 Pynetbox       :  7.0.0  
 Netbox version :  3.4.2  (Docker)
@@ -52,7 +52,7 @@ This is a list of dictionaries - one for each site. Each site has a name, descri
 
 Here's the code we'll use to import that data. I will quickly admit that this code includes some very non-Pythonic methods. In my opinion, making code more easily readable is more important that doing it "the right way" in a lot of cases.
 
-```python
+```python {linenos=true}
 ### pynetbox_populate_sites.py
 import pynetbox
 import yaml
@@ -88,33 +88,33 @@ for site in sites_to_load:
 token.delete()
 ```
 
-Lines 1 & 2 are the modules we want to use.
+Lines 2 & 3 are the modules we want to use.
 
-Lines 4 & 5 set the name of the files where some data will live.
+Lines 5 & 6 set the name of the files where some data will live.
 
-Line 7 & 8 import the Netbox URL, username, password, etc., from a YAML file into a dictionary called _env\_vars_. [This post](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/) talks about that a bit.
+Lines 8 & 9 import the Netbox URL, username, password, etc., from a YAML file into a dictionary called _env\_vars_. [This post](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/) talks about that a bit.
 
-Line 10 & 11 import the site data from a YAML file into a dictionary called _sites\_to\_load_.
+Lines 11 & 12 import the site data from a YAML file into a dictionary called _sites\_to\_load_.
 
-Lines 13 - 15 and line 32 connects to Netbox, creates a token to use, then deletes it. See [this post](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/) for more on that.
+Lines 14 - 16 and line 33 connects to Netbox, creates a token to use, then deletes it. See [this post](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/) for more on that.
 
-Line 17 goes through the sites from the YAML file to do the work.
+Line 18 goes through the sites from the YAML file to do the work.
 
-Line 18 creates a variable called _name_ with a value of the given site name in upper case. We'll use this as the name of the site in Netbox. I just like to have the names of things that I configure in upper case. Total personal opinion.
+Line 19 creates a variable called _name_ with a value of the given site name in upper case. We'll use this as the name of the site in Netbox. I just like to have the names of things that I configure in upper case. Total personal opinion.
 
-Line 19 converts the name from the YAML file to lower case and saves it in a variable called _slug_. The slug is a URL-friendly version of the name that's used by...heck, I don't even know. It's a required field, so something needs to be in there. I just feed it the name in lower case.
+Line 20 converts the name from the YAML file to lower case and saves it in a variable called _slug_. The slug is a URL-friendly version of the name that's used by...heck, I don't even know. It's a required field, so something needs to be in there. I just feed it the name in lower case.
 
-Line 20 start some checking. We don't want to try and add a site that already exists, so let's ask Netbox before trying to add it. The result is stored in _queried\_site_.
+Line 21 starts some checking. We don't want to try and add a site that already exists, so let's ask Netbox before trying to add it. The result is stored in _queried\_site_.
 
-Line 21 looks to see if _queried\_site_ has any value. If it does, that means the site name already exists in Netbox, so we need to skip it.
+Line 22 looks to see if _queried\_site_ has any value. If it does, that means the site name already exists in Netbox, so we need to skip it.
 
-Line 22 & 23 prints an "already exists" message and continues to the next site in the list.
+Lines 23 & 24 print an "already exists" message and continues to the next site in the list.
 
-Line 25 start a new dictionary called _constructed\_site_ which we'll use when it's time to create the site. _Name_ and _slug_ are the required fields that we already know, so we'll go ahead and add those.
+Line 26 starts a new dictionary called _constructed\_site_ which we'll use when it's time to create the site. _Name_ and _slug_ are the required fields that we already know, so we'll go ahead and add those.
 
-Line 26 - 29 look to see if the optional fields for description and address exist. If they do, then add them to _constructed\_site_ for processing. If you want to add other fields to the YAML to import (region, ASN, timezone, tags, etc.), you can just add some lines to check that as well.
+Lines 27 - 30 look to see if the optional fields for description and address exist. If they do, then add them to _constructed\_site_ for processing. If you want to add other fields to the YAML to import (region, ASN, timezone, tags, etc.), you can just add some lines to check that as well.
 
-Line 30, of course, is where the magic happens. This uses .create() to -- wait for it -- create a site using the given dictionary. This returns the site object we created. We're not doing anything with it, though we definitely should be checking the result to make sure it worked!
+Line 31, of course, is where the magic happens. This uses .create() to -- wait for it -- create a site using the given dictionary. This returns the site object we created. We're not doing anything with it, though we definitely should be checking the result to make sure it worked!
 
 The output is pretty unremarkable. If the site exists, it says "Site X already exists." If it get added, it says "Adding X to Netbox."
 
@@ -150,7 +150,7 @@ The YAML contains a list of devices that include name, type, role, and status. I
 
 Alright, here's the long, long code. I'll only mention the lines that are different than the code above.
 
-```python
+```python {linenos=true}
 ### pynetbox_populate_devices.py
 import pynetbox
 import yaml
@@ -219,17 +219,17 @@ for device in devices_to_load:
 token.delete()
 ```
 
-Lines 17 - 19 are interesting. Some of the fields in the Netbox GUI are dropdown boxes where you select a valid choice. You can't just freehand the value; it has to be one of the valid choices available. You can use .choices() to get a full list of all valid choices, including the status field. Line 18 gets all the valid values for the status field and adds them to the list called _valid\_device\_status_ so we can check them later. As homework, you should write code to get the choices for devices, prefixes, and device types and explore them a bit.
+Lines 18 - 20 are interesting. Some of the fields in the Netbox GUI are dropdown boxes where you select a valid choice. You can't just freehand the value; it has to be one of the valid choices available. You can use .choices() to get a full list of all valid choices, including the status field. Line 19 gets all the valid values for the status field and adds them to the list called _valid\_device\_status_ so we can check them later. As homework, you should write code to get the choices for devices, prefixes, and device types and explore them a bit.
 
-Lines 26 - 50 all do checking. Does the given device already exists? Does the given type exist? Does the given role exist? Does the given site exist? If they don't, print an error message and go to the next device.
+Lines 27 - 51 all do checking. Does the given device already exists? Does the given type exist? Does the given role exist? Does the given site exist? If they don't, print an error message and go to the next device.
 
-Lines 53 - 63 are basically the same as when we added the sites.
+Lines 54 - 64 are basically the same as when we added the sites.
 
-Line 57 is interesting. Remember the list of statuses we got in lines 16 - 18? This line checks the given status against that list to make sure they're valid. If it's not valid, print a message and move on. You can probably modify the script a bit to just default to "active" if you want.
+Line 58 is interesting. Remember the list of statuses we got in lines 17 - 19? This line checks the given status against that list to make sure they're valid. If it's not valid, print a message and move on. You can probably modify the script a bit to just default to "active" if you want.
 
 Did you catch the bad data in there? One of the devices is for the Atlanta site, which doesn't exist in Netbox. When you run the script, you'll see this.
 
-```
+```text
 The site ATL does not exist. Skipping.
 ```
 
