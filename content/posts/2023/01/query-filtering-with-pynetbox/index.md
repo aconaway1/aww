@@ -189,4 +189,4 @@ Saint Louis, MO 63101
 
 In summary, filtering is good. Carry on.
 
-Send any soapmaking tips questions my way.
+Send any ~~soapmaking tips~~ questions my way.

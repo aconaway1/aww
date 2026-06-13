@@ -39,4 +39,4 @@ Ah...a cool 19C.
 
 This is not a very graceful way to do it, but it gets the job done in a pinch.  I haven't tested it, but I would imagine this technique would work on 7600s as well.  I know it doesn't work on 2950s and the like.
 
-Send any house keys questions my way.
+Send any ~~house keys~~ questions my way.

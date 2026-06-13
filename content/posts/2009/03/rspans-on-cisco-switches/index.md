@@ -48,4 +48,4 @@ If you have a fully-meshed switch environment, you'll see the additional traffic
 
 Don't expect RSPANs to work on your 2950 like this.  On the lower-end switches, you have to use a reflector port to copy the traffic to the RSPAN.  I don't get into that here, but Google is your friend.
 
-Send any Cadbury Creme Eggs questions my way.
+Send any ~~Cadbury Creme Eggs~~ questions my way.

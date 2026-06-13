@@ -60,4 +60,4 @@ Here we go.
 
 I'll get my own answer together and post the consensus result in a few days.  In the meantime, let me know how terribly I did.
 
-Send any unlicensed CIPC phones questions my way.
+Send any ~~unlicensed CIPC phones~~ questions my way.

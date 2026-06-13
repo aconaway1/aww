@@ -117,4 +117,4 @@ How about redistributing a default route from BGP instead of a static?  Sure. �
 
 One thing to note is how the default routes appear in each method.  Using the _default network_ method doesn't actually show a route.  The _network_ and _summary_ methods show up as native EIGRP routes, and the _redistribute_ method, as expected, shows up as external.  This may be important when meeting certain design goals....or taking an exam.
 
-Send any questions marks questions my way.
+Send any ~~questions marks~~ questions my way.

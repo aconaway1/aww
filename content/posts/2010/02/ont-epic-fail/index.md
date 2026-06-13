@@ -21,4 +21,4 @@ At the heart of it, I think my demise stemmed from using only the Cisco Press bo
 
 The facility was great, though.  I was comfortable and couldn't hear traffic or the lecture across the hall this time.  At least I know a good place to take tests now.  I hope somebody gets some value from my absolute failure.
 
-Send any test vouchers questions my way.
+Send any ~~test vouchers~~ questions my way.

@@ -15,4 +15,4 @@ As a precaution, I've reset some passwords and deleted a whole mess of accounts.
 
 Thanks to Drew at GoDaddy for walking me through the restore process!  An unsolicited hazzah to those guys for having such great tools so they don't have to do any more work than they have to do!
 
-Send any stagnant accounts questions my way.
+Send any ~~stagnant accounts~~ questions my way.

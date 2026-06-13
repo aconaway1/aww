@@ -37,6 +37,6 @@ So, let's summarize the benefits of using a management overlay like Micetro.
 
 Do you use a management overlay? Probably. Do those Python scripts your use count? How about those Ansible playbooks? vCenter? NDS Manager (bonus points for knowing what that is!)?
 
-Send any overdue library books questions my way.
+Send any ~~overdue library books~~ questions my way.
 
 #overlay #management #dhcp #dns #ipam #NetEng

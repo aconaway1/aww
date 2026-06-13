@@ -52,4 +52,4 @@ On the server, you would add a static route to ServerA through 1.1.102.5. If you
 
 Don't forget the static route on ServerA.
 
-Send any [Peeps](http://www.marshmallowpeeps.com/ "MarshmallowPeeps.com -- Marshmallow Peeps") questions my way.
+Send any ~~[Peeps](http://www.marshmallowpeeps.com/ "MarshmallowPeeps.com -- Marshmallow Peeps")~~ questions my way.

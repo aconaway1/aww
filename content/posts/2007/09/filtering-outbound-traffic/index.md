@@ -11,6 +11,6 @@ I guess that way back in the day that was true. You had your well-behaved networ
 
 Forget that your workstation sits on the inside of the firewall and remember that the intern down in development has a machine there. You know -- the guy who "learned all about computers" in school. Use your firewall to protect the Internet from him!
 
-\----
+---
 
 The note: Outbound filtering doesn't keep the badies out completely. One of the first rules on your list will be to allow all users to TCP/80 on any host so everyone can surf. Any worm worth its salt these days will use TCP/80 for all its communications to take advantage of that hole, so you need to keep your antivirus and antispyware software updated to protect yourself and everyone else.

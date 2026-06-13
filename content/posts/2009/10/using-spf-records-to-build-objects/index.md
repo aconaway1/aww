@@ -41,4 +41,4 @@ There are always dangers when you rely on information from somebody else, though
 
 I'll also  note that there aren't that many domains using this technique, so finding SPF netblock records may be a challenge.  It's worth the time to do a simply query, though; it might save you some time.
 
-Send any carved pumpkins questions my way.
+Send any ~~carved pumpkins~~ questions my way.

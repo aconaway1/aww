@@ -44,7 +44,7 @@ To check the status, run a _show failover_.
 
 The output shows a couple things.  First, you can see that failover is enabled and that we're on the primary unit.  We also see the last failover and how long each unit has been active.
 
-Send any expensive PIX failover cables questions my way.
+Send any ~~expensive PIX failover cables~~ questions my way.
 
 Audio commentary
 

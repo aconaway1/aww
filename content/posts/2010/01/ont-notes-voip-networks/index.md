@@ -212,7 +212,7 @@ There's way too much info here.  I'll refine the process a little better for th
 - CAC make sure that resources are available (denies a new call if 2 calls are already placed).
 - Dropped packets affect every call - not just the new ones
 
-\-----
+---
 
 Additional Reading
 

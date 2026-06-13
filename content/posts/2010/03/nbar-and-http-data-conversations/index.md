@@ -69,4 +69,4 @@ For craps and smiles, I created a class-map that matched SIP, added it to the sa
 
 To finish out the testing, I added an ACL to the router that matched any-any-eq-80.  I made the class-map into a match-any and added the ACL.  Since the ACL just matches the destination port and doesn’t care what the content is, every packet sent matched the class as expected.  I remember reading several places and seeing a couple videos that said that you can use NBAR matching and ACLs interchangeably.  That may not really be true when it comes to HTTP.
 
-Send any Cisco learning credits questions my way.
+Send any ~~Cisco learning credits~~ questions my way.

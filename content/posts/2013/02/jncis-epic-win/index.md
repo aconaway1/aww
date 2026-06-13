@@ -20,4 +20,4 @@ The exam was yet another top-notch effort from [Liz and the group](https://twitt
 
 There was really nothing else to report.  It was a great exam, so don't be afraid to take it if it's next on your list.
 
-Send any Cisco refresher courses questions my way.
+Send any ~~Cisco refresher courses~~ questions my way.

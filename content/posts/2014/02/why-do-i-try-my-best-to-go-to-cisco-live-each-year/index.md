@@ -21,4 +21,4 @@ We all know what Cisco Live is, right?  Networkers?  The Cisco users' conferen
 - **Comradery** : With little to no exception, the people you meet at Cisco Live are fantastic.  Everyone happy, and there's no hate.  It's like our own little [hippy commune](http://en.wikipedia.org/wiki/The_Farm_\(Tennessee\)).  If you throw in familiarity from Twitter, you have the makings of some great friendships.  Let me stop before I start to sound like an [After School Special](http://en.wikipedia.org/wiki/After_school_special).  Hell, even [Chris](https://twitter.com/IPv6Freely) is friendly in person.
 - **Travel** : I don't travel very much for work.  When I do travel for fun, it's usually some place local and rural.  Going to Cisco Live gives me a chance and excuse to go to a big city and take it in a bit.  Mind you, my wife gets more of this benefit than I do since she has her days free.
 
-Send any excuses for not blogging for months questions my way.
+Send any ~~excuses for not blogging for months~~ questions my way.

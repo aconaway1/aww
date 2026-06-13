@@ -114,7 +114,7 @@ If we do a _show ip route vrf CUSTOMER1_, we'll see the static routes from the I
 
 That should do it. Now you should be able to talk from your local network in the CUSTOMER1 VRF and talk through a tunnel that's established on the INTERNET VRF.
 
-Send any Juniper configs questions my way.
+Send any ~~Juniper configs~~ questions my way.
 
 _Update_ : Here's an embarrassingly-sloppy logical diagram for Andrew.
 

@@ -85,4 +85,4 @@ One more to grow on?  10.0.0.0/24 goes into area 0.
 
 Yes, I got the message again when F0/0 moved to area 0.
 
-Send any link state table updates questions my way.
+Send any ~~link state table updates~~ questions my way.

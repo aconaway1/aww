@@ -48,4 +48,4 @@ I'm not sure if you need to do this to lo0.0, but it won't hurt.
 
 Now you can see your OSPF neighbors come up and start exchanging routing information.  That is, of course, assuming you did everything else right.
 
-Send any blog deadlines questions my way.
+Send any ~~blog deadlines~~ questions my way.

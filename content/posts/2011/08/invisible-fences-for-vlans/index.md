@@ -7,7 +7,7 @@ categories:
 
 _This week we have a guest post from CJ Infantino. He is currently writes on [convergingontheedge.com](http://convergingontheedge.com). You can find him hanging out on Google Plus as [CJ Infantino](https://plus.google.com/111171425909122797357/about) or follow him [@cjinfantino](https://twitter.com/#!/cjinfantino) on twitter._
 
-\-------------------------------------
+---
 
 The other day I was adding VLANs to the the allowed list on the core routers at work. It was then a question came to mind, “Does the VLAN allowed list filter ingress or egress traffic?”.
 

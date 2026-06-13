@@ -30,4 +30,4 @@ What else?  Cisco is continuing the Mentor program this year.  That's where a 
 
 See you guys in the desert in a couple months!
 
-Send any tickets to Blue Man Group questions my way.
+Send any ~~tickets to Blue Man Group~~ questions my way.

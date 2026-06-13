@@ -63,4 +63,4 @@ When you first drop in the config, the original RIPs should come up as operation
 
 Configured like that, you can move the servers whenever you would like, and the CSM will automatically detect the changes and act accordingly.  You just have to remember to remove the old IPs out of the serverfarm when a server moves.
 
-Send any alternative study techniques questions my way.
+Send any ~~alternative study techniques~~ questions my way.

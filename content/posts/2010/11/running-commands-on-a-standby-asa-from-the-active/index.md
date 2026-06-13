@@ -23,4 +23,4 @@ As an example, if you want to do a _show interface OUTSIDE_ on the standby unit 
 
 Pretty handy when you want to know information about the other firewall without having to log into that sucker (and getting confused by the same prompts and reloading the wrong mate).
 
-Send any misplaced commands questions my way.
+Send any ~~misplaced commands~~ questions my way.

@@ -23,4 +23,4 @@ Obviously, this is not the way we want to do switch implementations.  Rule #1 f
 
 Off topic:  This project is seriously cursed.
 
-Send any magic potions questions my way.
+Send any ~~magic potions~~ questions my way.

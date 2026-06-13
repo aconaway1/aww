@@ -137,4 +137,4 @@ When I moved SSH above TUNNEL, it started incrementing as it should.  The best 
 
 For the record, I did this lab twice – once with the GRE tunnel encrypted and once without encryption.  The results of the pre-classification were the same in both attempts; GRE matches every time.
 
-Send any ROUTE class vouchers questions my way.
+Send any ~~ROUTE class vouchers~~ questions my way.

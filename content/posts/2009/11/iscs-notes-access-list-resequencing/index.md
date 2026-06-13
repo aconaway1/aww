@@ -41,4 +41,4 @@ This command will take our example ACL and resequence it starting at 10 and incr
 
 Cool, eh?  I think I'll spend the week doing this to all our routers at work.
 
-Send any holiday turkeys questions my way.
+Send any ~~holiday turkeys~~ questions my way.

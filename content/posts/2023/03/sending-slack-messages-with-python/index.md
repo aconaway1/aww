@@ -137,6 +137,6 @@ Screenshot showing a Slack update for deleting tokens
 
 </figure>
 
-Send any air traffic scanners question my way.
+Send any ~~air traffic scanners~~ question my way.
 
 #python #netbox #pynetbox #automation #slack #logging

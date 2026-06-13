@@ -83,4 +83,4 @@ Just like in IPv4, EIGRP for IPv6 routes show up with the route code of "D".  I
 
 There are obviously a lot of more features and functions to EIGRP for IPv6, but this should get you started in your studies.  I'm sure I'll expound as time and my CCIE studies progress.
 
-Send any 6to4 tunnels questions my way.
+Send any ~~6to4 tunnels~~ questions my way.

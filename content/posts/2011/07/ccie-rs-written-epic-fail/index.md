@@ -19,4 +19,4 @@ I did have one great advantage last week that I've never had - I took the exam a
 
 You guys know me by now.  I'm definitely not going to give up or anything stupid like that.  I'll probably take a week off to recover from Cisco Live and then head back to the studies.  I'll do the usual brute force method, but I'm going to grab a copy of the Boson exams (which were also suggested) to supplement.  I would guess that I'll try again around the first of August, but we'll see.
 
-Send any beatin' sticks questions my way.
+Send any ~~beatin' sticks~~ questions my way.

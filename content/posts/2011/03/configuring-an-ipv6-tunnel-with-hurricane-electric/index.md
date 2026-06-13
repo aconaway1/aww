@@ -35,4 +35,4 @@ We're talking IOS here.  I have an ASA 5505 on the head of my network, and, tho
 
 Don't get caught up in the warm glow of IPv6, though.  This is the open Internet just like when your grandmother plugs the new Macbook Pro you got her directly into the cable modem.  You will need to put in some filtering and inspection to protect yourself at the edge.  Though beyond scope today, take a look at the lines for _ipv6 inspect_ and _ipv6 traffic-filter_ for a starting point.
 
-Send any native IPv6 support questions my way.
+Send any ~~native IPv6 support~~ questions my way.

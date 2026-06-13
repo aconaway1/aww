@@ -42,7 +42,7 @@ The "real fix" is to upgrade to 4.3(3.1) or 4.2(12.1).  Of course that means a 
 
 That's much easier than upgrading the CSM, eh?  If you're still using your CSM by 2020, you can set it again if you want, but you'll be well past the EOL on that guy (4.1 goes EOL on 13 Oct 2012[2](#2))
 
-Send any [space shuttle launch tickets](http://www.kennedyspacecenter.com/event.aspx?id=e8813adf-2f3a-4a72-a919-0f196ddf167a&calendar=2010/2/7/ea22fa6a-c5ea-486e-98ea-c80a8cce4773 "Space Shuttle Launch Tickets") questions my way.
+Send any ~~[space shuttle launch tickets](http://www.kennedyspacecenter.com/event.aspx?id=e8813adf-2f3a-4a72-a919-0f196ddf167a&calendar=2010/2/7/ea22fa6a-c5ea-486e-98ea-c80a8cce4773 "Space Shuttle Launch Tickets")~~ questions my way.
 
 Sources:
 

@@ -23,4 +23,4 @@ Another bit of evidence came from the [Packet Pushers Podcast this week](http://
 
 If Cisco actually does restrict downloads as such, it will wreak havoc on dynamips/dynagen/GNS3.  Traditionally, Cisco has looked the other way or simply ignored the fact that users were downloading IOS images for gear on which they didn't have support, but that's all bound to change.  While one sin is no worse than another, there's a difference in my mind between downloading code from Cisco's site without an entitlement and finding the same on a bit torrent site.  Before you know it, torrents may be the only way to get IOS images for routers supported on the emulators.
 
-Send any download spiders questions my way.
+Send any ~~download spiders~~ questions my way.

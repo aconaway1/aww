@@ -17,4 +17,4 @@ At my previous job, we were 90% Juniper with a whole mess of SRX firewalls aroun
 
 The exam was typical Juniper with clearly-worded questions and perfectly-clear exhibits all around.  A near-perfect exam yet again from Juniper.  I was disappointed by three questions, though.   The problem wasn't with the technical details; they were just worded terribly.  I'm definitely not shy about commenting on questions during the exam, so hopefully the exam team can use my comments to improve those bad apples.  I'll miss these exams; Cisco surely doesn't produce any exam of this quality.
 
-Send any Final Four tickets questions my way.
+Send any ~~Final Four tickets~~ questions my way.

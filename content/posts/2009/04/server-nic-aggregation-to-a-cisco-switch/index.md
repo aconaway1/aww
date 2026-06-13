@@ -36,4 +36,4 @@ You can look at getting a nice chassis switch and putting each NIC in different 
 
 Another solution is to use a couple [3760s](http://www.cisco.com/en/US/products/hw/switches/ps5023/ "Cisco.com -- Cisco Catalyst 3750 Series Switches - Products & Services - Cisco Systems") which, when connected using the [StackWise](http://en.wikipedia.org/wiki/Cisco_StackWise "Wikipedia.com -- Cisco StackWise") cable, are one logical device.  That gives you two separate switches that you can configure with the same channel group.  An upgrade to this solution is to use a pair of [6500s with VSS 1440 modules](http://www.cisco.com/en/US/products/ps9336/ "Cisco.com -- Cisco Catalyst 6500 Virtual Switching System 1440 - Products & Services - Cisco Systems") in them so that you have a stack of 6500s!  I'm sure that's not expensive at all, though.
 
-Send any white shoes questions my way.
+Send any ~~white shoes~~ questions my way.

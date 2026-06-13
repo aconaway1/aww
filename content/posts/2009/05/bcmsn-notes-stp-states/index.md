@@ -56,4 +56,4 @@ Here's the same output when the port is not in portfast mode.  Notice the times
 > *Mar  8 18:13:36.013: STP: VLAN0007 Fa0/3 -> forwarding
 > ```
 
-Send any obvious corrections and questions my way.
+Send any ~~obvious corrections and~~ questions my way.

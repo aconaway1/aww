@@ -24,4 +24,4 @@ Only the full conference passes give you credit towards [NetVet status](http://w
 
 I gave six reasons to go to Cisco Live in [a previous post](http://aconaway.com/2014/02/25/why-do-i-try-my-best-to-go-to-cisco-live-each-year/); only one of them is not covered by the Social Event pass.  What does that tell you about what makes this conference great?  If you're thinking about saving $2000 this year by getting a Social Event pass, go for it, but realize there are some things you may be missing.
 
-Send any trips to Haight-Ashbury questions my way.
+Send any ~~trips to Haight-Ashbury~~ questions my way.

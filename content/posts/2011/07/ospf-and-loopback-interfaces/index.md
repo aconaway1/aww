@@ -100,4 +100,4 @@ For this part of the experiment, I removed the redistribute commands and added t
 >      via FE80::A8BB:CCFF:FE00:6500, Ethernet0/0
 > ```
 
-Send any type-2002 LSAs questions my way.
+Send any ~~type-2002 LSAs~~ questions my way.

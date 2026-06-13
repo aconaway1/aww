@@ -50,4 +50,4 @@ After Netbox-build-o-matic ran upgrade.sh, I restarted the Netbox processes and 
 
 For those interested, the Netbox documentation can be found [here](https://docs.netbox.dev/en/stable/). I'm not a Netbox expert at all, but I'll be happy to help with any questions you may have. I may just punt you over to Jordan, though, since that's actually his job. Ha.
 
-Send any episodes of Andor questions my way.
+Send any ~~episodes of Andor~~ questions my way.

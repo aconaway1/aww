@@ -50,7 +50,7 @@ If you've ever done IP SLA on a router, you would call me on the fact that there
 
 Sometime I like it when my gear knows what I'm trying to do; this is one of those times.
 
-Send any stray ICMP packets questions my way.
+Send any ~~stray ICMP packets~~ questions my way.
 
 Audio Commentary  
 ![Audio: SLA Monitoring on the PIX-ASA](images/audio-unavailable.svg)

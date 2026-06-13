@@ -33,4 +33,6 @@ tags:
 >  neighbor 6.6.6.6 route-reflector-client
 > ```
 
-\----- Comment with corrections, please.
+---
+
+Comment with corrections, please.

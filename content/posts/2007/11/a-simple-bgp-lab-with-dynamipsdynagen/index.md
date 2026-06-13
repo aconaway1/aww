@@ -37,7 +37,7 @@ If you do a "list" at the dynagen prompt, you should see both of the routers in 
 
 Now comes the configuration, so get to it. Configure these guys to share their routes on the f0/0 interface via BGP. Experiment a little. Experiment a lot. You're not going to break anything, but remember to save the configuration when you're done. You can reuse the lab later.
 
-\-----
+---
 
 If you're lazy, you can use the configs that I used for this lab. They're very, very simple, but they work.
 

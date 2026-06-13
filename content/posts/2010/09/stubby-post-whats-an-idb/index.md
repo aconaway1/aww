@@ -26,4 +26,4 @@ Before you get freaked out and start checking the IDB limits on all your devices
 
 Unless you're doing something out of the ordinary, I don't think the IDB limit will be a problem.  Of course, that depends on your definition of "ordinary".
 
-Send any sort indexes questions my way.
+Send any ~~sort indexes~~ questions my way.

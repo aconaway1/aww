@@ -51,4 +51,4 @@ Remember that you can only tag routes external to the AS.  That means you can't
 
 Tags are also used in OSPF and BGP.  Our MPLS provider actually tags the routes they distribute to us with their BGP AS number.
 
-Send any infinite-hop routes questions my way.
+Send any ~~infinite-hop routes~~ questions my way.

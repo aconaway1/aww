@@ -59,4 +59,4 @@ Finally, after about 6 hours or so, everything was up and running.  The replace
 
 Oh, yeah.  The 2 1/2 hour drive back home sucked.
 
-Send any stiff drinks questions my way.
+Send any ~~stiff drinks~~ questions my way.

@@ -36,4 +36,4 @@ Here are the options you can use.
 
 Note that the command is similar to the _service timestamps_ in IOS where you can stack options.  I wound up setting my prompts to "hostname priority state" so I can see that information without having to do a _show failover_.  If you run contexts, I'm sure that would be a good one to include as well.  I imagine adding "domain" may make the prompt too long for use, though.  Heh.
 
-Send any candy hearts questions my way.
+Send any ~~candy hearts~~ questions my way.

@@ -81,6 +81,6 @@ That creates a new Cisco ACL called F00IN (for F0/0 inbound) that allows our int
 
 Looks fine to me.  I pasted this into a lab router, and it worked like a champ.  I think I'll put some more time into Capirca to see if I can find a use for it at work.
 
-Send any misspelled Battlestar Galactica references questions my way.
+Send any ~~misspelled Battlestar Galactica references~~ questions my way.
 
 Director's Commentary:  I need to get a better mic if I want to keep doing this. ![Audio: A Quick Intro to Google's Capirca](images/audio-unavailable.svg)

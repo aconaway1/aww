@@ -29,6 +29,6 @@ Configure the router sub-interfaces for each network.  I picked F0/0.2 and F0/0
 
 Pretty easy stuff. Let me know if you have any questions.
 
-\-----
+---
 
 Let me make a note here. When looking around for a good page to reference for this article, I read a lot of pages that said that this is a definite CCNA or CCDA test topic. I've taken the CCNA twice now (I passed both -- the first one expired) and didn' t see anything like this on either.

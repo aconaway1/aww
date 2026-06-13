@@ -28,4 +28,4 @@ What if your product owner says we need to roll to the alternate data center? Wh
 
 I recommend you take the ICS and NIMS training from FEMA. It's obviously going to be focused on physical disasters, but the ideas apply pretty broadly. Each class takes 3 or 4 hours to finish and is broken up into sections, so you don't have to do it all at once. There's an exam at the end, but that's obviously not a requirement (unless you need the cert like I did). The training is absolutely free and doesn't require you to log in or anything.  And get your ham radio license.  :)
 
-Send any new HTs questions my way.
+Send any ~~new HTs~~ questions my way.

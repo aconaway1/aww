@@ -122,6 +122,6 @@ You can see that everything is the same except for the metric-type field, which 
 
 Just another complexity of OSPF.  Thanks to [@matthewnorwood](http://twitter.com/matthewnorwood), [@jameskazin](http://twitter.com/jameskazin), [@steve](http://twitter.com/steve), [@wannabeccie](http://twitter.com/WannabeCCIE), [@ciscotophat](http://twitter.com/ciscotophat), and [@lbsources](http://twitter.com/LBSources) for the insight into the route differences.
 
-Send any twitter updates questions my way.
+Send any ~~twitter updates~~ questions my way.
 
 Audio Commentary ![Audio: ROUTE - Redistribution Nuance #2](images/audio-unavailable.svg)

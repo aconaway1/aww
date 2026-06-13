@@ -27,7 +27,7 @@ Let's test our new setup with an snmpwalk. There's some new flags you need to pa
 
 You should see a whole list of stuff scrolling by. If you don't, check the username and password and try again. Let me know if you need any help getting it running.
 
-\----
+---
 
 Here's my usual note. If you still have your "snmp-server community" line configured, then v1 or v2c is still available. If you're converting completely to v3, then just remove the community line. This will disable the old school versions and let you enjoy your encrypted goodness.
 

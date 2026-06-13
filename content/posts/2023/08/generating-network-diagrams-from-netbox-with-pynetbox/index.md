@@ -112,6 +112,6 @@ Some node details would be great. Query the assigned object and get model and se
 
 Some boxes around each site would make this a lot more readable. Maybe even some descriptions on the prefixes to better understand what we're seeing.
 
-Send any welding supplies questions my way.
+Send any ~~welding supplies~~ questions my way.
 
 #python #pynetbox #netbox #graphviz #diagram #NetEng

@@ -25,6 +25,6 @@ So, what's next?  I think I'm going to take a month or two off from networking 
 
 Don't worry.  The blog will stay network-related.  With the feedback from the study questions format, I think I'll start a problem question and answer format.  I'm also thinking of generating scenarios to work through.  Again, we'll see when we get there.
 
-Send any trips to Delaware questions my way.
+Send any ~~trips to Delaware~~ questions my way.
 
 Audio Commentary: ![Audio: ROUTE - Epic Win](images/audio-unavailable.svg)

@@ -107,4 +107,4 @@ Well, look at that.  It works again.
 
 Let's look back at the topic we're discussing, though.  If we use OSPF between the VRs, we need to make sure our routing design allows us to filter routes between the VRs; the risk is that you may wind up having all the routes from each VR advertised to the other.  Kind of defeats the purpose, eh?  Running BGP between the VRs might be an option that allows you to control what routes go in and out.  Statics might be the answer, as well.  As long as you can filter the advertisements, you wind up with a pretty elegant solution for sharing routes between VRs.
 
-Send any Marshmallow Peeps questions my way.
+Send any ~~Marshmallow Peeps~~ questions my way.

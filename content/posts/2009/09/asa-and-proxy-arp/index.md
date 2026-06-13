@@ -32,4 +32,4 @@ A more-secure solution is to use static ARP entries.  In our case, we added a s
 
 A part of me wants to do the simple thing and enable proxy ARP, but the vast majority of article, blogs, forums, lists, etc., that I've ready say to turn it off for security and efficiency purposes.  The more I think about it, though, the more Iwonder why proxy ARP needs to be enabled to make staic NATs work.  I looked back at an old PIX running 6.x,  and proxy ARP is on by default.  The same holds true for an FWSM running 2.x.  I'm going to have to ask Cisco what's up with that.
 
-Send any misconfigured subnet masks questions my way.
+Send any ~~misconfigured subnet masks~~ questions my way.

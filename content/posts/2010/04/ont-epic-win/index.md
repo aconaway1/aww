@@ -25,4 +25,4 @@ Thanks to everyone for their support.  At the risk of sounding cheesy, it's har
 
 Any suggestion on which switching test to take would be greatly appreciated.  Has anyone actually taken the SWITCH test yet?
 
-Send any Safari credits questions my way.
+Send any ~~Safari credits~~ questions my way.

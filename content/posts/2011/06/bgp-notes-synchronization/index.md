@@ -25,6 +25,6 @@ tags:
     - You don't want to tell the world you have a path to a prefix when you really have a !N.
 - Synchronization can be safely disabled with the use of [route reflectors](http://aconaway.com/2011/06/10/bgp-notes-route-reflectors/) or [confederations](http://aconaway.com/2011/06/10/bgp-notes-confederations/).
 
-\-----
+---
 
 These are just some notes I've been taking.  Comment with corrections, please.

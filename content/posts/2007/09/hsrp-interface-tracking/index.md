@@ -22,6 +22,6 @@ Like everything in the network world, this is a piece of cake. All we have to do
 
 Now, when the \[tag\]interface\[/tag\] goes down, the HSRP priority will be decremented by 55. If Router1 gets decremented by 55, Router2 will be the active peer since Router1's new priority will be 45. If Router2 loses the interface and gets decremented by 55, nothing will really happen since Router2 is already the standby peer.
 
-\----
+---
 
 The note: An interface has to be down for this to take place. If you lose line protocol but the interface stays up (the interface is up/down), HSRP won't decrement the priority. Look out for an article on object tracking later to fix this problem.

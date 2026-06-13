@@ -56,4 +56,4 @@ One thing that got me was not knowing what terms were defined to mean.  I knew 
 
 After you are confident that you know a topic, go through your books' glossaries and define everything from beginning to end.  Yes, it's very daunting and boring, but it's a great test of the terminology and reinforces how different terms are related.  You may know the definition of a term, but you may not realize how it's related to a topic or line on the blueprint.  As an added benefit, the glossary also tells you where to look if you don't know the definition.
 
-Send any CCIE study guides questions my way.
+Send any ~~CCIE study guides~~ questions my way.

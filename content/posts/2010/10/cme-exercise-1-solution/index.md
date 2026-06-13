@@ -111,7 +111,7 @@ Now for the after-hours call blocking.
 
 That should do it.
 
-Send any 640-level exam vouchers questions my way.
+Send any ~~640-level exam vouchers~~ questions my way.
 
 Audio Commentary  
 ![Audio: CME Exercise #1 Solution](images/audio-unavailable.svg)

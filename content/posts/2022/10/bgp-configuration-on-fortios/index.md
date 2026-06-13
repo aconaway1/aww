@@ -125,7 +125,7 @@ get router info bgp neighbor 172.16.0.2 received-routes
 
 I wish I had some real output for these commands, but my lab is limited. Well, it doesn't really exist. The output is actually very much like the equivalent commands in Ciscoland, so you're probably already familiar with the setup and layout. If I can find something to share, I will.
 
-Send any Forti-swag questions my way.
+Send any ~~Forti-swag~~ questions my way.
 
 [^1]: This is used in some of the most inconvenient ways possible throughout FortiOS.
 [^2]: This is a whole other topic that we can talk about later.

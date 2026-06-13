@@ -84,4 +84,4 @@ We all know that the configuration on a Junos box is very hierarchical. Sometime
 
 That'll do, pig.  I'll fire off a real configuration post later.  Feel free to add your pair of pennies since I'm a total Junos n00b.
 
-Send any stocking stuffers questions my way.
+Send any ~~stocking stuffers~~ questions my way.

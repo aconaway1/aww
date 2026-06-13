@@ -84,4 +84,4 @@ One last command shows us the routing table.  Can you guess what that command i
 
 Isn't that fancy?  We seem to have both an area router (the O route) and an inter-area route (the OI route).  We are ready for the big time now!
 
-Send any tunnel broker recommendations questions my way.
+Send any ~~tunnel broker recommendations~~ questions my way.

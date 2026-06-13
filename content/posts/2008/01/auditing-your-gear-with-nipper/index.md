@@ -11,6 +11,6 @@ Nipper was [the dog in the RCA logo](http://en.wikipedia.org/wiki/Nipper "Nipper
 
 It's very easy to use, so I won't get into that, but check it out. It's worth running your config through this guy every once in a while to make sure you didn't miss something stupid. Check it out!
 
-\---
+---
 
 Note: You shouldn't just trust one app to do all your auditing. There's no way that just a single app can cover everything, so download a bunch of them and run them all when you do your audit.

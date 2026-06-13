@@ -15,6 +15,6 @@ I use Samba for file sharing. Home directories for me and the wife are shared ou
 
 Samba works well and is easy to set up. Give it a try. It doesn't really scale very well, though, so using it in an enterprise may cause problems. There's a whole new article brewing in there about file locking and sharing, but I won't go there yet.
 
-\----
+---
 
 Remember that I mentioned backing stuff up if everything's on the same box? It's not related to Samba technically, but I wrote a quick and dirty bash script that takes a list of directories and tars them all up to a 400G external drive I have attached to the file server. If I didn't implement Samba, I'd really have no easy way to back it all up in one fell swoop.

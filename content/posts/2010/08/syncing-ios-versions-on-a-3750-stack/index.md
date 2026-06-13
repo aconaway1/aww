@@ -65,4 +65,4 @@ I used this command to copy the image from switch 2 (the master) to switch 1 (th
 
 I left out a large chunk, but you get the idea.  If you'll notice, all the HTML files are copied along with the IOS image, so you get exactly the same structure on all your switches.  It beats doing it all manually.
 
-Send any RMA packages questions my way.
+Send any ~~RMA packages~~ questions my way.

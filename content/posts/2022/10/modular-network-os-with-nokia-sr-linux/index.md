@@ -32,4 +32,4 @@ Let me clarify the container thing a bit. Nokia has [published a Docker containe
 
 The [Network Field Day 29](https://techfieldday.com/event/nfd29/) page has the videos for Nokia and the other presenters for you to watch. Definitely worth your time.
 
-Send any sawmill videos questions my way.
+Send any ~~sawmill videos~~ questions my way.

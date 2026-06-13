@@ -13,6 +13,6 @@ If you step back and take another look at it, you could definitely consider thos
 
 Segmentation is a really good start with security, especially if you don't know exactly what a box does, so let's start there.  If you have a bunch of stuff that's not traditionally a network device, you should first think about making a network segment for those guys.  If you have a Linux box as a firewall/router, you can simply add a NIC to it and voila!  New network segment for untrusted devices.  Lock that puppy down and you should be good.  In my setup at home, that segment has its own SSID for guests to connect to and contains my Wii.  The only thing that hosts have access to is HTTP and HTTPS and all access to my other networks is denied completely.  This protects my machine from them and doesn't let them go running amok.
 
-\----
+---
 
 My usual note:  You should probably have separate segments for untrusted devices, trusted workstations like laptops and PCs, and servers such as file servers.  If you want to be really anal about stuff, you should get a managed switch that supports private VLANs so hosts on the same network can't get to each other.  That sounds like another article to me, though.

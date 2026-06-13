@@ -45,7 +45,7 @@ That's it! From now on, when you send TCP or UDP packets from your workstation t
 
 Running CBAC requires the firewall feature set of \[tag\]Cisco\[/tag\] \[tag\]IOS\[/tag\], so keep that in mind. [Here](http://www.cisco.com/en/US/products/ps6350/products_configuration_guide_chapter09186a00804a41c5.html "Cisco.com -- CBACs")'s Cisco's typical technical page on CBACs. Depending on your IOS version, you should be able to do a "show access-list 101" and see the dynamic rules. You can also do a "show inspect ?" to see a bunch of inspection stuff. Just check out the Cisco page for what to do.
 
-\---
+---
 
 NOTE: CBAC is very CPU and memory intensive. Depending on your traffic load, you may have to upgrade your router to get it working without taking the router down.
 

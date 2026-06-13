@@ -50,10 +50,10 @@ That, my friend, is an external OSPF route (Type-5 LSA for those scoring at home
 
 I found another nuance with R1, as well, but that will have to wait until next time.
 
-Send any Android Twitter clients questions my way.
+Send any ~~Android Twitter clients~~ questions my way.
 
 Audio commentary: ![Audio: ROUTE - Redistribution Nuance #1](images/audio-unavailable.svg)
 
-\---
+---
 
 So, why didn't R2 see the route via OSPF through R5?  I experimented a bit by reloading each router to see what would happen.  When I reload R2, R5 quickly picks up the EIGRP route, but, from there, things seem a little random to me.  Sometimes, R5 picks the OSPF route through R2 again.  Sometimes, R2 picks R5 as the best path and leaves R5 to route via EIGRP.  The same happens when I reload R5; sometimes the route goes one way and sometimes it goes the other.  Can one of you higher-ups shed any light on why this happens like it does?

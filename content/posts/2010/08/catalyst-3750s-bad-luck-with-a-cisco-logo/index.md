@@ -23,6 +23,6 @@ I've been trying to find patterns for the failures, but I can't think of any.  
 
 I have noticed one pattern, though.  The only deployments of 3750s that have never had a problem are in data centers.  They seem to love any room that has an ambient temperature of 62F (16C) with less than 40% humidity and large volumes of air flow.  If only we could install micro-data centers in all our closets, then I would be a happy network dude.
 
-Send any wooden shoes questions my way.
+Send any ~~wooden shoes~~ questions my way.
 
 Edit:  I went back and checked our TAC cases to see what switches we actually replaced.  It turns out that we've done 19 replacements, and they've all been 3750G-12S-S switches.

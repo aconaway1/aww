@@ -30,4 +30,4 @@ Thursday is sessions mixed with hangovers from the CAE.  As an experienced atte
 
 Friday is travel day home and filled with tears as you already miss your buddies that you won't see until 2018 in Orlando.  :(
 
-Send any vendor party invites questions my way.
+Send any ~~vendor party invites~~ questions my way.

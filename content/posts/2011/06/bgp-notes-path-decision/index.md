@@ -16,7 +16,7 @@ tags:
 
 This is required blogging...and reading for that matter.  A good chunk of this is taken from my CCNP posts from last year.  Corrections, please.
 
-\-----
+---
 
 ### How does a BGP router decide which BGP route is the best?
 

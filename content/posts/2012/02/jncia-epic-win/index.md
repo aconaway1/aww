@@ -20,4 +20,4 @@ I must say that the exam was pretty darn good.  It may, in fact, be the best IT
 
 Overall, I was very impressed with the exam.  Two thumbs up.  I can only hope the rest of the exam in the track are this good.  I won't know until after I pass my CCIE lab, though.  :)
 
-Send any certification delays questions my way.
+Send any ~~certification delays~~ questions my way.

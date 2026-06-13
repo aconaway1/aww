@@ -43,4 +43,4 @@ What if I'm switching IPX packets?  Any non-IP packet will default to using the
 
 What if we then add f0/5?  That's a good question, but I'm not exactly sure how the switch handles a number of interfaces not a power of 2.  Can someone help on this, too?
 
-Send any obvious corrections and questions my way.
+Send any ~~obvious corrections and~~ questions my way.

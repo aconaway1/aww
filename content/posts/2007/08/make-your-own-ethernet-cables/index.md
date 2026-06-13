@@ -14,7 +14,7 @@ Being able to make your own Ethernet cables also lets you customize your cables.
 
 So, save money, clean up the data center, and make whatever you need. I won't go into how to make them, but here's a list of some places to show you how.
 
-\----
+---
 
 - [A pretty good video](http://www.livescience.com/php/video/player.php?video_id=ethernetcable "LiveScience.com -- Make Your Own Ethernet Cables")
 - [Some technical stuff on pinouts](http://www.ertyu.org/steven_nikkel/ethernetcables.html "Steven Nikkel -- How to wire Ethernet Cables")

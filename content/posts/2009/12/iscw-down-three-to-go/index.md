@@ -24,4 +24,4 @@ I had a big issue with time, and, if that happens to me, it can happen to anyone
 
 Overall, I give the test an 8 out of 10.  It was very honest and frank with none of the nonesense of trying to trick me.  All of the problems I had were either from my lack of knowledge or my being so easily distracted this morning.  As Cisco goes, it's not a bad test at all.
 
-Send any ear plugs questions my way.
+Send any ~~ear plugs~~ questions my way.

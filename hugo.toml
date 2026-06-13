@@ -17,6 +17,10 @@ enableRobotsTXT = true
   showReadingTime = true
   showShareButtons = false
   sidebar = true
+  themeColor = "blue"
+
+[params.logo]
+  logoText = "Aaron's Worthless Words"
 
 [[params.sidebarModules]]
   partial = "archive"
@@ -40,6 +44,11 @@ enableRobotsTXT = true
   url = "/tags/"
   weight = 3
 
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 4
+
 [taxonomies]
   archive = "archives"
   category = "categories"
@@ -50,8 +59,8 @@ enableRobotsTXT = true
     codeFences = true
     guessSyntax = true
     lineNumbersInTable = false
-    noClasses = false
-    style = "github"
+    noClasses = true
+    style = "dracula"
     tabWidth = 4
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -68,4 +77,4 @@ enableRobotsTXT = true
 
 [module]
   [[module.imports]]
-    path = "go.ngs.io/hugo-primer-blog"
+    path = "github.com/panr/hugo-theme-terminal"

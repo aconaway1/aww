@@ -20,7 +20,7 @@ The exam wasn't that difficult, either.  There were some questions that I wound
 
 Now that voice is finished, I'm back on the R&S track and am studying for the CCIE written.  I'll get around to marking the calendar for my attempt, but, for now, I'm going to take a few days off and enjoy [some cigars](http://www.peacefulhenryinc.com/).
 
-Send any Gilligan's Island episodes questions my way.
+Send any ~~Gilligan's Island episodes~~ questions my way.
 
 Audio commentary  
 ![Audio: IIUC Update - Passed](images/audio-unavailable.svg)

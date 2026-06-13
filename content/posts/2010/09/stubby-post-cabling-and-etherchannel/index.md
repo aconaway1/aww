@@ -15,4 +15,4 @@ So, what do you to make sure that your links are cabled the way you think they a
 
 For the cases of adding a new bundle, I will configure the individual ports, cable them up, make sure they go to the same switch, then configure the channel group.  In cases where you do a swap, you already have the config applied, so it's a matter of verifying everything was cabled correctly.  A quick _show cdp neighbor_ will show you where the other ends of cables are and let you know if there's a problem before users start complaining.  A problem already exists, mind you, but you can fix it quickly if you look at CDP.  Let's hope the misconfigured bundle isn't between you and the switch, though, or you may be SOL.
 
-Send any mislabled ports questions my way.
+Send any ~~mislabled ports~~ questions my way.

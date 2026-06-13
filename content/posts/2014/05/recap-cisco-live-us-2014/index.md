@@ -27,4 +27,4 @@ I don't think I'm going to give a direct review of Cisco Live US this year.  Th
 
 I'd like to say thanks to [@Cisco](https://twitter.com/Cisco) and [@CiscoLive](https://twitter.com/CiscoLive) for such a great event both in the real world and on Twitter.  This always has been and always will be the great event of the year, but times they are a-changin'.  Don't be surprised if something more drastic may happen.
 
-Send any frequent flyer miles questions my way.
+Send any ~~frequent flyer miles~~ questions my way.

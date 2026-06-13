@@ -137,6 +137,6 @@ Deleting the device DEV-OLDSWITCH01......deleted.
 
 The old firewall and both old switches in Denver were removed. The old router in New York gets skipped since we haven't reached the delete date yet. Everything seems to work fine.
 
-Send any ADS-B receivers questions my way.
+Send any ~~ADS-B receivers~~ questions my way.
 
 #python #netbox #pynetbox #automation #sot #neteng

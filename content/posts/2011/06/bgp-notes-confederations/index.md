@@ -42,4 +42,6 @@ tags:
 >  neighbor 3.3.3.3 remote-as 65003
 > ```
 
-\----- Comment with corrections, please.
+---
+
+Comment with corrections, please.

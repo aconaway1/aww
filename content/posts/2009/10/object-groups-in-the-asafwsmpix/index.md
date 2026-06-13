@@ -95,4 +95,4 @@ access-list LIST1 permit tcp object-group CLUSTER1 host 10.10.10.1 object-group 
 
 That's a lot of ACL entries for one configuration line, isn't it? Let's see. 102 ports times 41 servers is 4182 lines in the ACL. You can see how might be to your advantage to use object-groups at times.
 
-Send any candy corn questions my way.
+Send any ~~candy corn~~ questions my way.

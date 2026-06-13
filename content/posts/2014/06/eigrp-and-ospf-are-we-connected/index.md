@@ -22,6 +22,6 @@ In EIGRP,the subnet mask isn't sent in the hello packet, so that doesn't come in
 
 ![EIGRP-Header](images/EIGRP-Header-300x198.svg)
 
-Send any Wireshark certification vouchers questions my way.
+Send any ~~Wireshark certification vouchers~~ questions my way.
 
 _Edit_:  I did some further research on Julius's comment about point-to-point links in OSPF.  It is absolutely true that point-to-point links do indeed ignore the subnet mask, and routers will become neighbors even with mismatched masks.  The same holds true for point-to-multipoint.  The other network types (non-broadcast and point-to-multipoint non-broadcast) don't support dynamic neighbor discovery, so there's nothing to test between those.  The moral of the story is that the mask is only evaluated on broadcast network types.

@@ -191,6 +191,6 @@ Line 56 does the comparison of the scraped serial number versus the serial numbe
 
 Updating serial numbers is nice, but that's in the bottom 1% of the data you care about. You really care about subnets and addresses and interfaces and circuits and rack locations and more. Some things can be derived from the gear and others can't. There's always going to be some stuff you have to keep updated manually, but that data that can be updated automatically should be taken out of the hands of people. People make mistakes, get lazy, don't read directions...that leads to something worse than no documentation -- bad documentation.
 
-Send any docker router images questions my way.
+Send any ~~docker router images~~ questions my way.
 
 #python #netbox #pynetbox #automation #neteng
