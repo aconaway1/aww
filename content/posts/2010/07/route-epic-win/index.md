@@ -27,4 +27,4 @@ Don't worry.  The blog will stay network-related.  With the feedback from the 
 
 Send any trips to Delaware questions my way.
 
-Audio Commentary: \[audio:http://aconaway.com/wp-content/uploads/2010/07/ROUTE-Epic-Win.mp3|titles=ROUTE - Epic Win\]
+Audio Commentary: ![Audio: ROUTE - Epic Win](images/audio-unavailable.svg)

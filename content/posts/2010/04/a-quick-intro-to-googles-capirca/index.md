@@ -83,4 +83,4 @@ Looks fine to me.  I pasted this into a lab router, and it worked like a champ.
 
 Send any misspelled Battlestar Galactica references questions my way.
 
-Director's Commentary:  I need to get a better mic if I want to keep doing this. \[audio:http://aconaway.com/wp-content/uploads/2010/04/A-Quick-Intro-to-Googles-Capirca.mp3|titles=A Quick Intro to Google's Capirca\]
+Director's Commentary:  I need to get a better mic if I want to keep doing this. ![Audio: A Quick Intro to Google's Capirca](images/audio-unavailable.svg)

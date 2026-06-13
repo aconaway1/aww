@@ -18,7 +18,7 @@ I wanted to do some analysis of the EIGRP topology table last night, so I fired 
 
 Here's the lab I set up. You can ignore the IPv6 info for this exercise.
 
-[![eigrp1](images/eigrp1-300x198.png)](http://aconaway.com/wp-content/uploads/2014/06/eigrp1.png)
+![eigrp1](images/eigrp1-300x198.svg)
 
 It's a simple little thing.  All the networks you see are included in EIGRP 100 for simplicity.  I limited the network statements to 192.0.2.0/24 to keep my options open. I went ahead and added Loopback100 on R3 with an address of 3.3.3.3/32 and added a _redistribute_ _connected_ with a route-map to get the route out in the wild.  Here's what I had.
 

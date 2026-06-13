@@ -40,7 +40,7 @@ The replacement switches are actually a pair of 3750s stacked together.  As you
 
 Here's our Senior Network Engineer doing his part to help.  The pic pretty much sums up the whole day.  Upside down.  Cold.  Parts and cables all over the place.  He looks unconscious.
 
-[![](images/power-crawler-300x224.jpg "Crawling for Power")](http://aconaway.com/wp-content/uploads/2010/11/power-crawler.jpg)
+[![](images/power-crawler-300x224.svg "Crawling for Power")](http://aconaway.com/wp-content/uploads/2010/11/power-crawler.jpg)
 
 There was another problem, though.  There was no room to mount the new switches.  There was only room for the patch panels and the 6513 with a single rack unit of space at the bottom.  Luckily, we were able to finagle the switches into the bottom of the rack using that single U and the extra space on the floor.  Once powered up, we go the cabled plugged in and checked the systems that we could while our boss walked around to get status from the different departments.  Everything was finally fine.
 

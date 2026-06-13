@@ -7,3 +7,7 @@
 
 # System files
 .DS_Store
+
+# Local docs
+MIGRATION.md
+THEME_INSTALL.md

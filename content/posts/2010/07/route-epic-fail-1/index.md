@@ -27,4 +27,4 @@ As you figured out by now, this is yet another testing center.  I think this ma
 
 Moral of the Story:  Cisco put out a good test, but I'm too lazy to pass it.
 
-\[audio:http://aconaway.com/wp-content/uploads/2010/07/ROUTE-Epic-Fail.mp3|titles=ROUTE - Epic Fail\]
+![Audio: ROUTE - Epic Fail](images/audio-unavailable.svg)

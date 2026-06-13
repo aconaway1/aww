@@ -17,13 +17,13 @@ tags:
 
 Here's a quick summary of what we've talked about in the last few posts -- all with [Python](https://www.python.org/).
 
-- We've [asked Netbox to provide some info](https://aconaway.com/2022/12/11/querying-netbox-with-pynetbox/) using [pynetbox](https://pynetbox.readthedocs.io/en/latest/).
+- We've [asked Netbox to provide some info](/posts/2022/12/querying-netbox-with-pynetbox/) using [pynetbox](https://pynetbox.readthedocs.io/en/latest/).
 
-- We've [added stuff to Netbox](https://aconaway.com/2023/01/17/adding-stuff-to-netbox-with-pynetbox/) using pynetbox.
+- We've [added stuff to Netbox](/posts/2023/01/adding-stuff-to-netbox-with-pynetbox/) using pynetbox.
 
-- We've [updated](https://aconaway.com/2023/01/25/updating-stuff-on-netbox-with-pynetbox/) and [deleted stuff](https://aconaway.com/2023/02/24/deleting-stuff-from-netbox-with-pynetbox/) in Netbox using pynetbox.
+- We've [updated](/posts/2023/01/updating-stuff-on-netbox-with-pynetbox/) and [deleted stuff](/posts/2023/02/deleting-stuff-from-netbox-with-pynetbox/) in Netbox using pynetbox.
 
-- We've [logged our messages with Python logging](https://aconaway.com/2023/02/26/using-python-logging-to-figure-out-what-you-did-wrong/).
+- We've [logged our messages with Python logging](/posts/2023/02/using-python-logging-to-figure-out-what-you-did-wrong/).
 
 This is all fine and dandy, but I would guess that you're not the only engineer in the company and production maintenance scripts don't run off of your laptop. We need a way to let a group of people know what's happening when one of your scripts is run. And please don't say email. Email has been worthless for alerting for over a decade, and there are better ways to do it. Search your feelings...you know it to be true!
 
@@ -127,7 +127,7 @@ As an afterthought, here's proof that this code actually does something. Not pro
 
 <figure>
 
-![](images/image.png)
+![Image not available](images/image.svg)
 
 <figcaption>
 

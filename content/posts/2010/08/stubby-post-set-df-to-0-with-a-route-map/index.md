@@ -15,7 +15,7 @@ We ran into an issue the other day where an application was setting the DF bit i
 
 I set up a lab in GNS3 to replicate and do some captures.  It's a really simple setup.  R1 connected to R2 connected to R3.
 
-[![](images/setdf0-topology-300x41.png "Set DF 0 - Topology")](http://aconaway.com/wp-content/uploads/2010/08/setdf0-topology.png)
+[![](images/setdf0-topology-300x41.svg "Set DF 0 - Topology")](http://aconaway.com/wp-content/uploads/2010/08/setdf0-topology.png)
 
 Beyond the routing, here's the config we put on R2.  You configure it just like PBR, but, instead of setting the next hop or interface, you just set the DF bit to 0.
 
@@ -33,8 +33,8 @@ Really simple.  We've all done this many times, but I've never cared enough abo
 
 To test the new policy, I did a packet capture between R1 and R2 and another between R2 and R3.  R1-R2 shows the DF bit set to 1 on a ping I did from R1 to R3.  For those that care, I did a _ping 10.0.1.3 repeat 100 df-bit_ to generate this traffic.
 
-[![](images/setdf0-1-300x178.png "Set DF 0 - 1")](http://aconaway.com/wp-content/uploads/2010/08/setdf0-1.png)
+[![](images/setdf0-1-300x178.svg "Set DF 0 - 1")](http://aconaway.com/wp-content/uploads/2010/08/setdf0-1.png)
 
 The capture from R2-R3 shows the DF bit on the same packet set to 0.
 
-[![](images/setdf0-0-300x178.png "Set DF 0 - 0")](http://aconaway.com/wp-content/uploads/2010/08/setdf0-0.png)
+[![](images/setdf0-0-300x178.svg "Set DF 0 - 0")](http://aconaway.com/wp-content/uploads/2010/08/setdf0-0.png)

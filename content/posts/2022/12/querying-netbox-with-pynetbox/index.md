@@ -9,7 +9,7 @@ _To use pynetbox (or anything that uses API calls to Netbox), you'll need to set
 
 ## The Python Code
 
-We're going to write a short script to get all the devices from the Netbox instance...and here it is!\[efn\_note\]This is just something I wrote really quickly. Use more [Pythonic techniques](https://docs.python-guide.org/writing/style/) on your finished product\[/efn\_note\]
+We're going to write a short script to get all the devices from the Netbox instance...and here it is![^1]
 
 ```python {linenos=true}
 import pynetbox
@@ -38,11 +38,11 @@ Lines 8 & 9 are to keep those dang warnings from showing up. Again, if you're in
 
 We've got a **pynetbox.api** object created as **nb\_conn**, so let's ask Netbox to tell us everything about all the devices that it knows about. We'll store that information in a variable called **devices** so we can go through each device and print some information we need.
 
-Note that the directive to get all the devices is **nb\_conn.dcim.devices.all()**. Does any of that look familiar? If you were to open the devices page in the Netbox GUI, you would see that your URI is **dcim/devices**. Coincidence? I think not! A lot (most? all?) of pynetbox consists of a nice mapping of the API, which makes it pretty easy to use. What's your guess on what to use to get a list of sites? How about your IP addresses? **nb\_conn.dcim.sites.all()** and **nb\_conn.ipam.ip\_addresses.all()**\[efn\_note\]Notice the \_ and not the - here. Python doesn't like the dash, so you have to use the underscore.\[/efn\_note\]. Easy.
+Note that the directive to get all the devices is **nb\_conn.dcim.devices.all()**. Does any of that look familiar? If you were to open the devices page in the Netbox GUI, you would see that your URI is **dcim/devices**. Coincidence? I think not! A lot (most? all?) of pynetbox consists of a nice mapping of the API, which makes it pretty easy to use. What's your guess on what to use to get a list of sites? How about your IP addresses? **nb\_conn.dcim.sites.all()** and **nb\_conn.ipam.ip\_addresses.all()**[^2]. Easy.
 
 If all went well, we now have a list of all our devices. Let's look closer at the data we have, though. In Python, when you have a more than one of a particular type of object, you keep them in a [list](https://docs.python.org/3/tutorial/datastructures.html). If you were to look at the data type of the variable **devices**, though, you'll see that it's not a list. It's actually a [RecordSet](https://pynetbox.readthedocs.io/en/latest/response.html#pynetbox.core.response.RecordSet). This is a different data type than a list, but, for what we're doing, we can just treat it as if it were just a list. You may see some different behaviors when you get into some more advances stuff. Ask me how [I know](https://github.com/netbox-community/netbox/discussions/6738).
 
-In line 13, we go through that **RecordSet** and address each device as the variable called **device**. If you look at line 14, you'll see that we're calling object attributes for each device (**name** and **primary\_ip4**) as opposed to calling dictionary keys or something. That's because the devices in the **RecordSet** are actually all of the type **Devices**. This is [a Netbox data type](https://demo.netbox.dev/static/docs/core-functionality/device-types/) that includes all the information you may (or may not) want for the device. It includes the Netbox ID, the name, the device type, device role, serial...pretty much anything associated with the device.\[efn\_note\]For some reason, interfaces aren't included here. I don't know why.\[/efn\_note\] Because these are **Devices** object, we can simply call the name and IP address of each device and print them out.
+In line 13, we go through that **RecordSet** and address each device as the variable called **device**. If you look at line 14, you'll see that we're calling object attributes for each device (**name** and **primary\_ip4**) as opposed to calling dictionary keys or something. That's because the devices in the **RecordSet** are actually all of the type **Devices**. This is [a Netbox data type](https://demo.netbox.dev/static/docs/core-functionality/device-types/) that includes all the information you may (or may not) want for the device. It includes the Netbox ID, the name, the device type, device role, serial...pretty much anything associated with the device.[^3] Because these are **Devices** object, we can simply call the name and IP address of each device and print them out.
 
 Here's the output from the code above.
 
@@ -92,3 +92,7 @@ If you were to run the code with the split in it, it would die with a [TypeError
 Alright. You've got all your devices and a bunch of information for each. Now you can go and actually do something useful. Pull the address and name and generate an list to import into an SSH program. Pull the name and serial for your annual support contract renewal. Get a count of the number of each device you have in the network. Provide your audit team with a full inventory to include in audit preparation.
 
 Send try-except code snippets any questions my way.
+
+[^1]: This is just something I wrote really quickly. Use more [Pythonic techniques](https://docs.python-guide.org/writing/style/) on your finished product.
+[^2]: Notice the `_` and not the `-` here. Python doesn't like the dash, so you have to use the underscore.
+[^3]: For some reason, interfaces aren't included here. I don't know why.

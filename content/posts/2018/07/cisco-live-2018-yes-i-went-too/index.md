@@ -18,13 +18,13 @@ Those who are of any importance in the networking world (LOL!) converged on Orla
 
 This year, I went on the Imagine Pass instead of the full conference pass. This pass included admission to the World of Solutions, the keynotes, the social media hub, the CAE, and meals. This sounds a whole lot like the Social Pass from the last 84882 years, right? Well, it is except for the food, which was expected to be of a much higher quality than the box meals we've been getting the last few years. Did that work out?  I really didn't think the food could get any worse, but I was wrong. I would up only partaking only three times all week. It was that bad. Here's an example.
 
-[![](images/IMG_20180612_120013-1-300x225.jpg)](http://aconaway.com/wp-content/uploads/2018/07/IMG_20180612_120013-1.jpg)
+[![](images/IMG_20180612_120013-1-300x225.svg)](http://aconaway.com/wp-content/uploads/2018/07/IMG_20180612_120013-1.jpg)
 
 That's a barbecue pork sandwich and cole slaw. It tasted worse than it looks.  I wound up just throwing it away.  If the Imagine Pass was the same price as the old Social Pass, I wouldn't think much of it.  The going rate was $400 **MORE** than the Social Pass, though.  This isn't a $400 sandwich.
 
 Since I wasn't attending sessions all day, I was able to walk around the World of Solutions and talk to some vendors. It was exactly what I thought it would be. Was it mind-blowing? No. It met all my expectations and needs. That's it.  Of course, the usual suspects were there doing their part -- [DevNet](https://developer.cisco.com/), [the Technical Solutions Clinic](https://www.ciscolive.com/us/activities/connect-with-experts/#tsc), the Walk-In Self-Paced Labs. Of course, our favorite of all-time was there, too.
 
-[![](images/IMG_20180612_122816-300x225.jpg)](http://aconaway.com/wp-content/uploads/2018/07/IMG_20180612_122816.jpg)
+[![](images/IMG_20180612_122816-300x225.svg)](http://aconaway.com/wp-content/uploads/2018/07/IMG_20180612_122816.jpg)
 
 [Cisco Tactical Operations](https://www.cisco.com/c/en/us/about/csr/stories/tactical-operations.html). Look up those guys. Learn what they do. Be jealous that you don't do that for a living (then figure out how to do this in your own tow, county, state, country).
 
@@ -32,7 +32,7 @@ For me, the biggest problem of the entire event was actually where the Social Me
 
 The Customer Appreciation Event (CAE) was at Universal Studios again. I don't think I need to tell anyone that this is a great place (if you like that sort of thing), but it is Florida and it is outside. That means we got rained on. I got soaked! It was fine, though, since we got to catch a few songs from Cake. I've never even heard of the other acts, so I spent the rest of the time trying to dry off (don't underestimate exactly how wet I actually was) and enjoying the cuisine.
 
-[![](images/888-281x300.jpg)](http://aconaway.com/wp-content/uploads/2018/07/888.jpg)
+[![](images/888-281x300.svg)](http://aconaway.com/wp-content/uploads/2018/07/888.jpg)
 
 Nonetheless, another great Wednesday at Cisco Live.
 

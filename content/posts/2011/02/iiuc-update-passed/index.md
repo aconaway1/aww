@@ -23,4 +23,4 @@ Now that voice is finished, I'm back on the R&S track and am studying for the CC
 Send any Gilligan's Island episodes questions my way.
 
 Audio commentary  
-\[audio:http://aconaway.com/wp-content/uploads/2011/02/IIUC-Update-Passed.mp3|titles=IIUC Update - Passed\]
+![Audio: IIUC Update - Passed](images/audio-unavailable.svg)

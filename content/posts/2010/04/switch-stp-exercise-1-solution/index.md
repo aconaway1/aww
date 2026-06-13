@@ -32,19 +32,19 @@ Before we get started, you can assume that a bridge is a switch since, technical
 
 This is done with a table lookup.  Each segment (link between switches) gets a cost based on the technology that it is using.  For example, GigabitEthernet has a cost of 4 while FastEthernet has a cost of 19.  There are other values, but these are the only ones that are used in the network here.  I did find a [good table on STP path costs at HowStuffWorks.com](http://computer.howstuffworks.com/lan-switch14.htm) if you want to take a look at more of them.  Let's put the _path costs_ on the diagram.
 
-[![](images/STP-Exercise-1-Solution-Path-Costs-300x266.png "STP Exercise #1 Solution - Path Costs")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Path-Costs.png)
+[![](images/STP-Exercise-1-Solution-Path-Costs-300x266.svg "STP Exercise #1 Solution - Path Costs")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Path-Costs.png)
 
 **2\.  Find the root bridge**
 
 After we find the path costs, we find the root bridge.  The root bridge is the switch that has the lowest bridge ID, which is the switch priority and the MAC address concatenated together.  Since all the bridges have the same priority, we can just look at the MACs to figure out which one has the lowest bridge ID.  Switch E has the lowest MAC (0000.0000.0003), so that's the _root bridge_.
 
-[![](images/STP-Exercise-1-Solution-Root-Bridge-300x274.png "STP Exercise #1 Solution - Root Bridge")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Root-Bridge.png)
+[![](images/STP-Exercise-1-Solution-Root-Bridge-300x274.svg "STP Exercise #1 Solution - Root Bridge")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Root-Bridge.png)
 
 **3\.  Find the root ports of each bridge**
 
 The root port is a port on a switch that has the lowest total path cost back to the root bridge; every switch has a one and only one root port except for the root bridge itself which has none (it's the root; it already knows where it is).  The root bridge sends out BPDUs that are passed to each switch.  When a switch receives it (not sends it), it increments the root path cost field and passes that along,  The port on which the lowest root path costs is received is the root port, and the value in the root path cost field is the root path cost for that switch.  The finger trace method works for us humans for now; there's not that many switches involved.  Let's add the _root ports_ along with the _root path costs_ to the diagram.
 
-[![](images/STP-Exercise-1-Solution-Root-Path-Costs-300x275.png "STP Exercise #1 Solution - Root Path Costs")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Root-Path-Costs.png)
+[![](images/STP-Exercise-1-Solution-Root-Path-Costs-300x275.svg "STP Exercise #1 Solution - Root Path Costs")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Root-Path-Costs.png)
 
 **4\.  Find the designated ports**
 
@@ -54,13 +54,13 @@ All the bridges have the same root bridge ID, so that's a wash.  C has a lower 
 
 Let's put all the _designated ports_ on the diagram so you can see them.
 
-[![](images/STP-Exercise-1-Solution-Designated-Ports-300x275.png "STP Exercise #1 Solution - Designated Ports")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Designated-Ports.png)
+[![](images/STP-Exercise-1-Solution-Designated-Ports-300x275.svg "STP Exercise #1 Solution - Designated Ports")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Designated-Ports.png)
 
 **5\.  Find the blocked ports**
 
 There aren't many ports left, are there?  There are three actually, and all those go into a blocked state.  To get rid of the loops, any port that's not a root port or a designated port is blocked.  Here's the network with the _blocked ports_ marked.
 
-[![](images/STP-Exercise-1-Solution-Blocked-Ports-300x275.png "STP Exercise #1 Solution - Blocked Ports")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Blocked-Ports.png)
+[![](images/STP-Exercise-1-Solution-Blocked-Ports-300x275.svg "STP Exercise #1 Solution - Blocked Ports")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution-Blocked-Ports.png)
 
 And we're done.  That wasn't so hard.
 
@@ -68,4 +68,4 @@ Send me any summer home rentals questions.
 
 Audio commentary:
 
-\[audio:http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1-Solution.mp3|titles=STP Exercise 1 Solution\]
+![Audio: STP Exercise 1 Solution](images/audio-unavailable.svg)

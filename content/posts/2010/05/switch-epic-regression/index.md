@@ -21,4 +21,4 @@ I've really got nothing more to say about the BCMSN.  It's a good test with an 
 
 The next stop is ROUTE (642-902) for me.  I'm taking a class on that one soon, so I'm confident I can pass it in the next 11 weeks we have left until the deadline.
 
-Audio commentary \[audio:http://aconaway.com/wp-content/uploads/2010/05/SWITCH-Epic-Regression.mp3|titles=SWITCH - Epic Regression\]
+Audio commentary ![Audio: SWITCH - Epic Regression](images/audio-unavailable.svg)

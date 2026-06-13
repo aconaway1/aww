@@ -72,4 +72,4 @@ This article is based on an ASA 5505 running 8.3.1.  Most of the config above s
 
 Other reading:  [http://aconaway.com/2009/10/01/object-groups-in-the-asafwsmpix/](http://aconaway.com/2009/10/01/object-groups-in-the-asafwsmpix/)
 
-Director's Commentary: \[audio:http://aconaway.com/wp-content/uploads/2010/04/More-ASA-Objects-and-Object-groups.mp3|titles=More ASA Objects and Object-groups\]
+Director's Commentary: ![Audio: More ASA Objects and Object-groups](images/audio-unavailable.svg)

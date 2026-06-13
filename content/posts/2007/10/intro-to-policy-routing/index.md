@@ -9,7 +9,7 @@ I like \[tag\]layer-3\[/tag\] \[tag\]switch\[/tag\]es. They give some great flex
 
 Let's check an example. Here's what the proverbial you had in mind when you plugged your web server, management server, and firewall into your 3750.
 
-![AConaway.com Layer-3 Diagram](images/11511_1192242797510.png "AConaway.com Layer-3 Diagram")
+![AConaway.com Layer-3 Diagram](images/11511_1192242797510.svg "AConaway.com Layer-3 Diagram")
 
 This works, but most of the time, I don't think they really want your web servers to pass traffic directly to your management servers. Yes, your web server can send packets to your management server all day long without the firewall even knowing what's going on. And so can anyone who compromises your web server.
 

@@ -18,7 +18,7 @@ We talked about [running multiple data centers on a stick](http://aconaway.com/2
 
 Let's set up a scenario.  Check the diagram for an overview.  We have many pairs of client and server VLANs each with a firewall interface as the gateway into the DCOAS.  Let's just focus on just one, though -- client VLAN 101 and server VLAN 102.  In VLAN 101 is ServerA (not pictured) with an IP of 1.1.101.45; in VLAN 102 is our web farm that needs to connect to ServerA to drop off some data.  We add a static route on ServerA pointing traffic for 1.1.102.0/24 back through the CSM.
 
-![](images/DCOAS-2.png "Multiple Data Centers on a Stick")
+![](images/DCOAS-2.svg "Multiple Data Centers on a Stick")
 
 When you try to connect from the web farm, though, it just times out.  Why is that?
 

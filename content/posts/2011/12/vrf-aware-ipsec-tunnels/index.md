@@ -118,4 +118,4 @@ Send any Juniper configs questions my way.
 
 _Update_ : Here's an embarrassingly-sloppy logical diagram for Andrew.
 
-[![IPSec-Aware VPN Logical](images/IPSec-Aware-VPN-Logical-300x187.png)](http://aconaway.com/wp-content/uploads/2011/12/IPSec-Aware-VPN-Logical.png)
+[![IPSec-Aware VPN Logical](images/IPSec-Aware-VPN-Logical-300x187.svg)](http://aconaway.com/wp-content/uploads/2011/12/IPSec-Aware-VPN-Logical.png)

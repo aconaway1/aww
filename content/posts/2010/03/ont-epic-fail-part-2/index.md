@@ -23,4 +23,4 @@ I believe this puts me far enough behind my schedule to have to take another pat
 
 Hear the Director's Commentary on this post:
 
-\[audio:http://aconaway.com/wp-content/uploads/2010/03/ONT-Epic-Fail-Part-2.mp3|titles=ONT - Epic Fail Part 2\]
+![Audio: ONT - Epic Fail Part 2](images/audio-unavailable.svg)

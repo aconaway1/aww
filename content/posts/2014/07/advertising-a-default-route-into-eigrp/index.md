@@ -14,7 +14,7 @@ Let's get an IPv4 default route into EIGRP.  There are a few methods to do it. 
 
 Here's the lab I have set up to test everything.  I want R4 to generate the default in each case.
 
-[![topology](images/topology-300x176.png)](http://aconaway.com/wp-content/uploads/2014/07/topology.png)
+![topology](images/topology-300x176.svg)
 
 **Default Network** - Candidate default.  I don't think I've ever used that all my years in networking, but here's how to use it in EIGRP for a default route.  You basically say "If you don't know where to send a packet, send it to where network _X_ lives."  We're going to set the 192.168.1.0/24 as the default network, so, in our case X = 192.168.1.0. R4 will tag that route as a default candidate when it advertises it to the rest of the network.  The config is easy but requires a classful (yes, classful) network to be configured as the default.
 

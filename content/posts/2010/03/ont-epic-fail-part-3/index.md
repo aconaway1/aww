@@ -24,4 +24,4 @@ I called Pearson and told them the story.  They verified I was in the right pla
 
 I guess we'll see what happens on Tuesday.  Of course all of this means another half day off of work and another 150 miles on the car.  Will I ever get to pass this test?
 
-The Director's Commentary is here again.  Let me know if you like the audio, or if I should burn my terrible voice with fire. \[audio:http://aconaway.com/wp-content/uploads/2010/03/ONT-Epic-Fail-Part-3.mp3|titles=ONT - Epic Fail Part 3\]
+The Director's Commentary is here again.  Let me know if you like the audio, or if I should burn my terrible voice with fire. ![Audio: ONT - Epic Fail Part 3](images/audio-unavailable.svg)

@@ -88,7 +88,7 @@ Line 33 is the one that shows us the graph. Line 32 logs the graph source, which
 
 What happens when we run this thing? You'll see a bunch of log messages, and your machine will open a PDF with a diagram using terrible colors.
 
-![A generated network diagram with ugly green nodes for the devices and ugly brown nodes for the prefixes. It's as bad as you think it is. Nodes are connected to prefixes appropriately, showing that the script actually works.](images/image-1024x899.png)
+![A generated network diagram with ugly green nodes for the devices and ugly brown nodes for the prefixes. It's as bad as you think it is. Nodes are connected to prefixes appropriately, showing that the script actually works.](images/image-1024x899.svg)
 
 You can obviously play around with the colors to make it look better, but this will do nicely for a good number of audits or high-level presentations. And how many hours did we spend in Visio? Exactly the number that I like to spend -- ZERO!
 

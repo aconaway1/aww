@@ -39,6 +39,6 @@ Somebody help me out here.  What am I missing?  Is there some magical book ser
 
 I should have bought testing vouchers in bulk when they were $150.
 
-Audio commentary \[audio:http://aconaway.com/wp-content/uploads/2010/05/SWITCH-Epic-Fail.mp3|titles=SWITCH - Epic Fail\]
+Audio commentary ![Audio: SWITCH - Epic Fail](images/audio-unavailable.svg)
 
 **UPDATE**:  It seems that the idea of seeing topics on the exam that aren't are the test go beyond just me.  I'm getting in touch with as many people related to the SWITCH book as I can to let them know that this is a serious problem.  I'm sure I'll have a post or two on the outcome of that effort.

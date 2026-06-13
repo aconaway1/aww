@@ -18,7 +18,7 @@ I just got back from Global Knowledge's ROUTE class, and I must say that it was 
 
 One of the topics we covered was route redistribution, so I went back to the hotel one night and fired off this network in GNS3 to study a bit.
 
-[![](images/redist21-300x138.png "Redistribution")](http://aconaway.com/wp-content/uploads/2010/05/redist21.png)
+[![](images/redist21-300x138.svg "Redistribution")](http://aconaway.com/wp-content/uploads/2010/05/redist21.png)
 
 The object was to see how redistributing statics into OSPF and into EIGRP differ.  It was also an opportunity to see how EIGRP redistributes into OSPF (and OSPF into EIGRP, but I didn't make it that far).  To do that, I redistributed 10.10.10.0/24 from R1 into OSPF and 10.10.20.0/24 from R4 into EIGRP.  I then had R2 and R5 redistribute all EIGRP routes into OSPF.  It's a nice mix, but I saw some weirdness in the paths to 10.10.20.0/24.
 
@@ -52,7 +52,7 @@ I found another nuance with R1, as well, but that will have to wait until next t
 
 Send any Android Twitter clients questions my way.
 
-Audio commentary: \[audio:http://aconaway.com/wp-content/uploads/2010/05/ROUTE-Redistribution-Nuance-1.mp3|titles=ROUTE - Redistribution Nuance #1\]
+Audio commentary: ![Audio: ROUTE - Redistribution Nuance #1](images/audio-unavailable.svg)
 
 \---
 

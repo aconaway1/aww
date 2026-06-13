@@ -18,7 +18,7 @@ tags:
 
 As a warning to everyone, I am not a developer. I am a network engineer who is trying to do some automation stuff. Some of what I’m doing sounds logical to me, but I would not trust my own opinions for production work. I’m sure you can find a [Slack channel](https://netdev.chat/) or [Mastodon instance](https://infosec.exchange/explore) with people who can tell you how to do things properly.
 
-We've added stuff and updated stuff, so let's delete some stuff. "Hey, man...you already did that," you say? You're right! When [we started creating API tokens based on user/pass](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/), we made sure to delete the token at the end. That means we should all be professional [pynetbox](https://pynetbox.readthedocs.io/en/latest/) deleters, then, right? :)
+We've added stuff and updated stuff, so let's delete some stuff. "Hey, man...you already did that," you say? You're right! When [we started creating API tokens based on user/pass](/posts/2023/01/using-pynetbox-to-create-netbox-api-tokens/), we made sure to delete the token at the end. That means we should all be professional [pynetbox](https://pynetbox.readthedocs.io/en/latest/) deleters, then, right? :)
 
 When using pynetbox, we mostly deal with object. When updating, we get the object, make changes, then save it back to [Netbox](https://docs.netbox.dev/en/stable/). We don't say "update object 38718 with a new widget"; you actually manipulate an object. When we delete something, we do the same thing...get the object and delete it. Here's a snippet of the token cleanup script to show that.
 

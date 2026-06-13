@@ -15,7 +15,7 @@ I feel like a teenage girl with a fashion blog who hasn't posted in 6 months and
 
 I've had some personal things going on lately, and those have taken all of my energy.  We've made it through those rough times, so my energy is coming back.  I'm feeling better every day, and I hope I can get back to producing some content.  And, let me tell you...I've got some stuff to talk about.
 
-\*insert star wipe here\*
+*insert star wipe here*
 
 We got a new director-level dude at the office, and he's really mixing things up for us.  His philosophy includes changing the way we do everything that we do.  Like literally everything.  He ran a report for me on my ticket queue and showed me that 60% of my ticket count was on stupid stuff that's below my pay grade.  His advice : Make somebody else do it.  So I did.  I taught myself some more Python (not hard since I've done coding stuff throughout my career and college), learned some Ansible, wrote a couple modules, put some playbooks in Rundeck, and taught our support center how to use them.  Now I don't have to worry about that noise any more.  Inspired by my resounding success, I looked at other tasks I was doing.  Firewall rule updates, simple routing changes, packet capture setups...now all done through some sort of automation tool.  The whole team is involved, too.  On a regular basis, my teammates and I get calls from other groups asking for help automating their own tasks.  Proud moments for us.  More on that later.
 

@@ -15,7 +15,7 @@ Setting your network up this way may set you up for disaster, though. You have t
 
 Here's a terrible diagram to show what we're doing. In our example, we have two works stations connected to a switch on VLANs 2 and 3.
 
-![Router-on-a-stick Diagram](images/ROAS.jpg "Router-on-a-stick Diagram")
+![Router-on-a-stick Diagram](images/ROAS.svg "Router-on-a-stick Diagram")
 
 How about some sample configurations to bring it all together? Of course, I'm assuming you're using a Cisco router and Cisco switch. I can't speak for any other platforms. I'm also assuming that you are doing to use 802.1q trunks.
 

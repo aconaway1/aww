@@ -19,4 +19,4 @@ Here's an STP exercise for you.  Given the bridge priorities, MAC addresses, an
 
 Send any configuration BPDUs questions my way.
 
-\[caption id="attachment\_653" align="alignleft" width="300" caption="STP Exercsie #1"\][![](images/STP-Exercise-1-300x280.png "STP Exercise #1")](http://aconaway.com/wp-content/uploads/2010/04/STP-Exercise-1.png)\[/caption\]
+![STP Exercise #1](images/STP-Exercise-1-300x280.svg)

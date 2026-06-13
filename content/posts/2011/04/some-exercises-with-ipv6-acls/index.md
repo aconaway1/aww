@@ -20,7 +20,7 @@ ACLs in IPv6 aren't that different from what you're used to dealing with in the 
 
 For those playing at home, here's the setup I used to generate the configs and get the output.  Execute some click action for the whole thing.
 
-[![](images/screenshot-150x93.png "IPv6 ACLs")](http://aconaway.com/wp-content/uploads/2011/04/screenshot.png)
+[![](images/screenshot-150x93.svg "IPv6 ACLs")](http://aconaway.com/wp-content/uploads/2011/04/screenshot.png)
 
 The first thing you need to know is that all IPv6 ACLs are extended and named.  There's no concept of numbering and using standard list types that include the destination only.  This is a good thing in my opinion, and I've been doing that in my IPv4 ACLs for many years now.  This allows (forces?) you to use descriptive names and very specific entries.  Sometimes my entries are too specific, but that's usually because people don't include all the requirements.  I digress.
 

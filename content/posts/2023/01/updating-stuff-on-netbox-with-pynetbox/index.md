@@ -14,7 +14,7 @@ tags:
   - "python"
 ---
 
-Let's see. We've [queried stuff](https://aconaway.com/2022/12/11/querying-netbox-with-pynetbox/) on [Netbox](https://docs.netbox.dev/en/stable/) and [added stuff](https://aconaway.com/2023/01/17/adding-stuff-to-netbox-with-pynetbox/) to Netbox. Now let's update stuff.
+Let's see. We've [queried stuff](/posts/2022/12/querying-netbox-with-pynetbox/) on [Netbox](https://docs.netbox.dev/en/stable/) and [added stuff](/posts/2023/01/adding-stuff-to-netbox-with-pynetbox/) to Netbox. Now let's update stuff.
 
 Netbox, like all sources of truth, needs to be kept up-to-date if it's going to be useful. Without doing some maintenance on the data, it will wind up being like that one Visio diagram that you give the auditors -- it might have been accurate at one point but gets further and further from the truth every day. We'll need to keep our stuff updated today in order to use it more effectively tomorrow.
 
@@ -28,7 +28,7 @@ Pynetbox       :  7.0.0
 Netbox version :  3.4.3 (Docker)
 ```
 
-Remember when [we loaded the data from the _sites.yml_ file last time](https://aconaway.com/2023/01/17/adding-stuff-to-netbox-with-pynetbox/)? We're going to use that same file to run another script that will update existing information. This time, the script will check Netbox for some site values and updated it if it doesn't match the [YAML](https://yaml.org/) file. Here we go. As always, these scripts and YAML files are available in [my Github repository](https://github.com/aconaway1/blog-pynetbox).
+Remember when [we loaded the data from the _sites.yml_ file last time](/posts/2023/01/adding-stuff-to-netbox-with-pynetbox/)? We're going to use that same file to run another script that will update existing information. This time, the script will check Netbox for some site values and updated it if it doesn't match the [YAML](https://yaml.org/) file. Here we go. As always, these scripts and YAML files are available in [my Github repository](https://github.com/aconaway1/blog-pynetbox).
 
 ```python {linenos=true}
 ### pynetbox_update_sites.py
@@ -68,7 +68,7 @@ for site in sites_to_load:
 token.delete()
 ```
 
-All the way down to line 16 should be pretty familiar already. Check out [the last few posts](https://aconaway.com/tag/pynetbox/) to get caught up.
+All the way down to line 16 should be pretty familiar already. Check out [the last few posts](/tags/pynetbox/) to get caught up.
 
 Line 18 goes through all the sites in the YAML so we can do stuff.
 
@@ -78,7 +78,7 @@ Lines 21 - 24 check to make sure the site actually exists. If it doesn't, print 
 
 I'm having trouble wording an explanation for lines 25 - 28. We first take the keys for the dictionary that we imported from YAML and go through each of them. If the value for that key in the Netbox object is different than the value for the same key in the YAML file, then we'll set that boolean variable to _True_. If they're the same, nothing will happen.
 
-Lines 29 - 30 check to see if we need to do an update and then do it if needed. We're done .all(), .get(), .filter(), and .create() (and even .delete() if you count [the token thing](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/)), but this is the first time we're doing an .update(). In this case, we're taking the _queried\_site_ object and updating it with the data that came from the YAML. Any values that are different get updated.
+Lines 29 - 30 check to see if we need to do an update and then do it if needed. We're done .all(), .get(), .filter(), and .create() (and even .delete() if you count [the token thing](/posts/2023/01/using-pynetbox-to-create-netbox-api-tokens/)), but this is the first time we're doing an .update(). In this case, we're taking the _queried\_site_ object and updating it with the data that came from the YAML. Any values that are different get updated.
 
 Lines 31 - 33 tell the user nothing is happening since the values match.
 

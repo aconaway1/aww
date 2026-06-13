@@ -19,7 +19,7 @@ _Anyway,...on with the show!_
 
 Check out this screengrab I took from the presentation.
 
-[![](images/Voyance-Refresher-1-300x151.png)](http://aconaway.com/wp-content/uploads/2018/08/Voyance-Refresher-1.png)
+[![](images/Voyance-Refresher-1-300x151.svg)](http://aconaway.com/wp-content/uploads/2018/08/Voyance-Refresher-1.png)
 
 The big, shining star of the Voyance platform is the Crawler.  This device sits on your network to collect data from all over the place.  It talks to your wireless controllers to get data about the wireless clients (client densities, RFI, SNR, other wireless stuff I don't really care about).  It's a SPAN destination so it can watch packets run across your network.  It's also a NetFlow server (sFlow and jFlow are coming, by the way), a syslog server, and an API client to get information from applications like Skype for Business.  The Crawler does its magic on this data and sends the resulting metadata to a backend for the real crunching.
 
@@ -31,19 +31,19 @@ That's enough about collecting data.  Let's see what information we can get out
 
 We're talking about user experience here, so baselines are probably the most important part of the analysis by Voyance.  Is my 150ms ping time to the data center normal?  Don't know without a baseline.  Voyance is able to tell you very easily that 150ms is great for that specific connection from Kansas City to Singapore since a baseline has been established with historical data.  Let's not forget, too, that latency is only one part of what's measured here.  Check out this screengrab that shows some of the baselines for sample sites.
 
-[![](images/Voyance-Baselines-300x141.png)](http://aconaway.com/wp-content/uploads/2018/08/Voyance-Baselines.png)
+[![](images/Voyance-Baselines-300x141.svg)](http://aconaway.com/wp-content/uploads/2018/08/Voyance-Baselines.png)
 
 The performance tab shows that the Daly City and South San Francisco sites have a Radius problem where 44% of user are affected.  Palo Alto, Manilla, Bangalore have problems getting to the Internet. Pittsburgh has wifi issues.  These are established and measured baselines taken from data reported from the various sources.  I guess we can consider this the norm.
 
 Compare that screen to this one.
 
-[![](images/Voyance-Mexico-City-Baseline-300x145.png)](http://aconaway.com/wp-content/uploads/2018/08/Voyance-Mexico-City-Baseline.png)
+[![](images/Voyance-Mexico-City-Baseline-300x145.svg)](http://aconaway.com/wp-content/uploads/2018/08/Voyance-Mexico-City-Baseline.png)
 
 The incidents tab shows that the Mexico office is having problems with the Radius server.  Eleven percent of user are being affected, which is a 5.1x deviation from the baseline.  Since this measurement is in deviations from baseline, we know this is a new, atypical issue.  Or at least the scale is atypical. What can we do about it?
 
 Here's a shot of the recommendations tab.
 
-[![](images/Voyance-Recommendations-300x143.png)](http://aconaway.com/wp-content/uploads/2018/08/Voyance-Recommendations.png)
+[![](images/Voyance-Recommendations-300x143.svg)](http://aconaway.com/wp-content/uploads/2018/08/Voyance-Recommendations.png)
 
 Not only does Voyance tell you what to fix but it also tells you the postive impact that the recommendation will make.  This particular shot shows wifi problems in an office due to interference on the 2.4 GHz band from rogue APs.  You can see a metric called client hours, which is one user having a poor experience in one hour.  The wider the impact, the bigger this number will be.  In this example, we see that fixing the interference will save 476 client hours.  This number can be compared against other recommendations to maximize the impact of your time.  If the Radius problem in Mexico calculates out to 210 client hours, then your time may be better spent dealing with the interference problem.
 

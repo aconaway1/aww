@@ -24,7 +24,7 @@ If you've ever tried to do something similar on an IOS router, then you've proba
 
 Let's take a look at the test network that I've used to simulate the setup at the customer site.
 
-[![](images/asa-ip-sla1-258x300.png "ASA IP SLA")](http://aconaway.com/wp-content/uploads/2010/10/asa-ip-sla1.png)
+[![](images/asa-ip-sla1-258x300.svg "ASA IP SLA")](http://aconaway.com/wp-content/uploads/2010/10/asa-ip-sla1.png)
 
 The test is to have INSIDE1 communicate with TARGET.  Each ISP knows where TARGET is through a huge EIGRP AS, but we want to detect any routing problems on ISP1.  If we find a problem, we want [Volume Pills](http://photoshopturk.org/) to roll over to ISP2 on the BACKUP interface.  What do we monitor, though?  We can monitor the IP of the ISP's router at the data center, but we'd miss any issues upstream.  Let's monitor the IP of the second router on ISP1, which is 10.0.0.2.  In the real world, we'd fine a host somewhere deep on the Intertubes that we think won't go down very often.  In our test, 10.0.0.2 is the closest thing we can find to that.
 
@@ -53,4 +53,4 @@ Sometime I like it when my gear knows what I'm trying to do; this is one of thos
 Send any stray ICMP packets questions my way.
 
 Audio Commentary  
-\[audio:http://aconaway.com/wp-content/uploads/2010/10/SLA-Monitoring-on-the-PIX-ASA.mp3|titles=SLA Monitoring on the PIX-ASA\]
+![Audio: SLA Monitoring on the PIX-ASA](images/audio-unavailable.svg)

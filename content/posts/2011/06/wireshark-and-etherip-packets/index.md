@@ -18,4 +18,4 @@ Once we figured out which addresses the switches and routers were using, it was 
 
 I love calls that get the brain working.  It just goes to show that you have to look at the packets closely sometimes to figure out what's going on.
 
-[![](images/wireshark-etherip1-150x150.png "Wireshark EtherIP")](http://aconaway.com/wp-content/uploads/2011/06/wireshark-etherip1.png)
+[![](images/wireshark-etherip1-150x150.svg "Wireshark EtherIP")](http://aconaway.com/wp-content/uploads/2011/06/wireshark-etherip1.png)

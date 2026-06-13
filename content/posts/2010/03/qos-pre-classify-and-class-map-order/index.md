@@ -18,7 +18,7 @@ I’m still studying for the ONT test, so I did some labs tonight.  One of them
 
 Here’s the lab.  I was testing from TestHost1 to TestHost2 and configuring R1 to do the pre-classification.  Both R1 and R2 are 3640s running IOS 12.4(25b) and have a GRE tunnel between them.
 
-[![qospre1](images/qospre1_thumb1.png "qospre1")](http://aconaway.com/wp-content/uploads/2010/03/qospre11.png)
+[![qospre1](images/qospre1_thumb1.svg "qospre1")](http://aconaway.com/wp-content/uploads/2010/03/qospre11.png)
 
 I created a policy map that simply acknowledges the existence of ICMP packets; the router doesn’t do anything except match them in a class-map and smile at them on the way through.  Here’s the snippet.
 

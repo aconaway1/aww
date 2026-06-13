@@ -20,7 +20,7 @@ tags:
 
 Here's the network again.
 
-[![](images/redist21-300x138.png "Redistribution")](http://aconaway.com/wp-content/uploads/2010/05/redist21.png)
+[![](images/redist21-300x138.svg "Redistribution")](http://aconaway.com/wp-content/uploads/2010/05/redist21.png)
 
 The static routes are being redistributed into their respective IGPs, and EIGRP is being redistributed into OSPF.  Let's look at the routing table on R1.
 
@@ -124,4 +124,4 @@ Just another complexity of OSPF.  Thanks to [@matthewnorwood](http://twitter.co
 
 Send any twitter updates questions my way.
 
-Audio Commentary \[audio:http://aconaway.com/wp-content/uploads/2010/06/ROUTE-Redistribution-Nuance-2.mp3|titles=ROUTE - Redistribution Nuance #2\]
+Audio Commentary ![Audio: ROUTE - Redistribution Nuance #2](images/audio-unavailable.svg)

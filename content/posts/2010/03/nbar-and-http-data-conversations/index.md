@@ -18,7 +18,7 @@ tags:
 
 I’m still working on the ONT test and doing labs, so I marked up a lab for me to work.  I’m using the same setup as I did last time.  The two routers are 3640s running 12.4(25b).
 
-[![nbar-classmap1](images/nbarclassmap1_thumb.png "nbar-classmap1")](http://aconaway.com/wp-content/uploads/2010/03/nbarclassmap1.png)
+[![nbar-classmap1](images/nbarclassmap1_thumb.svg "nbar-classmap1")](http://aconaway.com/wp-content/uploads/2010/03/nbarclassmap1.png)
 
 Part of the lab was to identify HTTP traffic coming into F0/0 and mark it as CS3.  That’s pretty easy, right?  Of course, the lab I made up was a little more complicated, but the point comes clear with a simpler example.
 
@@ -59,7 +59,7 @@ I let that run for a while and checked out the service policy on F0/0; there wer
 
 I thought that was strange, so I kept the script running and captured the traffic coming out of S1/0.  Looking at the packets in Wireshark showed that none of the HTTP packets were showing up as being marked as CS3; they’re all set to the default DSCP value.
 
-[![HTTP-nomark](images/HTTPnomark_thumb.png "HTTP-nomark")](http://aconaway.com/wp-content/uploads/2010/03/HTTPnomark.png)No matter how many NMap scans cycled through, the class never incremented a bit.  I let it run for two full minutes and generated a few hundred HTTP packets, but there was still nothing.
+[![HTTP-nomark](images/HTTPnomark_thumb.svg "HTTP-nomark")](http://aconaway.com/wp-content/uploads/2010/03/HTTPnomark.png)No matter how many NMap scans cycled through, the class never incremented a bit.  I let it run for two full minutes and generated a few hundred HTTP packets, but there was still nothing.
 
 On a whim, I enabled NBAR protocol discovery on F0/0 to see if that would shed any light on my mess.  Guess what I found.  That’s right; there were no HTTP matches to NBAR, either.  That makes sense since the class-map I defined uses the NBAR protocol.  Alright, so it seems that it’s NBAR that doesn’t see the packets as HTTP, but why?
 

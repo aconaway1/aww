@@ -11,11 +11,11 @@ I've never done a post on Forti-anything, but I'm really appreciating the produc
 
 Let's review some of the basic configuration elements of BGP first. You need an autonomous system (AS) number and a router ID for your side. You also need the AS number of the remote system. You need the IP address on their side (usually the interface facing you). That looks something like this. We're going to be 'Fortigate 1' for this exercise.
 
-![](images/BGP-Basic-Neighbors-4.png)
+![](images/BGP-Basic-Neighbors-4.svg)
 
 With just this information, we can turn up a BGP neighbor that does absolutely nothing. To actually send some routes, you need to tell BGP what to send. We'll keep this simple and add just connected networks. Adding to the diagram, we get this.
 
-![](images/BGP-Networks-2.png)
+![](images/BGP-Networks-2.svg)
 
 Now we have something of value (though choosing BGP over OSPF or RIP for this little scenario is pretty horrible). We can advertise a couple networks back and forth, and everything should work. Let's advertise all subnets in both directions, shall we? We're looking at a config for FortiOS 6.4.
 
@@ -41,11 +41,11 @@ end
 
 Let's go over some of the unique ways FortiOS handles the config. First of all, note that you don't go in to a generic configuration mode; instead you go into specific modules to configure. In this case, we're in the config for "router bgp". From there, we configure just BGP. If you wanted to configure anything else (including prefix list and route maps), you would need to leave BGP config completely. This is a foreign concept if you come from other world like Cisco where you just do a "config t" and do all your work.
 
-FortiOS also has configs within configs. We configure the neighbors and networks (among a myriad of other stuff) inside of the bgp config. For the neighbor config, we have a quoted string which is the neighbor's IP address. Inside of that subconfig, we set neighbor-specific settings like remote AS. For the network config, we have the infamous FortiOS list**\[efn\_note\]This is used in some of the most inconvenient ways possible throughout FortiOS.\[/efn\_note\]** with all its elements numbered. Each element is a prefix to advertise.
+FortiOS also has configs within configs. We configure the neighbors and networks (among a myriad of other stuff) inside of the bgp config. For the neighbor config, we have a quoted string which is the neighbor's IP address. Inside of that subconfig, we set neighbor-specific settings like remote AS. For the network config, we have the infamous FortiOS list[^1] with all its elements numbered. Each element is a prefix to advertise.
 
 At this point, you might be telling yourself that it would be much easier to do this in the GUI. For what we're doing here, you're right. There are a few checkboxes and some fields to fill out. Easy. If you want to do some "advanced stuff", though, you need to do it through the CLI. See the next section.
 
-Of course, it wouldn't be a BGP post without talking about filtering. You don't want to just blindly accept routes from another organization without validation. You also want to make sure you can filter routes you send out\[efn\_note\]This is a whole other topic that we can talk about it later.\[/efn\_note\]. If you're from the land of Cisco, the steps are very familiar; you just need to know the syntax.
+Of course, it wouldn't be a BGP post without talking about filtering. You don't want to just blindly accept routes from another organization without validation. You also want to make sure you can filter routes you send out[^2]. If you're from the land of Cisco, the steps are very familiar; you just need to know the syntax.
 
 We need to generate prefix lists (or ACLs, but I prefer prefix lists) of all the interesting routes. We'll have one for inbound and one for outbound. Next, we'll use that prefix list to generate a route map, which we'll then apply to the neighbor. This is three different configuration commands, since prefix lists, route maps, and BGP are all configured separately.
 
@@ -126,3 +126,6 @@ get router info bgp neighbor 172.16.0.2 received-routes
 I wish I had some real output for these commands, but my lab is limited. Well, it doesn't really exist. The output is actually very much like the equivalent commands in Ciscoland, so you're probably already familiar with the setup and layout. If I can find something to share, I will.
 
 Send any Forti-swag questions my way.
+
+[^1]: This is used in some of the most inconvenient ways possible throughout FortiOS.
+[^2]: This is a whole other topic that we can talk about later.

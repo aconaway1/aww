@@ -92,11 +92,11 @@ Lines 2 & 3 are the modules we want to use.
 
 Lines 5 & 6 set the name of the files where some data will live.
 
-Lines 8 & 9 import the Netbox URL, username, password, etc., from a YAML file into a dictionary called _env\_vars_. [This post](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/) talks about that a bit.
+Lines 8 & 9 import the Netbox URL, username, password, etc., from a YAML file into a dictionary called _env\_vars_. [This post](/posts/2023/01/using-pynetbox-to-create-netbox-api-tokens/) talks about that a bit.
 
 Lines 11 & 12 import the site data from a YAML file into a dictionary called _sites\_to\_load_.
 
-Lines 14 - 16 and line 33 connects to Netbox, creates a token to use, then deletes it. See [this post](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/) for more on that.
+Lines 14 - 16 and line 33 connects to Netbox, creates a token to use, then deletes it. See [this post](/posts/2023/01/using-pynetbox-to-create-netbox-api-tokens/) for more on that.
 
 Line 18 goes through the sites from the YAML file to do the work.
 
@@ -120,7 +120,7 @@ The output is pretty unremarkable. If the site exists, it says "Site X already e
 
 What about some more-complex objects like devices? We can do that, too. To add a device, we need to pause a bit and take a look at the required fields, though. If you go into the GUI to add one manually, you'll see _device role_ (the function of the devices), _device type_ (the make and model), _site_, and _status_ are all required. They also are all objects that must already exist in Netbox, so we'll have to check the given data before trying to add the device. If we don't, we'll get an exception somewhere down the line.
 
-We'll do another YAML file for the devices. This is what it looks like. There may or may not be some bad data in this one, so be on the lookout. \*\*hint, hint\*\*
+We'll do another YAML file for the devices. This is what it looks like. There may or may not be some bad data in this one, so be on the lookout. **hint, hint**
 
 ```yaml
 ### devices.yml

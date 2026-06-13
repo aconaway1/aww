@@ -14,7 +14,7 @@ I'm sure you would like to know how it works, so let's walk through the process.
 
 That was awfully technical, so let's look at an example. Here's another terrible diagram to show what I'm talking about. I can't afford Visio. :( Anyway, both routers have their FastEthernet0/0 on the same network, and we want to configure them as HSRP pairs.
 
-![HSRP Diagram](images/HSRP.jpg "HSRP Diagram")
+![HSRP Diagram](images/HSRP.svg "HSRP Diagram")
 
 Let's do the configuring. We'll use standby group 75 for our configuration. It's just a number so you can use multiple HSPR configurations on the same interface, so it doesn't really matter. Router 1 and Router 2 have IP addresses of 10.1.1.11 and 10.1.1.12, respectively. We'll use 10.1.1.1 as the standby IP. We'll also say that the priority of Router 1 should be higher just so we can get an example going.
 

@@ -15,7 +15,7 @@ tags:
   - "vegas"
 ---
 
-[![](images/bus-schedule-dec-2-2010-200-150x150.jpg "bus-schedule-dec-2-2010-200")](http://aconaway.com/wp-content/uploads/2011/04/bus-schedule-dec-2-2010-200.jpg)For the first time ever, I'm headed to Cisco Live - the big Cisco users conference in Las Vegas! I usually don't go to these things since I wind up just hanging out by myself, but I'm meeting all sorts of people there - from bloggers to Tweeps to personal friends. It should be a huge blast, and I can't wait to get there.
+[![](images/bus-schedule-dec-2-2010-200-150x150.svg "bus-schedule-dec-2-2010-200")](http://aconaway.com/wp-content/uploads/2011/04/bus-schedule-dec-2-2010-200.jpg)For the first time ever, I'm headed to Cisco Live - the big Cisco users conference in Las Vegas! I usually don't go to these things since I wind up just hanging out by myself, but I'm meeting all sorts of people there - from bloggers to Tweeps to personal friends. It should be a huge blast, and I can't wait to get there.
 
 For those interested, here's my schedule.
 

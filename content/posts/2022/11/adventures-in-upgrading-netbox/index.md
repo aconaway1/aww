@@ -36,7 +36,7 @@ I should note that all my upgrade efforts were made on a local lab VM on my lapt
 
 So I ran Netbox-build-o-matic to try an install version `2.11.12`. The scripts ran fine (for definitions of those words), but they're not going to fix the Python version problem, are they? The scripts run the same upgrades that I did by hand, so it still thinks that Python 3.10 is older than 3.6. Time to switch my brain into developer mode. The only way around all this was to manually implement the bug fix from version 3.0.10, so I was preparing myself for hours and hours of work to get this thing running on 2.11.12! Then I saw [the actual change](https://github.com/netbox-community/netbox/pull/7815/commits/773fd47ca6f7a33238d63816e4a589c2f2f5687c).
 
-![](images/image-1024x387.png)
+![](images/image-1024x387.svg)
 
 Two lines of code to change in the settings.py file. I got all psyched up for noting! Story of my life?
 

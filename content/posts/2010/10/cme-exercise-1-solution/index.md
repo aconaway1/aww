@@ -114,4 +114,4 @@ That should do it.
 Send any 640-level exam vouchers questions my way.
 
 Audio Commentary  
-\[audio:http://aconaway.com/wp-content/uploads/2010/10/CME-Exercise-1-Solution.mp3|titles=CME Exercise #1 Solution\]
+![Audio: CME Exercise #1 Solution](images/audio-unavailable.svg)

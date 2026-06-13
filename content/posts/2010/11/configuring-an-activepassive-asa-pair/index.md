@@ -48,4 +48,4 @@ Send any expensive PIX failover cables questions my way.
 
 Audio commentary
 
-\[audio:http://aconaway.com/wp-content/uploads/2010/11/Configuring-an-Active-Passive-ASA-Pair.mp3|titles=Configuring an Active-Passive ASA Pair\]
+![Audio: Configuring an Active-Passive ASA Pair](images/audio-unavailable.svg)

@@ -16,7 +16,7 @@ tags:
 
 As a warning to everyone, I am not a developer. I am a network engineer who is trying to do some automation stuff. Some of what I’m doing sounds logical to me, but I would not trust my own opinions for production work. I’m sure you can find a [Slack channel](https://netdev.chat/) or [Mastodon instance](https://infosec.exchange/explore) with people who can tell you how to do things properly.
 
-[A bit ago](https://aconaway.com/2022/12/11/querying-netbox-with-pynetbox/), we talked about getting information out of Netbox with Pynetbox. The example was very simple, but I'm afraid the real world dictates that querying every device every time is not very efficient or manageable. At some point, we'll need to ask for a subset of everything, so let's look at filtering.
+[A bit ago](/posts/2022/12/querying-netbox-with-pynetbox/), we talked about getting information out of Netbox with Pynetbox. The example was very simple, but I'm afraid the real world dictates that querying every device every time is not very efficient or manageable. At some point, we'll need to ask for a subset of everything, so let's look at filtering.
 
 We used .all() last time. It's pretty obvious what that gives us. If we don't want everything in the world returned, we can use .filter() along with some parameters to limit that result. Let's get to an example.
 
@@ -61,7 +61,7 @@ token.delete()
 
 Lines 2 & 3 are our imports. Basic Python stuff there.
 
-Lines 5 - 11 and 26 are from [a previous post about generating keys in pynetbox](https://aconaway.com/2023/01/12/using-pynetbox-to-create-netbox-api-tokens/).
+Lines 5 - 11 and 26 are from [a previous post about generating keys in pynetbox](/posts/2023/01/using-pynetbox-to-create-netbox-api-tokens/).
 
 Line 13 gets all the sites.
 
