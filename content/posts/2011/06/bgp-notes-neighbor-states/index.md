@@ -21,7 +21,7 @@ Corrections appreciated.
 
 **Connect** : The router is waiting for the TCP connection to finish.  If the TCP connection finishes, the router sends an _open_ and transitions to OpenSent.  If it times out, it transitions to Active.
 
-**Active** : The router tries [Cialis](http://greatlakesecho.org/about/) to initiate a TCP connection.  If the TCP connection finishes, the router sends an _open_ and transitions to OpenSent.
+**Active** : The router tries to initiate a TCP connection.  If the TCP connection finishes, the router sends an _open_ and transitions to OpenSent.
 
 **OpenSent** : The router is waiting for an _open_ to be returned.  If one is received, the router transitions to OpenConfirm.
 

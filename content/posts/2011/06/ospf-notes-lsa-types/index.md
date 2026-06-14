@@ -30,7 +30,7 @@ Yes, it is inevitable that I cover these.  I'm sure network types will be next.
 
 **Type 4 - ASBR Summary** : These LSAs make sure that all routers in all areas have a path to an ASBR that's flooding type 5 LSAs.  Those routes in the area with the ASBR won't see these.
 
-**Type 5 - AS External [Online Casino](http://normproject.org/)** : These are flooded by an autonomous system boundary router and are routes redistributed into OSPF from another routing process like EIGRP or BGP.  Since these routes come from a different source, there's no way to discover the topology past the ASBR, so we just have to trust the rumor that the network exists that way.  E1 routes gets the OSPF path cost added as it crosses the network, while E2 routes (the default) have a static cost.
+**Type 5 - AS External** : These are flooded by an autonomous system boundary router and are routes redistributed into OSPF from another routing process like EIGRP or BGP.  Since these routes come from a different source, there's no way to discover the topology past the ASBR, so we just have to trust the rumor that the network exists that way.  E1 routes gets the OSPF path cost added as it crosses the network, while E2 routes (the default) have a static cost.
 
 **Type 6 - Group Membership** :  This is for Multicast OSPF and not supported by IOS
 

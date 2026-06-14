@@ -24,7 +24,7 @@ Please correct if I'm being stupid...which is a lot of the time.
 >   Route being updated including k values to compute metric
 > ```
 
-**Query** : Used to ask a neighbor if it has a route to a certain network; see [casino online for free](http://tangoessentials.com/) stuck-in-active
+**Query** : Used to ask a neighbor if it has a route to a certain network; see stuck-in-active
 
 > ```
 > Destination:  224.0.0.10
