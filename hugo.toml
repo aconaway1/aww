@@ -27,6 +27,7 @@ enableRobotsTXT = true
 
 [params.social]
   github = "aconaway1"
+  mastodon = "https://masto.ai/@aconaway"
 
 [menus]
 [[menus.main]]

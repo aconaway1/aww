@@ -1,0 +1,31 @@
+<div class="about-author">
+  <hr>
+  <p><strong>About the author</strong></p>
+  <p>
+    {{ $.Site.Params.author }}
+    {{ with $.Site.Params.social.mastodon }}
+    · <a href="{{ . }}" rel="me">Mastodon</a>
+    {{ end }}
+    {{ with $.Site.Params.social.github }}
+    · <a href="https://github.com/{{ . }}">GitHub</a>
+    {{ end }}
+  </p>
+  <p>
+    <a href="#" id="mastodon-share">Share on Mastodon</a>
+  </p>
+</div>
+
+<script>
+  document.getElementById('mastodon-share').addEventListener('click', function(e) {
+    e.preventDefault();
+    var instance = localStorage.getItem('mastodon-instance');
+    if (!instance) {
+      instance = prompt('What is your Mastodon instance? (e.g. mastodon.social)');
+      if (!instance) return;
+      instance = instance.replace(/^https?:\/\//, '').replace(/\/$/, '');
+      localStorage.setItem('mastodon-instance', instance);
+    }
+    var text = encodeURIComponent('{{ .Title }} — {{ .Permalink }}');
+    window.open('https://' + instance + '/share?text=' + text, '_blank');
+  });
+</script>
