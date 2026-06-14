@@ -23,7 +23,7 @@ tags:
     - Unless every router is participating in iBGP, there's no guarantee that any one router will have a route to NEXT\_HOP.
 - Synchronization also prevents a router from advertising the black hole to an eBGP neighbor.
     - You don't want to tell the world you have a path to a prefix when you really have a !N.
-- Synchronization can be safely disabled with the use of [route reflectors](http://aconaway.com/2011/06/10/bgp-notes-route-reflectors/) or [confederations](http://aconaway.com/2011/06/10/bgp-notes-confederations/).
+- Synchronization can be safely disabled with the use of [route reflectors](/posts/2011/06/bgp-notes-route-reflectors/) or [confederations](/posts/2011/06/bgp-notes-confederations/).
 
 ---
 

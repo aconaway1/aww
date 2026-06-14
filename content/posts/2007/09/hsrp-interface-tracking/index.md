@@ -6,7 +6,7 @@ tags:
   - "hsrp"
 ---
 
-Remember the article on [router-on-a-stick](http://aconaway.com/2007/08/20/router-on-a-stick/ "AConaway.com -- Router-on-a-stick")? And the one on [HSRP](http://aconaway.com/2007/08/21/running-hsrp-for-availability/ "AConaway.com -- Running HSRP for Availability")? Let's add to that example network, shall we? Let's make those routers into edge routers so they connect your internal network to the Internet with some size circuit. Let's just say they each terminate [DS3s](http://en.wikipedia.org/wiki/DS3 "Wikipedia -- Digital Signal 3") to different providers.
+Remember the article on [router-on-a-stick](/posts/2007/08/router-on-a-stick/ "AConaway.com -- Router-on-a-stick")? And the one on [HSRP](/posts/2007/08/running-hsrp-for-availability/ "AConaway.com -- Running HSRP for Availability")? Let's add to that example network, shall we? Let's make those routers into edge routers so they connect your internal network to the Internet with some size circuit. Let's just say they each terminate [DS3s](http://en.wikipedia.org/wiki/DS3 "Wikipedia -- Digital Signal 3") to different providers.
 
 Here's our network now (I'm experimenting with Visio alternatives, so excuse the diagram footer there). Let's assume that we have \[tag\]HSRP\[/tag\] set up like the HSRP article and that we have many sub-interfaces on the Ethernet side of the routers like the ROAS article. Also, Router1 is the HSRP active peer and each router has a default route pointing to the upstream ISP through interface Serial 0/0.
 

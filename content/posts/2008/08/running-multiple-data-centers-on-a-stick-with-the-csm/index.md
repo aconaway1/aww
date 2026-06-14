@@ -5,7 +5,7 @@ tags:
   - "csm"
 ---
 
-That's an awesome title, eh?  I've mentioned a [router-on-a-stick](http://aconaway.com/2007/08/20/router-on-a-stick/ "AConaway.com -- Router on a Stick") before but not a data-center-on-a-stick (DCOAS).  This is one of those Cisco terms I ran across a while ago and is a group of servers sort of sticking out on their own behind a load balancer and/or firewall.  Connections to and from the server group go through a single spoke -- kinda like stubby routing.  Here's a pretty picture.
+That's an awesome title, eh?  I've mentioned a [router-on-a-stick](/posts/2007/08/router-on-a-stick/ "AConaway.com -- Router on a Stick") before but not a data-center-on-a-stick (DCOAS).  This is one of those Cisco terms I ran across a while ago and is a group of servers sort of sticking out on their own behind a load balancer and/or firewall.  Connections to and from the server group go through a single spoke -- kinda like stubby routing.  Here's a pretty picture.
 
 ![Data Center on a Stick](images/DCOAS-1.svg "Data Center on a Stick")
 

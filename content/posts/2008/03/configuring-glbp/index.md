@@ -8,7 +8,7 @@ tags:
 
 Believe it or not, I got a request for an article on how to configure GLBP. I'm as shocked as you are, so here it goes.
 
-[The Gateway Load Balancing Protocol (GLBP)](http://cisco.com/en/US/docs/ios/12_2t/12_2t15/feature/guide/ft_glbp.html "Cisco.com -- GLBP") is another Cisco-proprietary protocol for providing highly-available gateways on a network...but there's a twist. GLBP, as you can figure out from the name, load-balances the traffic going through the participating routers. With [HSRP](http://aconaway.com/category/cisco/hsrp/ "AConaway.com -- HSRP") and VRRP, one host is the active peer and handles all the traffic until it dies, then another peer takes over. With GLBP, all the routers accept traffic.
+[The Gateway Load Balancing Protocol (GLBP)](http://cisco.com/en/US/docs/ios/12_2t/12_2t15/feature/guide/ft_glbp.html "Cisco.com -- GLBP") is another Cisco-proprietary protocol for providing highly-available gateways on a network...but there's a twist. GLBP, as you can figure out from the name, load-balances the traffic going through the participating routers. With [HSRP](/tags/hsrp/ "AConaway.com -- HSRP") and VRRP, one host is the active peer and handles all the traffic until it dies, then another peer takes over. With GLBP, all the routers accept traffic.
 
 The key is the virtual MAC address. When you configure a router to use GLBP, it discovers all the other routers configured for GLBP, and an election is held. The winner is called the Active Virtual Gateway (AVG) and assigns virtual MAC addresses to all the members in the group (called Active Virtual Forwarders or AVFs). When a host on the network ARPs for the virtual IP, the AVG answers the request with one of the virtual MAC addresses of the AVFs. The next ARP request gets another virtual MAC, etc. Do this a few times, and the hosts are the network are splitting their traffic among all the AVFs.
 
@@ -47,6 +47,6 @@ Those are the basics, but there are a few more things worth mentioning that you 
 
 - By default, the load-balancing method is round robin, but you can set the GLBP balancing method to weighted, which uses configured weights on each router to determine who's next in line for ARP replies. Use the _load-balancing_ and _weighting_ directives.
 - You can set priorities for each router to better control which one becomes the AVG and backup AVG with the _priority_ directive.
-- You can have GLBP track objects [just as you do with HSRP](http://aconaway.com/2007/10/18/object-tracking-and-hsrp/ "AConaway.com -- Object Tracking and HSRP"). Use the _weighting track_ configuration to do so.
+- You can have GLBP track objects [just as you do with HSRP](/posts/2007/10/object-tracking-and-hsrp/ "AConaway.com -- Object Tracking and HSRP"). Use the _weighting track_ configuration to do so.
 - You can put passwords on the GLBP group to protect yourself from random routers trying to participate and hose things up. Look at _authentication_.
 - By default, a higher priority router won't overthrow a lower one to become the AVG. You can turn this feature on with the _preempt_ directive.

@@ -39,7 +39,7 @@ Some stats for the site in 2010:
 - New Visitors:  34,396
 - Top Visiting Countries (besides the US):  UK, Australia, Canada, India, Germany
 - Most Popular Visitor OSes (besides Windows):  Mac 10.6, Linux 2.6.32
-- Top Article by Landings:  [ASA 8.3.1 - Smart Tunnel and NAT Changes](http://aconaway.com/2010/03/11/asa-8-3-1-smart-tunnel-and-nat-changes/)
+- Top Article by Landings:  [ASA 8.3.1 - Smart Tunnel and NAT Changes](/posts/2010/03/asa-8-3-1-smart-tunnel-and-nat-changes/)
 - Top Page by Landings: Reasons I Hate Comcast (retired)
 - Most Referrals:  [packetlife.net](http://packetlife.net/)
 - Most Popular Search Term That Lead People Here:  "rspan"  <- Really?  That's odd.

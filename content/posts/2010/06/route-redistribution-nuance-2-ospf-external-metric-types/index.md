@@ -16,7 +16,7 @@ tags:
   - "route"
 ---
 
-[Last time](http://aconaway.com/2010/05/24/route-redistribution-nuance-1/), we talked about a nifty little lab I set up for redistribution and how the OSPF ASBRs acted a little differently than I expected.  This time, let's look at how changing external OSPF routes to a metric-type of 1 (E1) affects the routing tables.
+[Last time](/posts/2010/05/route-redistribution-nuance-1/), we talked about a nifty little lab I set up for redistribution and how the OSPF ASBRs acted a little differently than I expected.  This time, let's look at how changing external OSPF routes to a metric-type of 1 (E1) affects the routing tables.
 
 Here's the network again.
 

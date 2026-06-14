@@ -5,7 +5,7 @@ tags:
   - "csm"
 ---
 
-The [CSM](http://aconaway.com/category/cisco/csm/ "AConaway.com -- Category:CSM") is pretty bad little box.  It not only watches layer 4 items like TCP connections, but also talks HTTP, which you can use to do some custom, or policy-based, load balancing.
+The [CSM](/tags/csm/ "AConaway.com -- Category:CSM") is pretty bad little box.  It not only watches layer 4 items like TCP connections, but also talks HTTP, which you can use to do some custom, or policy-based, load balancing.
 
 Policies are the objects that make custom balancing work.  Like everything else (it seems) on the CSM, a policy is an object made up of other objects -- _maps_ and _serverfarms_.  A _map_ matches patterns based on a number of things including the URL and HTTP header values, while the _serverfarm_ directive tells where to send traffic that matches the _map_.  If, for example, you want to send all requests with "/admin" in the URL to a management server instead of the regular web servers, you can do it with a policy.
 
@@ -57,7 +57,7 @@ With me so far?  Good.  There's only one thing left to do -- apply the policy 
 >  slb-policy TEST-POL
 > ```
 
-Everytime the CSM gets a request to the virtual IP of 1.1.1.1 on HTTP, it will check the URL for the string "/admin", and, if it's in the request, it will send it over to the management server.  If it doesn't match, it simply goes to the main serverfarm just as if the policy wasn't even applied.  If you do a "[show mod csm X vservers](http://aconaway.com/2008/06/10/getting-something-out-of-the-csm/ "AConaway.com -- Getting Something Out of the CSM")" now, you'll see the policy listed under the vserver we just made along with stats on the number of packets that were matched.
+Everytime the CSM gets a request to the virtual IP of 1.1.1.1 on HTTP, it will check the URL for the string "/admin", and, if it's in the request, it will send it over to the management server.  If it doesn't match, it simply goes to the main serverfarm just as if the policy wasn't even applied.  If you do a "[show mod csm X vservers](/posts/2008/06/getting-something-out-of-the-csm/ "AConaway.com -- Getting Something Out of the CSM")" now, you'll see the policy listed under the vserver we just made along with stats on the number of packets that were matched.
 
 There are caveats.  The CSM can only support a limited number of policies for each vserver.  According to a TAC case I opened a while back, you can only have 10 policies configured per vserver, so keep that in mind when designing everything out.  There's also a 30k memory limit for policies on a serverfarm; I have no clue how to calculate how much memory a policy is using, but using wildcards definitely adds to the memory footprint.
 

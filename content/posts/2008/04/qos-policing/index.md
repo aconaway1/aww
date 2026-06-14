@@ -6,7 +6,7 @@ tags:
   - "qos"
 ---
 
-[We covered QoS tagging](http://aconaway.com/2008/04/05/qos-tagging/ "AConaway.com -- QoS Tagging") the other day, but that just marks packets. I think you're old enough now that we should actually do some policing. Policing is where you restrict the amount of bandwidth that a flow or set of flows can use. For example, say you have a site that serves webpages to the rest of the network. HTTP is the primary function, but the SysAdmins also have to maintain the boxes via SSH, right? To make sure that their SSH sessions don't squash the bandwidth that your HTTP servers need, you can police the SSH sessions by giving the a bandwidth ceiling that they can't cross.
+[We covered QoS tagging](/posts/2008/04/qos-tagging/ "AConaway.com -- QoS Tagging") the other day, but that just marks packets. I think you're old enough now that we should actually do some policing. Policing is where you restrict the amount of bandwidth that a flow or set of flows can use. For example, say you have a site that serves webpages to the rest of the network. HTTP is the primary function, but the SysAdmins also have to maintain the boxes via SSH, right? To make sure that their SSH sessions don't squash the bandwidth that your HTTP servers need, you can police the SSH sessions by giving the a bandwidth ceiling that they can't cross.
 
 Let's set up a scenario. You have a router with two Ethernet ports. E0/0 goes to your webservers on 192.168.1.0/24, while E0/1 goes to SysAdmins' PCs on 192.168.2.0/24. We want to restrict all SSH access from 192.168.2.0/24 to 192.168.1.0/24 to 8k of bandwidth. That's right, you don't like your admins and want them to struggle with their daily tasks. Let's set it up.
 

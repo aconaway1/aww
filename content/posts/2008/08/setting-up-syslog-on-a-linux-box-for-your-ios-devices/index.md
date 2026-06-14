@@ -5,7 +5,7 @@ tags:
   - "tools"
 ---
 
-A few articles ago, [we discussed](http://aconaway.com/2008/08/11/setting-up-a-system-logging-on-an-ios-device/ "AConaway.com -- Setting up System Loggin on an IOS Device") getting logging up and running on your IOS box.  Part of the discussion was actually having the device log remotely to a box somewhere, but that's kind of worthless without a properly (for definitions of proper) configured syslog server.  A low-end Linux box with an appropriate amount of disk space is a really good candidate to do this for you.  I'll assume you're running some Redhat-based distro.
+A few articles ago, [we discussed](/posts/2008/08/setting-up-a-system-logging-on-an-ios-device/ "AConaway.com -- Setting up System Loggin on an IOS Device") getting logging up and running on your IOS box.  Part of the discussion was actually having the device log remotely to a box somewhere, but that's kind of worthless without a properly (for definitions of proper) configured syslog server.  A low-end Linux box with an appropriate amount of disk space is a really good candidate to do this for you.  I'll assume you're running some Redhat-based distro.
 
 I won't go through the installation, but it should be easy.  Just look for the syslog packages for your distro and you should wind up with a working copy on your box.  On a Redhat distro, you'll probably just do a _yum install syslog_ to get it working.
 

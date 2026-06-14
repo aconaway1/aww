@@ -12,7 +12,7 @@ tags:
   - "vlans"
 ---
 
-Did you catch the article on [setting up fault tolerance on the CSM](http://aconaway.com/2008/10/10/configuring-fault-tolerance-on-the-csm/ "AConaway.com -- Configuring Fault Tolerance on the CSM")?  In that article, I mentioned that Cisco recommends a dedicated trunk for the FT VLAN if you have two HA CSMs in two chassis.  Discuss amongst yourselves while I drone on.
+Did you catch the article on [setting up fault tolerance on the CSM](/posts/2008/10/configuring-fault-tolerance-on-the-csm/ "AConaway.com -- Configuring Fault Tolerance on the CSM")?  In that article, I mentioned that Cisco recommends a dedicated trunk for the FT VLAN if you have two HA CSMs in two chassis.  Discuss amongst yourselves while I drone on.
 
 Why should you set up a dedicated trunk for this stuff?  The most obvious reason is to be sure that normal traffic doesn't step on the syncing traffic.  Since we're syncing state information as well as configuration, the frames need to arrive in a timely manner.  Any errors could potentially disrupt the FT process, which is bad.  You surely don't want the primary to fail only to find out that the standby doesn't have the complete or current config.
 

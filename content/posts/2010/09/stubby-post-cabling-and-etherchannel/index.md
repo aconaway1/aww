@@ -9,7 +9,7 @@ tags:
   - "etherchannel"
 ---
 
-I've done it.  You've done it.  We've all done it.  You turn up another EtherChannel bundle and realize the hard way that your interface descriptions aren't accurate.  Or you've swapped out a [piece-of-crap 3750](http://aconaway.com/2010/08/30/catalyst-3750s-bad-luck-with-a-cisco-logo/) and didn't notice that the labels on the cables were wrong.  In either case, we all know that EtherChannel bundles don't really work if the links aren't plugged into the right switches.
+I've done it.  You've done it.  We've all done it.  You turn up another EtherChannel bundle and realize the hard way that your interface descriptions aren't accurate.  Or you've swapped out a [piece-of-crap 3750](/posts/2010/08/catalyst-3750s-bad-luck-with-a-cisco-logo/) and didn't notice that the labels on the cables were wrong.  In either case, we all know that EtherChannel bundles don't really work if the links aren't plugged into the right switches.
 
 So, what do you to make sure that your links are cabled the way you think they are?  Personally, I don't trust any label at all - no matter if I did it or not.  At some point, someone has changed something on a switch, and that just might have been a change to where the port is question is cabled.  If I was onsite, I would hand-trace the cabling from one end to the other then do it again to make sure I didn't hose it up the first time.  The big problem with this technique is that I'm not everywhere at the same time, and the travel budget isn't very big these days.  If I can't get my hands on the cables, I relegate myself to using CDP to see what's on the other end of links when putting ports into EtherChannel bundles.
 

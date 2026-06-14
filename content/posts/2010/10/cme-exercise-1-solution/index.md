@@ -5,7 +5,7 @@ categories:
   - "voice"
 ---
 
-Here's my solution to [the exercise I posed last week](http://aconaway.com/2010/10/06/cme-exercise-1/).  Let's see if we can get this right.
+Here's my solution to [the exercise I posed last week](/posts/2010/10/cme-exercise-1/).  Let's see if we can get this right.
 
 I'm going to assume you know how to give a router an IP address.  If you don't, let me know and I'll help you out.  We'll use 10.10.10.1/24 for our CME router.
 

@@ -8,7 +8,7 @@ tags:
   - "lan"
 ---
 
-Let's keep going with [our example setup on the ASA 5505](http://aconaway.com/2008/04/01/setting-up-vlans-on-an-asa-5505/ "AConaway.com -- Setting Up VLANs on an ASA 5505") and set up DHCP on this guy. You can set it up to either forward (relay) DHCP requests to a DHCP server somewhere or have it be the DHCP server. Let's do it.
+Let's keep going with [our example setup on the ASA 5505](/posts/2008/04/setting-up-vlans-on-an-asa-5505/ "AConaway.com -- Setting Up VLANs on an ASA 5505") and set up DHCP on this guy. You can set it up to either forward (relay) DHCP requests to a DHCP server somewhere or have it be the DHCP server. Let's do it.
 
 To set up DHCP forwarding, you have to configure where the DHCP server is and then enable the relaying on the proper interfaces. Let's say we have a DHCP server on the inside interface at 192.168.14.11 and we want it to serve IPs to the _guests_ network. Setting up the DHCP server is beyond the scope here, so you'll have to look elsewhere on how to set that up.
 

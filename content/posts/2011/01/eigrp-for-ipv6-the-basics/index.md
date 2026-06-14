@@ -23,7 +23,7 @@ Next, let's get to configuring EIGRP for IPv6.  By default, IPv6 routing protoc
 > Router(config)#ipv6 router eigrp 100  
 > Router(config-rtr)#no shutdown
 
-There's also the issue of the router ID.  In IPv4, EIGRP has [an method to figure out its router ID](http://aconaway.com/2010/06/16/route-notes-eigrp-neighbor-relationships/), and EIGRP for IPv6 uses that same method.  The problem is that the router ID is still a 32-bit number, but there aren't any 32-bit address on the router if you're pure IPv6.  A dilemma, eh?  There are two way to get around this, though.  First, you can set a loopback interface with an IPv4 address so that EIGRP will have an address to use.
+There's also the issue of the router ID.  In IPv4, EIGRP has [an method to figure out its router ID](/posts/2010/06/route-notes-eigrp-neighbor-relationships/), and EIGRP for IPv6 uses that same method.  The problem is that the router ID is still a 32-bit number, but there aren't any 32-bit address on the router if you're pure IPv6.  A dilemma, eh?  There are two way to get around this, though.  First, you can set a loopback interface with an IPv4 address so that EIGRP will have an address to use.
 
 > Router(config)#interface lo0  
 > Router(config-if)#ip address 192.0.2.1 255.255.255.255

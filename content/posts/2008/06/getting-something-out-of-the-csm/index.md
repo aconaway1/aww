@@ -5,7 +5,7 @@ tags:
   - "csm"
 ---
 
-My buddy told me that my site is the only place on the web with documentation on the Cisco [Content Switching Module (CSM)](http://aconaway.com/2007/10/02/getting-started-with-the-cisco-csm/ "AConaway.com -- Getting Started with the CSM"). I also noticed a few months ago that every TAC case I've opened on the CSM has been handled by the same guy. I seriously think that the only people in the world that really know about these things are me and him. Cool. I better get some more content up.
+My buddy told me that my site is the only place on the web with documentation on the Cisco [Content Switching Module (CSM)](/posts/2007/10/getting-started-with-the-cisco-csm/ "AConaway.com -- Getting Started with the CSM"). I also noticed a few months ago that every TAC case I've opened on the CSM has been handled by the same guy. I seriously think that the only people in the world that really know about these things are me and him. Cool. I better get some more content up.
 
 The CSM is configured and controlled by the IOS running on the 6500. Unlike the FWSM, it is not independent from the switch's operation, which is sometimes good. One good thing out of that is the fact that you can pull stats and stuff from the IOS without having to session or SSH to another module. The bad part of that, though, is that the commands wind up being long.
 

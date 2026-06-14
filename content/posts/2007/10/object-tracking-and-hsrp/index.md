@@ -12,7 +12,7 @@ In doing any type of object tracking, the first thing you is...wait for it...cre
 
 > track 100 interface S0/0 line-protocol
 
-This creates an object with the object number of 100 that tracks the line protocol of interface S0/0. Now what? If we look back to the [HSRP setup we have](http://aconaway.com/2007/08/21/running-hsrp-for-availability/ "AConaway.com -- Running HSRP for Availability") two routers with HSRP running on each of the FastEthernets. If we add an interface S0/0 for Internet access (or corporate access or POS access or access to your toilet), we probably want to track the line protocol of those interfaces to make sure the interface is still healthy. Here's the new configuration on the FastEthernet interfaces.
+This creates an object with the object number of 100 that tracks the line protocol of interface S0/0. Now what? If we look back to the [HSRP setup we have](/posts/2007/08/running-hsrp-for-availability/ "AConaway.com -- Running HSRP for Availability") two routers with HSRP running on each of the FastEthernets. If we add an interface S0/0 for Internet access (or corporate access or POS access or access to your toilet), we probably want to track the line protocol of those interfaces to make sure the interface is still healthy. Here's the new configuration on the FastEthernet interfaces.
 
 > interface FastEthernet 0/0 ip address 10.1.1.11 255.255.255.0 standby 75 ip 10.1.1.1 standby 75 priority 100 standby 75 preempt standby 75 track 100 decrement 55
 

@@ -30,7 +30,7 @@ Another way to configure the VLANs is through the old-fashioned _network-scripts
 
 Personally, this is the way I would do it.  It lets you change configurations through the configuration files just like physical interfaces instead of trusting the configuration that resides out in the ether that is the Linux kernel.  Also, when you restart network, the interface itself actually goes up and down, so you can see what's going on with it.  If you need some help with this, check out [Redhat's manual](http://www.redhat.com/docs/manuals/linux/RHL-8.0-Manual/ref-guide/s1-networkscripts-interfaces.html "Redhat.com -- Interface Configuration Files") on it.  Let me know if you're still having problems with it.
 
-Remember to set the box's switch port to a matching 802.1q [trunk](http://aconaway.com/category/lan/switching/trunking/ "AConaway.com -- Trunking").  You've seen that before, but here's a refresher, assuming the Linux box is plugged into f0/1 on the switch.
+Remember to set the box's switch port to a matching 802.1q [trunk](/tags/trunking/ "AConaway.com -- Trunking").  You've seen that before, but here's a refresher, assuming the Linux box is plugged into f0/1 on the switch.
 
 > int f0/1 switchport switchport trunk encapsulation dot1q switchport mode trunk
 
@@ -38,7 +38,7 @@ To check the status of your VLANs, look in _/proc/net/vlan_.  You'll see the _c
 
 Let's talk security, though.  First of all, I could argue that a Linux box shouldn't be participating in any trunking at all.  There will be exceptions, but, in my experience, a Linux box (read: server) should only be on one network at a time and shouldn't straddle networks.  Do you really trust the Linux guys to keep their boxes from doing bad things on more than one network? I don't. Heh.
 
-If, however, you need to use VLANs on a Linux box, you'll need to make sure you have only the proper VLANs running across this port (like we did with the [CSM VLAN](http://aconaway.com/2008/11/24/configuring-dedicated-trunks-for-the-csm/ "AConaway.com -- Configuring Dedicated Trunks for the CSM")).  If a box were to be compromised, the bad guy could simply start adding VLANs to the server and suddenly get around your routers and firewalls.  Awesome, right?  Make sure you put in the _switchport trunked allowed vlan x_ directive so the server only has access to those VLANs.
+If, however, you need to use VLANs on a Linux box, you'll need to make sure you have only the proper VLANs running across this port (like we did with the [CSM VLAN](/posts/2008/11/configuring-dedicated-trunks-for-the-csm/ "AConaway.com -- Configuring Dedicated Trunks for the CSM")).  If a box were to be compromised, the bad guy could simply start adding VLANs to the server and suddenly get around your routers and firewalls.  Awesome, right?  Make sure you put in the _switchport trunked allowed vlan x_ directive so the server only has access to those VLANs.
 
 As always, send me any four-leaf clovers questions you have.
 

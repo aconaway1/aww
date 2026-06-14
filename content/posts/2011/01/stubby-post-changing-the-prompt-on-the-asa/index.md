@@ -19,7 +19,7 @@ tags:
   - "state"
 ---
 
-RichardF commented on [an article I wrote last November](http://aconaway.com/2010/11/22/running-commands-on-a-standby-asa-from-the-active/) and mentioned the _prompt_ command in the ASA.  I never set aside any time to research it, but I finally took the time today while waiting for a maintenance window.
+RichardF commented on [an article I wrote last November](/posts/2010/11/running-commands-on-a-standby-asa-from-the-active/) and mentioned the _prompt_ command in the ASA.  I never set aside any time to research it, but I finally took the time today while waiting for a maintenance window.
 
 This is one of those little things in life that make me happy.  Since the active ASA always has the same hostname and IP address, I find it hard to keep track of to which firewall I'm actually connected.  That "configurtions are no long in sync" message you get when you _conf t_ on the standby firewall really irks me.  With the _prompt_ command, I can see which firewall I'm on and in what state it is.
 

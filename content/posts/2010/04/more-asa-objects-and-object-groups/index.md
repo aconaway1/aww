@@ -70,6 +70,6 @@ Send any questions my way.
 
 This article is based on an ASA 5505 running 8.3.1.  Most of the config above should be portable to any 8.x except for declaring the objects. In other versions of 8.x, you may have to add host directly to the object-group.  Running on 7.x and below may be a different story.
 
-Other reading:  [http://aconaway.com/2009/10/01/object-groups-in-the-asafwsmpix/](http://aconaway.com/2009/10/01/object-groups-in-the-asafwsmpix/)
+Other reading:  [/posts/2009/10/object-groups-in-the-asafwsmpix/](/posts/2009/10/object-groups-in-the-asafwsmpix/)
 
 Director's Commentary: ![Audio: More ASA Objects and Object-groups](images/audio-unavailable.svg)

@@ -18,7 +18,7 @@ These backup farms are quite easy to configure.  When you assign the _serverfar
 > vserver TEST-VS  
 > serverfarm MAIN-SF backup BACKUP-SF
 
-You can also use a backup on a [policy](http://aconaway.com/2008/06/23/intro-to-policies-on-the-csm/ "AConaway.com -- Intro to Policies on the CSM").
+You can also use a backup on a [policy](/posts/2008/06/intro-to-policies-on-the-csm/ "AConaway.com -- Intro to Policies on the CSM").
 
 > policy TEST-POL  
 > serverfarm POL-SF backukp BACKUP-SF

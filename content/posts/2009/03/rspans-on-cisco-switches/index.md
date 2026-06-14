@@ -10,7 +10,7 @@ tags:
   - "vlan"
 ---
 
-We [discussed SPANs](http://aconaway.com/2009/03/13/spans-on-cisco-switches/ "AConaway.com -- SPANs on Cisco Switches") earlier, but let's talk about RSPANs for a bit.
+We [discussed SPANs](/posts/2009/03/spans-on-cisco-switches/ "AConaway.com -- SPANs on Cisco Switches") earlier, but let's talk about RSPANs for a bit.
 
 Can anyone guess what the "R" means?  You guessed it -- "Remote".  An RSPAN is a way to get traffic from a SPAN source on one switch to a SPAN destination on another switch that's connected via a trunk.
 

@@ -15,7 +15,7 @@ tags:
   - "router-id"
 ---
 
-A few hours ago, the last of the IPv4 addresses were allocated by IANA.  Now's the time to learn more about IPv6!  Yesterday, I posted about [EIGRP for IPv6](http://aconaway.com/2011/01/30/eigrp-for-ipv6-the-basics/), so I think I'll continue the trend by introducing OSPFv3, which is the IPv6 implementation of OSPF.  As always, I'm using Cisco routers here.  Just as yesterday, this is just a guide to the absolutely basics; if you want to do some funky OSPF magic, you won't find it here - perhaps in time, though.
+A few hours ago, the last of the IPv4 addresses were allocated by IANA.  Now's the time to learn more about IPv6!  Yesterday, I posted about [EIGRP for IPv6](/posts/2011/01/eigrp-for-ipv6-the-basics/), so I think I'll continue the trend by introducing OSPFv3, which is the IPv6 implementation of OSPF.  As always, I'm using Cisco routers here.  Just as yesterday, this is just a guide to the absolutely basics; if you want to do some funky OSPF magic, you won't find it here - perhaps in time, though.
 
 ### Configuration
 

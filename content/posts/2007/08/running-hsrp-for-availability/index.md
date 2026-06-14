@@ -6,7 +6,7 @@ tags:
   - "hsrp"
 ---
 
-In [the article describing a router-on-a-stick](http://aconaway.com/2007/08/20/router-on-a-stick/ "aconaway.com -- Router-on-a-stick"), I mentioned that I would use two routers that run HSRP for availability, so I figured that I would write up a short post on what it is and how it works.
+In [the article describing a router-on-a-stick](/posts/2007/08/router-on-a-stick/ "aconaway.com -- Router-on-a-stick"), I mentioned that I would use two routers that run HSRP for availability, so I figured that I would write up a short post on what it is and how it works.
 
 HSRP (Hot Standby Router Protocol) is a Cisco-proprietary protocol for establishing two or more layer-3 devices as a fault-tolerant gateway. Please note that it is not a _routing_ protocol like OSPF or BGP. HSRP provides availability and fault-tolerance...it does not advertise routes. I actually found several Google results that said it was a routing protocol. Those were on the first page of the results, so be careful when searching! Webopedia.com is terrible.
 

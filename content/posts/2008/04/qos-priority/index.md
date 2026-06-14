@@ -5,7 +5,7 @@ tags:
   - "qos"
 ---
 
-We just talked about [tagging traffic](http://aconaway.com/2008/04/05/qos-tagging/ "AConaway.com -- QoS Tagging") and [policing traffic](http://aconaway.com/2008/04/07/qos-policing/ "AConaway.com -- QoS Policing"), but we haven't talked about prioritizing traffic. Tagging just sets a value in the header. Policing sets a "bandwidth ceiling" that can't be crossed. Prioritization guarantees a certain amount of bandwidth for a flow/app/etc. no matter what's going on.
+We just talked about [tagging traffic](/posts/2008/04/qos-tagging/ "AConaway.com -- QoS Tagging") and [policing traffic](/posts/2008/04/qos-policing/ "AConaway.com -- QoS Policing"), but we haven't talked about prioritizing traffic. Tagging just sets a value in the header. Policing sets a "bandwidth ceiling" that can't be crossed. Prioritization guarantees a certain amount of bandwidth for a flow/app/etc. no matter what's going on.
 
 Prioritization offers you a certain amount of bandwidth; it doesn't carve it out and hand it over. If you're using less than the priority value, you only get as much as you need and the rest of the reserved bandwidth goes into the pot for everyone to use. As priority traffic grows, though, you're given as much as you need up to the configured value. When you go over that, your extra traffic just goes into the best-effort queue with everything else (Note: Don't go over the limit with VOIP traffic. Echoes and artifacts suck). For example, if you give your VOIP traffic 70% of the bandwidth of an interface but are only using 40%, the other 30% can be used by the other apps on the line. If you're using 80%, that 10% over is competing with everything else for bandwidth.
 

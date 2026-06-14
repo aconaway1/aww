@@ -7,7 +7,7 @@ tags:
   - "snmp"
 ---
 
-I had an [article](http://aconaway.com/2007/10/02/getting-started-with-the-cisco-csm/ "AConaway -- Getting Started with the Cisco CSM") a few weeks ago about the Cisco CSM, which is a load-balancer module for the 6500 series switches. This thing is a pretty good device, but monitoring the connections to each VIP and RIP is not very straightforward. If you have an SNMP monitoring system like [Cacti](http://cacti.net/ "Cacti -- Home Page") or [MRTG](http://oss.oetiker.ch/mrtg/ "MRTG -- Home Page"), you need to know the OID to monitor, but it doesn't work like anything else in the world.
+I had an [article](/posts/2007/10/getting-started-with-the-cisco-csm/ "AConaway -- Getting Started with the Cisco CSM") a few weeks ago about the Cisco CSM, which is a load-balancer module for the 6500 series switches. This thing is a pretty good device, but monitoring the connections to each VIP and RIP is not very straightforward. If you have an SNMP monitoring system like [Cacti](http://cacti.net/ "Cacti -- Home Page") or [MRTG](http://oss.oetiker.ch/mrtg/ "MRTG -- Home Page"), you need to know the OID to monitor, but it doesn't work like anything else in the world.
 
 Let's start with the OID for the vserver. First, there's the base OIDs that you can look up on CCO. This is just standard SNMP stuff that Cisco defined long ago. The slot number that the CSM is in is added to that base OID. You then have to add the length of the vserver name -- don't ask me...I don't know. Next comes the really stupid part -- you have to take the names of the vserver and get the ASCII values of every character in the name and add each to the end to get the full OID. Yes, it's that stupid.
 

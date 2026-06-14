@@ -8,7 +8,7 @@ tags:
   - "serverfarm"
 ---
 
-I've talked about [probes](http://aconaway.com/2008/11/06/using-probes-on-the-csm/ "AConaway.com -- Using Probes on the CSM") and stuff on the CSM, but I never mentioned what happens to the connections to a server that fails.  That is, if I'm connected to server A in a cluster and that server suddenly commits [ritual seppuku](http://en.wikipedia.org/wiki/Seppuku "Wikipedia.com -- Seppuku"), what happens to my connection through the CSM?
+I've talked about [probes](/posts/2008/11/using-probes-on-the-csm/ "AConaway.com -- Using Probes on the CSM") and stuff on the CSM, but I never mentioned what happens to the connections to a server that fails.  That is, if I'm connected to server A in a cluster and that server suddenly commits [ritual seppuku](http://en.wikipedia.org/wiki/Seppuku "Wikipedia.com -- Seppuku"), what happens to my connection through the CSM?
 
 Remember how the CSM works?  You connect to the VIP, some state tables are updated, your packet's destination IP is changed to a RIP, and the packet is forwarded.  The point I want to emphasize this time is the state table.  If you were to send another packet to the same VIP on the same port, the CSM would look in its state table and see that you're already connected to a server and just forward you on over after a NAT.  What if that server has suddenly died?
 

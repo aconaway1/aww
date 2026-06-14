@@ -37,4 +37,4 @@ Alright...one more thing.  The configurations don't sync automagically (at leas
 
 If the primary goes down now and the secondary takes over, the changes you just made won't be reflected on the secondary.  You fix this with the _hw-module contentSwitchingModule X standby config-sync_ command (where X is the module slot in the chassis).  Alternatively, you can just type _hw c X s c_ as a shortcut.  It'll take a few minutes depending on your configuration, so check your logs for when it's finished.  Note that the secondary does not save the new configuration to its startup-config; you'll have to log in and save that manually (or automatically through CiscoWorks or something) to save changes there.
 
-Let me know if you have any questions and check out [my page on getting output](http://aconaway.com/2008/06/10/getting-something-out-of-the-csm/ "AConaway.com -- Getting Something Out of the CSM") from Cisco's fine mid-tier load balancer.  :)
+Let me know if you have any questions and check out [my page on getting output](/posts/2008/06/getting-something-out-of-the-csm/ "AConaway.com -- Getting Something Out of the CSM") from Cisco's fine mid-tier load balancer.  :)
