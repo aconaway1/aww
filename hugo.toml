@@ -15,6 +15,7 @@ enableRobotsTXT = true
   recentPostsCount = 5
   showAuthor = true
   showReadingTime = true
+  favicon = "favicon.svg"
   showShareButtons = false
   sidebar = true
   themeColor = "blue"
